@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sounds>
+	<!--<startupsound file="Content/Sounds/StartDrone.ogg"/>-->
+	<!--
+	<music file="Content/Sounds/Music/Simplex.ogg" type="default"/>
+	<music file="Content/Sounds/Music/Tenebrous Brothers Carnival - Prelude.ogg" type="default"/>
+	-->
+	<Override>
+		<music file="%ModDir%/Sounds/Music/tintinonthemoonlighter.ogg" type="menu" volume="2" />
+		<music file="%ModDir%/Sounds/Music/controlledchaos.ogg" type="ruins" />
+		<music file="%ModDir%/Sounds/Music/deusexmdilluminati.ogg" type="thal_blacksite" />
+		<music file="%ModDir%/Sounds/Music/Space Asshole.ogg" type="EndLocation"/>
+		<music file="%ModDir%/Sounds/Music/milkchanloop.ogg" type="editor" />
+	
+	</Override>
+	<!--
+	<music file="%ModDir%/Sounds/Music/robocop.ogg" type="default" continuefromprevioustime="true" />
+	<music file="%ModDir%/Sounds/Music/flipflop.ogg" type="default" continuefromprevioustime="true" />	
+	-->
+	<thal_footstep_ramblin file="%ModDir%/Characters/Ramblin/mushfootstep0.ogg" range="400" />
+	<thal_footstep_ramblin file="%ModDir%/Characters/Ramblin/mushfootstep1.ogg" range="400" />
+	<thal_footstep_ramblin file="%ModDir%/Characters/Ramblin/mushfootstep2.ogg" range="400" />
+	
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk01.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk02.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk03.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk04.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk05.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk06.ogg" range="400" />
+	<thal_footstep_brute file="%ModDir%/Sounds/Footsteps/metal_walk07.ogg" range="400" />
+	
+	<impact_wetsplat file="%ModDir%/Sounds/Impacts/wetsplat2.ogg" range="450" />
+	<impact_wetsplat file="%ModDir%/Sounds/Impacts/wetsplat3.ogg" range="450" />
+	<impact_wetsplat file="%ModDir%/Sounds/Impacts/wetsplat4.ogg" range="450" />
+</sounds>
