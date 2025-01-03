@@ -1,5 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- file for the genetic synth and all its ammo -->
 <Items>
-  
+	<Item name="" identifier="thal_synthcrystal" maxstacksize="16" maxstacksizecharacterinventory="4" variantof="thal_glowcrystal" inventoryiconcolor="245,63,67,255" spritecolor="245,63,67" category="Alien" Tags="smallitem,thal_sabercrystal,alienartifact" cargocontaineridentifier="metalcrate" scale="0.5">
+		<PreferredContainer primary="armcab" minamount="0" maxamount="0" spawnprobability="0" />
+		<PreferredContainer primary="wreckreactorcab" minamount="0" maxamount="0" spawnprobability="0" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="60"><!-- requiresrecipe="True"-->
+			<RequiredItem identifier="uranium" />
+			<RequiredItem identifier="fulgurium" />
+			<RequiredItem identifier="fulgurium" />
+			<RequiredItem identifier="thorium" />
+		</Fabricate>
+		<LightComponent range="1" lightcolor="245,63,67,128" powerconsumption="0" IsOn="True" castshadows="False" allowingameediting="False" depth="0.025">
+			<Sprite name="synthcrystlight" texture="%ModDir%/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
+		</LightComponent>
+	</Item>
+	<Item name="synth splicer" identifier="synthsplicer" scale="0.4" category="Equipment" tags="smallitem,geneticdevice" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,64,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" depth="0.55" sourcerect="215,242,41,21" origin="0.5,0.5" />
+		<Body radius="15" width="45" density="25" />
+		<GeneticMaterial name="test" effect="increasedswimmingspeed" >
+			<StatusEffect type="OnWearing" target="Character" duration="0.0"/>
+		</GeneticMaterial>
+		<Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect" displaycontainedstatus="true"/>
+	</Item>
+	<Item name="" identifier="geneticmaterialsynth" nameidentifier="geneticmaterial" category="Material" maxstacksize="1" tags="smallitem,geneticmaterial" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" depth="0.55" sourcerect="215,242,41,21" origin="0.5,0.5" />
+		<GeneticMaterial name="test" effect="increasedswimmingspeed" conditionincreaseoncombinemin="0.0" conditionincreaseoncombinemax="0.0" ConditionIncreaseOnLowQualityCombine="3.0" ConditionIncreaseOnHighQualityCombine="25.0" tooltipvaluemin="10" tooltipvaluemax="50" SetTaintedOnDeath="true" CanBeUntainted="true">
+			<StatusEffect type="OnWearing" target="Character" duration="0.0"/>
+		</GeneticMaterial>
+	</Item>
+	
 </Items>
