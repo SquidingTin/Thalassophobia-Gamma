@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character SpeciesName="Humangummy" Group="Gummy" Humanoid="True" DisplayName="" HasInfo="True" Husk="False" UseHuskAppendage="True" NeedsAir="False" CanSpeak="True" Noise="150" Visibility="150" BloodDecal="blackblood" EatingSpeed="10" PathFinderPriority="1" NeedsWater="False" BleedParticleAir="blackblooddrop" BleedParticleWater="blackwaterblood" HideInSonar="False" SonarDisruption="0" SpeciesTranslationOverride="" specifiertags="true" skincolors="(#899394, 100)" CanInteract="True" UseHumanAI="True" IsMachine="True" ShowHealthBar="True" UseBossHealthBar="False" BleedParticleMultiplier="1" CanEat="True" UsePathFinding="True" HideInThermalGoggles="False" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" AITurretPriority="1" AISlowTurretPriority="1" DespawnContainer="">
+	<names path="Content/Characters/Human/names.xml" />
+	<ragdolls folder="default" />
+	<animations folder="default" />
+	<!-- meltdown -->
+	<huskappendage affliction="thal_huskhead" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<huskappendage affliction="thal_husktorso" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<huskappendage affliction="thal_husklimbs" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<!-- meltdown -->
+	<huskappendage affliction="thal_meltdownhead" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<huskappendage affliction="thal_meltdowntorso" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<huskappendage affliction="thal_meltdownlimbs" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<!-- mudraptor -->
+	<huskappendage affliction="thal_mudraptorhead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Mudraptorhead.xml" />
+	<huskappendage affliction="thal_mudraptortorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Mudraptortorso.xml" />
+	<huskappendage affliction="thal_mudraptorlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Mudraptorlimbs.xml" />
+	<!-- maggot -->
+	<huskappendage affliction="thal_maggothead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Maggothead.xml" />
+	<huskappendage affliction="thal_maggottorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Maggottorso.xml" />
+	<huskappendage affliction="thal_maggotlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Maggotlimbs.xml" />
+	<!-- mushroom -->
+	<huskappendage affliction="thal_shroomhead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Shroomhead.xml" />
+	<huskappendage affliction="thal_shroomtorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Shroomtorso.xml" />
+	<huskappendage affliction="thal_shroomlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Shroomlimbs.xml" />
+	<!-- crawler -->
+	<huskappendage affliction="thal_crawlerhead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Crawlerhead.xml" />
+	<huskappendage affliction="thal_crawlertorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Crawlertorso.xml" />
+	<huskappendage affliction="thal_crawlerlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Crawlerlimbs.xml" />
+	<!-- thresher -->
+	<huskappendage affliction="thal_thresherhead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Thresherhead.xml" />
+	<huskappendage affliction="thal_threshertorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Threshertorso.xml" />
+	<huskappendage affliction="thal_thresherlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Thresherlimbs.xml" />
+	<!-- hammerhead -->
+	<huskappendage affliction="thal_hammerhead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Hammerhead.xml" />
+	<huskappendage affliction="thal_hammertorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Hammertorso.xml" />
+	<huskappendage affliction="thal_hammerlimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Hammerlimbs.xml" />
+	<!-- thalamus -->
+	<huskappendage affliction="thal_thalamushead" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Thalamushead.xml" />
+	<huskappendage affliction="thal_thalamustorso" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Thalamustorso.xml" />
+	<huskappendage affliction="thal_thalamuslimbs" path="%ModDir%/Items/Jobgear/Scientist/GeneLimbs/Thalamuslimbs.xml" />
+	
+	<huskappendage affliction="thal_gummyinfection" path="%ModDir%/Characters/HumanGummy/Gummyhead.xml" />
+	<damageemitter drawontop="True" Particle="gib" AngleMin="0" AngleMax="360" ScaleMin="0.25" ScaleMax="0.5" VelocityMin="50" VelocityMax="300" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+	<bloodemitter Particle="blood" AngleMin="0" AngleMax="0" ScaleMin="1" ScaleMax="1" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+	<bloodemitter Particle="waterblood" AngleMin="0" AngleMax="0" ScaleMin="1" ScaleMax="1" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="1" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+	<gibemitter Particle="gib" AngleMin="0" AngleMax="360" ScaleMin="1" ScaleMax="1" VelocityMin="200" VelocityMax="700" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="20" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+	<gibemitter Particle="heavygib" AngleMin="0" AngleMax="360" ScaleMin="1" ScaleMax="1" VelocityMin="50" VelocityMax="500" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+	<health Vitality="260" DoesBleed="True" CrushDepth="Infinity" UseHealthWindow="True" BleedingReduction="0" BurnReduction="0.075" ConstantHealthRegeneration="0" HealthRegenerationWhenEating="0" StunImmunity="False" PoisonImmunity="False" PoisonVulnerability="1" EmpVulnerability="0" ApplyAfflictionColors="True">
+		<MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+		<MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+		<Limb name="Head">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+		</Limb>
+		<Limb name="Torso">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+		</Limb>
+		<Limb name="LeftArm">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+		</Limb>
+		<Limb name="RightArm">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+		</Limb>
+		<Limb name="LeftLeg">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+		</Limb>
+		<Limb name="RightLeg">
+			<Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+			<Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+		</Limb>
+	</health>
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" AccessibleWhenAlive="True" Commonness="1" />
+	<ai CombatStrength="150" Sight="1.0000001" Hearing="1" AggressionHurt="100" AggressionGreed="10" FleeHealthThreshold="0" AttackWhenProvoked="True" AvoidGunfire="True" DamageThreshold="0" AvoidTime="3" MinFleeTime="20" AggressiveBoarding="True" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" RandomAttack="False" CanOpenDoors="False" UsePathFindingToGetInside="False" KeepDoorsClosed="False" AvoidAbyss="True" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="0" WallTargetingMethod="Target">
+		<target Tag="provocative" State="Attack" Priority="70" ReactDistance="20" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="crawler" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="mudraptor" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="spineling" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="hammerheadspawn" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="husk" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="humanhusk" State="Attack" Priority="70" ReactDistance="50" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+		<target Tag="jobid:thal_clown" State="Attack" Priority="100" ReactDistance="1000" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+	</ai>
+	<Heads>
+		<Head tags="head1,male" sheetindex="0,0" />
+		<Head tags="head1,female" sheetindex="0,0" />
+	</Heads>
+	<Vars>
+		<Var var="GENDER" tags="female,male" />
+	</Vars>
+	<MenuCategory var="GENDER" />
+	<Pronouns var="GENDER" />
+	<HeadAttachments>
+		<Wearable type="Husk">
+			<sprite name="Husk" texture="Content/Characters/Human/Human_husk.png" hidewearablesoftype="Beard" sheetindex="0,0" />
+		</Wearable>
+		<Wearable type="Herpes">
+			<sprite name="Herpes" texture="Content/Characters/Human/Human_karma.png" sheetindex="0,0" />
+		</Wearable>
+	</HeadAttachments>
+	<sound gender="None" File="%ModDir%/Characters/HumanGummy/Sounds/scream1.ogg" State="Die" Range="800" Volume="1" Tags="" />
+	<sound gender="None" File="%ModDir%/Characters/HumanGummy/Sounds/scream2.ogg" State="Die" Range="800" Volume="1" Tags="" />
+	<sound gender="None" File="%ModDir%/Characters/HumanGummy/Sounds/scream3.ogg" State="Die" Range="800" Volume="1" Tags="" />
+	<sound gender="None" File="%ModDir%/Characters/HumanGummy/Sounds/scream4.ogg" State="Die" Range="800" Volume="1" Tags="" />
+</Character>
