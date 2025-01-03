@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+	<!--Factions-->
+	<faction.thal_ues>Общество Объединенной Европы</faction.thal_ues>
+	<faction.thal_ues.description>Общество Объединенной Европы - гуманитарная организация, состоящая в основном из исследователей, врачей и других необычайно образованных людей. Они стремятся бороться с бедностью и прекратить конфликты между враждующими фракциями. Пожертвования ООЕ обычно делают аванпосты безопаснее для всех, включая ваш экипаж.</faction.thal_ues.description>
+	<faction.thal_ues.shortdescription>Благотворительная пацифистская организация, стремящаяся покончить с бедностью и насильственными конфликтами ради человечества. Пожертвования ООЕ приносят пользу всем на Европе.</faction.thal_ues.shortdescription>
+
+	<faction.thal_confederacy>Европейская Конфедерация</faction.thal_confederacy>
+	<faction.thal_confederacy.description>Европейская Конфедерация является более моральным ответвлением печально известных Йовианских сепаратистов. После Великой рецессии различные аванпосты объединились, чтобы выступать за расширение свобод, что привело к объявлению войны со стороны Коалиции. Йовианские сепаратисты и Конфедерация расходятся в методах: \nВ то время как Йовианские сепаратисты прибегают к терроризму в борьбе с Коалицией, Конфедерация старается причинить меньше вреда невинным.</faction.thal_confederacy.description>
+	<faction.thal_confederacy.shortdescription>Лига сепаратистских аванпостов, официально объявивших о выходе из Коалиции, которая заклеймила их как предателей. Твердо верящие в права личности, они ведут прямую войну, в отличие от повстанческих Йовианских сепаратистов.</faction.thal_confederacy.shortdescription>
+
+	<faction.thal_cartel>Хтонический Картель</faction.thal_cartel>
+	<faction.thal_cartel.description>Хтонический Картель — это лицо обширного преступного подполья Европы. Неизвестно, относится ли "Хтонический" к лавкрафтовским монстрам подо льдом или к "подземному миру", из которого происходит картель. В некоторых районах с ограниченным присутствием Коалиции картель выступает в качестве власти.</faction.thal_cartel.description>
+	<faction.thal_cartel.shortdescription>Могущественная преступная организация, в основном занимающаяся наркотиками. Они являются фактической властью в районах с ограниченным присутствием правительства.</faction.thal_cartel.shortdescription>
+		<!-- Skills -->
+	<skillname.thal_scienceskill>Научные Знания</skillname.thal_scienceskill>
+	<skillname.thal_clownskill>Шутовство</skillname.thal_clownskill>
+		<!-- Jobs -->
+	<jobname.thal_clown>Клоун</jobname.thal_clown>
+	<jobdescription.thal_clown>Клоуны – это комические чудаки, нанятые для развлечения экипажа. Их задача не обязательно помогать кораблю, а скорее развлекать экипаж безобидными выходками и шутками. У них есть характеристика "шутовство", определяющая их эффективность в различных розыгрышах. Если ваши игры становятся скучными в социальной сфере, подумайте о добавлении одного из вариантов клоуна.</jobdescription.thal_clown>
+
+	<jobname.thal_cultist>Культист</jobname.thal_cultist>
+	<jobdescription.thal_cultist>Религиозная группа, стремящаяся к "общению" с паразитом-хаском, чтобы привести к появлению нового вида человечества, более способного к выживанию в этих суровых условиях.</jobdescription.thal_cultist>
+
+	<jobname.thal_clown1>Jester</jobname.thal_clown1>
+	<jobname.thal_clown2>Honkchild</jobname.thal_clown2>
+	<jobname.thal_clown3>Mime</jobname.thal_clown3>
+	<jobdescription.thal_clown1>The jester is the classic performer, always scheming. They spawn with basic clowning gear as well as a fabricator that allows them to make a variety of hysterical pranking gear from odds and ends they find around the ship. Notably, they are quite skilled with balloons and can make surprisingly functional balloon sculptures.</jobdescription.thal_clown1>
+	<jobdescription.thal_clown2>Honkchildren, part cultist and part shaman, are the cunning followers of the Children of the Honkmother. Sworn in under the Honkly Juggaloath, they are loyal devotees to the honkmother.\nIf spirit rituals, blood pacts, and creature summoning sound fun, choose this.</jobdescription.thal_clown2>
+	<jobdescription.thal_clown3>Mimes are unable to speak but possess various superpowers that make them faster, sturdier, stronger, and capable of affecting/irritating other players.</jobdescription.thal_clown3>
+
+	<jobname.thal_scientist>Scientist</jobname.thal_scientist>
+	<jobdescription.thal_scientist>Scientists are the class for eager experimenters and researchers who want to uncover the secrets of Europa. Grow deadly but profitable fauna, create reactive gases, research and splice DNA, assemble lightsabers, perform surgery, and much more.</jobdescription.thal_scientist>
+	<jobname.thal_scientist1>Botanist</jobname.thal_scientist1>
+	<jobname.thal_scientist2>Geneticist</jobname.thal_scientist2>
+	<jobdescription.thal_scientist1>Botanists may sound boring, but Europa houses many botanic horrors. Plants can range from highly corrosive to massively infectious, occasionally even bringing back the dead. This job requires you to strap on your respirator to create and maintain highly toxic environments to get rich quick.</jobdescription.thal_scientist1>
+	<jobdescription.thal_scientist2>For those with a god complex, Geneticists allow you to toy with your subjects on a genetic level. Imprison monsters and scan them for their DNA, which can then be used to hatch more of them, upgrade your weaponry against them, or even graft their DNA with your crewmates to steal their abilities.</jobdescription.thal_scientist2>
+	
+	<jobname.thal_enforcer>Enforcer</jobname.thal_enforcer>
+	<jobdescription.thal_enforcer>Enforcers are responsible for keeping the submarine safe from threats, both external and internal. The creatures inhabiting the ocean aren't the only threat they need to worry about, as several of the renegade groups opposing the Europa Coalition are known to have sent infiltrators on board the vessels.</jobdescription.thal_enforcer>
+
+		<!-- Missing name override -->
+	<jobname.outpostsecurityofficer>Outpost Security</jobname.outpostsecurityofficer>
+	<jobname.killer>Killer</jobname.killer>
+		<!-- tutorial -->
+	<tutorial.clowntraining>Clown Training</tutorial.clowntraining>
+		<!-- Crew hiring -->
+	<hirecrew.cost>Hello, we're in need of a new crew. What are your prices?</hirecrew.cost>
+	<hirecrew.costre>Hello, I have a limited selection of crew members waiting for you.</hirecrew.costre>
+	<hirecrew.hc_clown>Our clowns cost 3500 marks.</hirecrew.hc_clown>
+	<hirecrew.hc_cultist>Our cultists cost 3500 marks.</hirecrew.hc_cultist>
+	<hirecrew.hc_scientist>Our scientists cost 3500 marks.</hirecrew.hc_scientist>
+	<hirecrew.purchase>Thank you for your purchase; your crew member is waiting for your command.</hirecrew.purchase>
+	<hirecrew.nohc>No, we're currently not looking to hire anyone.</hirecrew.nohc>
+	<hirecrew.nohcre>Understood, I'll be here if you happen to change your mind.</hirecrew.nohcre>
+	<hirecrew.rehc>Hey there! Have you changed your mind?</hirecrew.rehc>
+	<hirecrew.rehc_yes>Yes, who is available for recruitment?</hirecrew.rehc_yes>
+	<hirecrew.rehc_no>It's still a no.</hirecrew.rehc_no>
+	<hirecrew.end>Fine then, get lost.</hirecrew.end>
+		<!-- UES fundraiser computer -->
+	<thal_ues_donate.interact>[The automated computer beeps to life]</thal_ues_donate.interact>
+	
+	<thal_ues_donate.accept>You press the donation button and the screen shows an animated sub shooting off fireworks.</thal_ues_donate.accept>
+	<thal_ues_donate.info>You check the terminal and it says"United Europa Society needs every mark, would you care to donate?"</thal_ues_donate.info>
+		
+	<thal_ues_donate.smalldonation>You donate 125 marks.</thal_ues_donate.smalldonation>
+	<thal_ues_donate.normaldonation>You donate 250 marks.</thal_ues_donate.normaldonation>
+	<thal_ues_donate.largedonation>You donate 500 marks.</thal_ues_donate.largedonation>
+	
+	<thal_ues_donate.decline>You press the decline option.</thal_ues_donate.decline>
+	<thal_ues_donate.decline.insult>You kick the machine.</thal_ues_donate.decline.insult>
+	
+	<!-- Afflictions -->
+	<afflictionname.thal_nutrition>Nutrition</afflictionname.thal_nutrition>
+	<afflictiondescription.thal_nutrition>The patient's body is benefitting from the nutrition of a previous meal. Natural regenerative processes of cells are sped up, and buffs circulate in the bloodstream for longer.	These effects become more pronounced the more nutrition there is. Healthy food has a better nutrition to fillingness ratio.</afflictiondescription.thal_nutrition>
+	
+	<afflictionname.thal_foodpoisoning>Food Poisoning</afflictionname.thal_foodpoisoning>
+	<afflictiondescription.thal_foodpoisoning>The patient reports extreme discomfort in their abdomen, likely stemming from eating infected or unclean food. It is harder for them to walk, and nutrition from all food is wasted fighting the malignant bacteria in the stomach.</afflictiondescription.thal_foodpoisoning>
+	<causeofdeathdescription.thal_foodpoisoning>Died of food poisoning.</causeofdeathdescription.thal_foodpoisoning>
+	<selfcauseofdeathdescription.thal_foodpoisoning>You have died of food poisoning.</selfcauseofdeathdescription.thal_foodpoisoning>
+
+	<afflictionname.thal_glowing>Glowing</afflictionname.thal_glowing>
+	<afflictiondescription.thal_glowing>A scalding hot and putrid smelling fluid covers and soaks into the patient's skin. The patient does not seem to be affected by any kind of heat, but may be a hazard to those around them.</afflictiondescription.thal_glowing>
+	<causeofdeathdescription.thal_glowing>Decayed from the Glow</causeofdeathdescription.thal_glowing>
+	<selfcauseofdeathdescription.thal_glowing>You have decayed due to the Glow</selfcauseofdeathdescription.thal_glowing>
+	
+	<afflictionname.thal_frozen>Flash Frozen</afflictionname.thal_frozen>
+	<afflictiondescription.thal_frozen>The patient's skin is extremely cold to the touch. There are patches of frostbitten skin over the affected area.</afflictiondescription.thal_frozen>
+	<causeofdeathdescription.thal_frozen>Froze to death.</causeofdeathdescription.thal_frozen>
+	<selfcauseofdeathdescription.thal_frozen>You have frozen to death.</selfcauseofdeathdescription.thal_frozen>
+
+	<afflictionname.thal_silenced>Silenced</afflictionname.thal_silenced>
+	<afflictiondescription.thal_silenced>The patient's tongue is tied, but it is slowly untying. They should be able to talk without treatment in some time.</afflictiondescription.thal_silenced>
+	<causeofdeathdescription.thal_silenced>this guy/gal shut the fuck up somehow you shouldn't see this</causeofdeathdescription.thal_silenced>
+	<selfcauseofdeathdescription.thal_silenced>You have shut the fuck up.</selfcauseofdeathdescription.thal_silenced>
+
+	<afflictionname.thal_bombcollar>Explosive Collar</afflictionname.thal_bombcollar>
+	<afflictiondescription.thal_bombcollar>The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a bomb collar.</afflictiondescription.thal_bombcollar>
+	<causeofdeathdescription.thal_bombcollar>Attempted to remove explosive collar.</causeofdeathdescription.thal_bombcollar>
+	<selfcauseofdeathdescription.thal_bombcollar>You have died as a result of your attempt to remove the explosive collar.</selfcauseofdeathdescription.thal_bombcollar>
+	
+	<afflictionname.thal_bombcollartimed>Explosive Collar (Timed)</afflictionname.thal_bombcollartimed>
+	<afflictiondescription.thal_bombcollartimed>The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a timed bomb collar.</afflictiondescription.thal_bombcollartimed>
+	<causeofdeathdescription.thal_bombcollartimed>Failed to disarm explosive collar in time.</causeofdeathdescription.thal_bombcollartimed>
+	<selfcauseofdeathdescription.thal_bombcollartimed>You have died as a result of your inability to disarm the collar in time.</selfcauseofdeathdescription.thal_bombcollartimed>
+
+	<afflictionname.thal_gutted>Carved</afflictionname.thal_gutted>
+	<afflictiondescription.thal_gutted>The patient's muscles are removed.</afflictiondescription.thal_gutted>
+	<causeofdeathdescription.thal_gutted>Carved Organs</causeofdeathdescription.thal_gutted>
+	<selfcauseofdeathdescription.thal_gutted>You have died from having your muscles carved out of you.</selfcauseofdeathdescription.thal_gutted>
+	
+	<afflictionname.thal_fallen>Fallen</afflictionname.thal_fallen>
+	<afflictiondescription.thal_fallen>The patient has fallen and cannot get up. Give them a second.</afflictiondescription.thal_fallen>
+	
+	<afflictionname.thal_mushroomized>Mushroomized</afflictionname.thal_mushroomized>
+	<afflictiondescription.thal_mushroomized>A large fuchsia mushroom sprouts from the patient's head, inversing their motor functions. When the affliction reaches its peak, it will turn into a Ramblin' Evil Mushroom to further spread the mushroomization.</afflictiondescription.thal_mushroomized>
+	<causeofdeathdescription.thal_mushroomized>Died of mushroomization.</causeofdeathdescription.thal_mushroomized>
+	<selfcauseofdeathdescription.thal_mushroomized>You have died of mushroomization.</selfcauseofdeathdescription.thal_mushroomized>
+
+	<afflictionname.thal_blinded>Blinded</afflictionname.thal_blinded>
+	<afflictiondescription.thal_blinded>The patient's eyes and nasal passages are swollen and cannot stop watering.</afflictiondescription.thal_blinded>
+	<causeofdeathdescription.thal_blinded>Blinded to death</causeofdeathdescription.thal_blinded>
+	<selfcauseofdeathdescription.thal_blinded>You Blinded to death</selfcauseofdeathdescription.thal_blinded>
+
+	<afflictionname.thal_teargasaffliction>Tear Gas Exposure</afflictionname.thal_teargasaffliction>
+	<afflictiondescription.thal_teargasaffliction>The patient has been exposed to tear gas.</afflictiondescription.thal_teargasaffliction>
+	<causeofdeathdescription.thal_teargasaffliction>Killed by Tear Gas Exposure</causeofdeathdescription.thal_teargasaffliction>
+	<selfcauseofdeathdescription.thal_teargasaffliction>You died to Tear Gas Exposure</selfcauseofdeathdescription.thal_teargasaffliction>
+
+	<afflictionname.thal_shroomcureaffliction>Fungicide Exposure</afflictionname.thal_shroomcureaffliction>
+	<afflictiondescription.thal_shroomcureaffliction>The patient has been exposed to aerosol fungicide.</afflictiondescription.thal_shroomcureaffliction>
+	<causeofdeathdescription.thal_shroomcureaffliction>Killed by fungicide.</causeofdeathdescription.thal_shroomcureaffliction>
+	<selfcauseofdeathdescription.thal_shroomcureaffliction>You have died of fungicide.</selfcauseofdeathdescription.thal_shroomcureaffliction>
+
+	<afflictionname.thal_blackholedeath>Spaghettified</afflictionname.thal_blackholedeath>
+	<afflictiondescription.thal_blackholedeath>The patient has been exposed to tear gas.</afflictiondescription.thal_blackholedeath>
+	<causeofdeathdescription.thal_blackholedeath>Spaghettified in Black Hole</causeofdeathdescription.thal_blackholedeath>
+	<selfcauseofdeathdescription.thal_blackholedeath>You have been spaghettified by a black hole.</selfcauseofdeathdescription.thal_blackholedeath>
+
+	<afflictionname.thal_chance>Second Chance</afflictionname.thal_chance>
+	<afflictiondescription.thal_chance>Extra borrowed time granted by your phoenix injector. It won't last forever: find medicine ASAP!</afflictiondescription.thal_chance>
+
+	
+		<!-- PAST CHOOSING -->
+	<thalcampaign_start.1>Добро пожаловать в кампанию талассофобии. Перед тем, как вы начнете, выберете своё прошлое, что повлияет на вашу стартовую репутацию.</thalcampaign_start.1>
+	<thalcampaign_start.2>Решите со своей командой ваше прошлое, которое кажется вам забавным или подходящим.</thalcampaign_start.2>
+	<thalcampaign_start.seeoptions>Ознакомьтесь с вариантами.</thalcampaign_start.seeoptions>
+	<thalcampaign_start.confirm>Принять</thalcampaign_start.confirm>
+	<thalcampaign_start.back>Вернутся к выбору...</thalcampaign_start.back>
+	<thalcampaign_start.newline>Вы - НОВОПРИБЫВШИЕ НА ЕВРОПЕ. Мир Баротравмы для вас новый и таинственный, и вы хотите увидеть его своими глазами.</thalcampaign_start.newline>
+	<thalcampaign_newbrief>Вы начинаете без привилегий, льгот или бонусов репутации, но, наоборот, вы находитесь на нейтральном положении со всеми фракциями. По ходу кампании вам будет предоставлена возможность присоединиться к фракциям и покинуть их, как вам заблагорассудится.\n\nВыберите этот путь, чтобы начать с чистого листа, как в классической баротравме.</thalcampaign_newbrief>
+	<thalcampaign_start.corporateline>Мы - КОРПОРАТИВНЫЕ АГЕНТЫ. Мы лояльны Коалиции.</thalcampaign_start.corporateline>
+	<thalcampaign_corporatebrief>Корпоративные агенты - это профи по спецоперациям, работающие на Коалиционную антитеррористическую полицию (CATPOL). Ваша задача состоит в том, чтобы выследить сепаратистских повстанцев и положить конец мятежу. У вас есть специальный доступ к засекреченым водам, где хранятся секретные правительственные проекты. Если вы отойдете слишком далеко от интересов Коалиции, командование сверху активирует ваш имплантированный режим самоуничтожения.\n\nВыберите этот путь для получения опыта работы в качестве потенциально коррумпированного силового сотрудника правоохранительных органов</thalcampaign_corporatebrief>
+	<thalcampaign_start.circusline>Мы - ЦИРКАЧИ. Европа погрузится в хаос.</thalcampaign_start.circusline>
+	<thalcampaign_circusbrief>По мере того как человечество продлевает свое пребывание на Европе, все больше и больше подлодок таинственным образом регистрируются как "передвижные цирки". Лояльные никому, кроме самого хаоса, корабли клоунов были замечены идущими от аванпоста к аванпосту, беспокоя своих обитателей раздражающими клоунскими выходками.\n\nВыберите этот путь для дикой поездки, чтобы шароёбится и смотреть, как горит мир.</thalcampaign_circusbrief>
+	<thalcampaign_start.huskline>Мы - МИССИОНЕРЫ КАЛИКСА. Учение паразита спасет человечество.</thalcampaign_start.huskline>
+	<thalcampaign_huskbrief>Человечество должно причащаться яйцами, развивая нас, чтобы приспособиться к жизни на Европе. Ваше задание от верховного жреца - распространять влияние паразитов. По пути священнослужители будут помогать вам, чтобы убедиться, что ваша миссия выполняется.\n\nВыберите этот путь, чтобы принять участие в заговоре трансгуманизма.</thalcampaign_huskbrief>
+	<thalcampaign_start.bluecollarline>Мы - НАЕМНОЕ ОТРЕБЬЕ. Преступные связи находят нам нелегальную работу.</thalcampaign_start.bluecollarline>
+	<thalcampaign_bluecollarbrief>На Европе ты никто, пока не "в игре". Как уличная шайка, вы делаете все это для получения марок, не задавая никаких вопросов. Заказ на убийство? Расплюнуть. Контрабанда наркотиков? Легкотня. Улицы - это то место, где вы родились и выросли.\n\nВыберите этот путь, чтобы испытать раскинувшийся преступный мир и Европу.</thalcampaign_bluecollarbrief>
+	<thalcampaign_start.terroristline>Мы - ПОВСТАНЦЫ СОПРОТИВЛЕНИЯ. Освободите луну!</thalcampaign_start.terroristline>
+	<thalcampaign_terroristbrief>В течение многих лет люди Европы страдали под тираническим правлением всеохватывающей Коалиции. Слежка, жестокость полиции, безудержная коррупция - и все это в то время, как толстосумы Коалиции живут в роскошных станциях. Хватит... ХВАТИТ!\n\nВыберите этот путь, чтобы разбить государство и прижать его.</thalcampaign_terroristbrief>
+		<!-- UES DONATION -->
+	<thalcampaign_uesdonation.start>К вам подходит врач, держа в руках какую-то коробку, украшенную знаком марки. - "Извините, я занимаюсь сбором средств в ЕЭС... Не будет ли слишком нагло, если я попрошу всего лишь минуту вашего времени?“</thalcampaign_uesdonation.start>
+	<thalcampaign_uesdonation.clueless>“У-Е-Что?“</thalcampaign_uesdonation.clueless>
+	<thalcampaign_uesdonation.lore>Сборщик средств делает паузу и вопросительно смотрит на вас. - Я удивлен, что вы никогда о нас не слышали. Мы - благотворительная некоммерческая организация, занимающаяся улучшением качества жизни на Европе. Вы когда-нибудь замечали, что везде, куда бы вы ни пошли в этих аванпостах, вы видите клоунов-маньяков, низших существ, грязерапторов в вентиляционных отверстиях... и тому подобное? ЕЭС считает, что Европа не должна быть такой; Наш сбор средств направлен на повышение качества жизни в аванпостах.“</thalcampaign_uesdonation.lore>
+	<thalcampaign_uesdonation.okay>“Хорошо...“</thalcampaign_uesdonation.okay>
+	<thalcampaign_uesdonation.fewmarks>Он продолжает: “Мы в основном боремся с бедностью, управляя столовыми, раздавая одежду или выполняя общественные работы, такие как уборка аванпостов, сильно пострадавших от аварии“. Он представляет коробку для пожертвований: “Всего несколько марок могут изменить мир!"</thalcampaign_uesdonation.fewmarks>
+	<thalcampaign_uesdonation.goingaround>- Значит, ты ходишь с этой штукой и просишь пожертвования?“</thalcampaign_uesdonation.goingaround>
+	<thalcampaign_uesdonation.donationoptions>Он нетерпеливо держит коробку для пожертвований. “Вы хотели бы внести свой вклад?“</thalcampaign_uesdonation.donationoptions>
+	<thalcampaign_uesdonation.10mk>Пожертвовать 10 марок</thalcampaign_uesdonation.10mk>
+	<thalcampaign_uesdonation.react10>Вы переводите 10 марок в ЕЭС. - "Спасибо, мы вам очень признательны.“</thalcampaign_uesdonation.react10>
+	<thalcampaign_uesdonation.100mk>Пожертвовать 100 марок</thalcampaign_uesdonation.100mk>
+	<thalcampaign_uesdonation.react100>Вы переводите 100 марок в ЕЭС. “Ух ты, 100 марок! Это очень поможет. Искренне благодарю вас.“</thalcampaign_uesdonation.react100>
+	<thalcampaign_uesdonation.1000mk>Пожертвовать 1000 марок</thalcampaign_uesdonation.1000mk>
+	<thalcampaign_uesdonation.react1000>Вы переводите 1000 марок в ЕЭС. Они выглядят ошеломленными. - "Ты серьезно? Я не могу отблагодарить вас... это невероятно! Большое вам спасибо. Мы этого не забудем.“</thalcampaign_uesdonation.react1000>
+	<thalcampaign_uesdonation.nvm>- "Вообще-то, я передумал, извини.“</thalcampaign_uesdonation.nvm>
+	<thalcampaign_uesdonation.mug>[Вооруженный] “Как насчет того, чтобы вместо этого внести свой вклад мне?“</thalcampaign_uesdonation.mug>
+	<thalcampaign_uesdonation.mugsuccess>Они отступают, пораженные. -"Т-ты ведь знаешь, что это устройство для передачи данных в один конец, верно? ...Знаешь что, забудь об этом! Вот: Вы можете получить 400 марок, это все, что у меня есть на моем личном счете, клянусь. Только не делай мне больно!“ Они переводят тебе марки и отступают. ЕЭС узнает об этом.</thalcampaign_uesdonation.mugsuccess>
+	<thalcampaign_uesdonation.mugfail>Они отступают, пораженные. - "Кем, черт возьми, ты себя возомнил, воруя у благотворительности? Ты, подлый кусок дерьма ползунов!" Их рука ныряет в куртку. Приготовьтесь к бою!</thalcampaign_uesdonation.mugfail>
+	<thalcampaign_uesdonation.later>- "Извини, может быть, в другой раз.“</thalcampaign_uesdonation.later>
+	<thalcampaign_uesdonation.hippies>“Разве вы, ребята, не кучка хиппи?“</thalcampaign_uesdonation.hippies>
+	<thalcampaign_uesdonation.irked>Член ЕЭС явно раздражен вашим замечанием: “Мы выступаем против конфликта между коалицией и сепаратистскими силами, если вы это имеете в виду. Выходит, что "война с терроризмом" не сделала ничего, кроме того, что оставила много марок для производителей оружия, и все это за счет простых людей. Никогда не было "хорошей войны" или "плохого мира". Как бы то ни было, ни один из наших средств не тратится на политические цели. Мы просто хотим облегчить страдания.“</thalcampaign_uesdonation.irked>
+	<thalcampaign_uesdonation.alright>“Тогда ладно.“</thalcampaign_uesdonation.alright>
+	<thalcampaign_uesdonation.political>“Значит, вас поддерживает Коалиция, или как?“</thalcampaign_uesdonation.political>
+	<thalcampaign_uesdonation.humanity>Член ЕЭС бросает косой взгляд: “На самом деле мы ни с кем не "вместе". ЕЭС - это друзья самого человечества. Неужели это так плохо, что мы не олигархи, стремящиеся к власти, кровожадные сепаратисты, культисты, поклоняющиеся паразитам, или психопаты-клоуны? Некоторые люди говорят, что, в отличие от других парней, наши пацифистские идеалы недостижимы на адском ландшафте, которым является Европа. Я думаю, что после этой кампании по сбору средств мы увидим, сколько людей готовы поверить.“</thalcampaign_uesdonation.humanity>
+	<thalcampaign_uesdonation.believe>“Поверить?“</thalcampaign_uesdonation.believe>
+	<thalcampaign_uesdonation.join>“Я хотел бы вступить в ЕЭС.“</thalcampaign_uesdonation.join>
+	<thalcampaign_uesdonation.membership>Сборщик средств улыбается. “Ну, на самом деле я не вербовщик. Я был заперт в этом захолустном форпосте по сбору средств до... почти до конца времен, так что у меня нет с собой документов. Однако я перешлю ваш запрос вышестоящему начальству, и мы посмотрим, сможет ли кто-нибудь связаться с вами в дальнейшем в ваших путешествиях на другом аванпосте, хорошо?“</thalcampaign_uesdonation.membership>
+	<thalcampaign_uesdonation.iknow>“Я знаю, кто ты. Вы ищете пожертвование?“</thalcampaign_uesdonation.iknow>
+	<thalcampaign_uesdonation.keepwalking>Продолжайте идти и отводите взгляд.</thalcampaign_uesdonation.keepwalking>
+	<thalcampaign_uesdonation.busy>“Мне очень жаль, но сейчас я действительно очень занят.“</thalcampaign_uesdonation.busy>
+	<thalcampaign_uesdonation.terrorinquiry>[Агент CATPOL] “На самом деле, мне нужно немного вашего времени. Были ли вы свидетелем какого-либо подозрительного заговора против Коалиции?“</thalcampaign_uesdonation.terrorinquiry>
+	<thalcampaign_uesdonation.catpol>[Агент CATPOL] “Цветочник ЕЭС, да? Отдайте мне все собранные сегодня средства, и я сделаю вид, что не застал вас за попрошайничеством без разрешения Коалиции.“</thalcampaign_uesdonation.catpol>
+	<thalcampaign_uesdonation.blackmail>Сборщик средств ЕЭС в ярости. - Такие дерьмовые агенты, как ты, - вот почему у нас не может быть хороших вещей. Я надеюсь, что вы и все ваши друзья по коалиции получите то, что вам причитается.“ Они неохотно дают вам 300 марок и уходят.</thalcampaign_uesdonation.blackmail>
+		<!-- Locations -->
+	<locationname.thal_mineRadioactive>Ядерный рудник.</locationname.thal_mineRadioactive>
+	<locationnameformat.thal_mineRadioactive>[name]</locationnameformat.thal_mineRadioactive>
+	<locationchange.thal_mineRadioactive.changeto.outpost>Новый аванпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.outpost>
+	<locationchange.thal_mineRadioactive.changeto.military>Новый военный форпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.military>
+	<locationchange.thal_mineRadioactive.changeto.research>Новый исследовательский аванпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.research>
+	<locationname.thal_blackSite>Засекреченые воды.</locationname.thal_blackSite>
+	<locationnameformat.thal_blackSite>[name]</locationnameformat.thal_blackSite>
+	<locationchange.thal_blackSite.changeto.outpost>[previousname] был преобразован в аванпост после того, как нарушение безопасности поставило под угрозу оперативную безопасность.</locationchange.thal_blackSite.changeto.outpost>
+	<locationchange.thal_blackSite.changeto.military>Новый военный аванпост был создан в [previousname], ранее засекреченном месте.</locationchange.thal_blackSite.changeto.military>
+	<locationchange.thal_blackSite.changeto.research>Новый исследовательский аванпост был создан в [previousname], ранее засекреченном месте.</locationchange.thal_blackSite.changeto.research>
+		<!-- Stationary Repairtools -->
+	<entityname.thal_sprinkler>Sprinkler</entityname.thal_sprinkler>
+	<entitydescription.thal_sprinkler>Sprays water onto an area to extinguish fires or water plants. Leaving it running for a ridiculously long time may cause puddles. Or worse.</entitydescription.thal_sprinkler>
+	<entityname.thal_trashcan>Trash Can</entityname.thal_trashcan>
+	<entitydescription.thal_trashcan>Trash can used for disposal of small or medium sized items. Wire the trigger_out pin to a trash chute, and link the chute to the can for the item to be transported.</entitydescription.thal_trashcan>
+	<entityname.thal_trashchute>Trash Chute</entityname.thal_trashchute>
+	<entitydescription.thal_trashchute>Exit point of trash cans.</entitydescription.thal_trashchute>
+	<entityname.thal_blastdoor>Blast Door</entityname.thal_blastdoor>
+	<entitydescription.thal_blastdoor>Slower, heavily armored sliding door incapable of being levered open or shredded by monsters. Does not have a button variant due to impractical nature.</entitydescription.thal_blastdoor>
+	<entityname.thal_glassdoor>Plexiglass Door</entityname.thal_glassdoor>
+	<entitydescription.thal_glassdoor>Slightly weaker, completely transparent door made entirely of a plexiglass-based metamaterial.</entitydescription.thal_glassdoor>
+	<entityname.thal_glassdoorwbuttons>Plexiglass Door with Buttons</entityname.thal_glassdoorwbuttons>
+	<entitydescription.thal_glassdoorwbuttons>Slightly weaker, completely transparent door made entirely of a plexiglass-based metamaterial. Has integrated buttons.</entitydescription.thal_glassdoorwbuttons>
+	<entityname.thal_glasshatch>Plexiglass Hatch</entityname.thal_glasshatch>
+	<entitydescription.thal_glasshatch>Slightly weaker, completely transparent hatch made entirely of a plexiglass-based metamaterial.</entitydescription.thal_glasshatch>
+	<entityname.thal_glasshatchwbuttons>Plexiglass Hatch with Buttons</entityname.thal_glasshatchwbuttons>
+	<entitydescription.thal_glasshatchwbuttons>Slightly weaker, completely transparent hatch made entirely of a plexiglass-based metamaterial. Has integrated buttons.</entitydescription.thal_glasshatchwbuttons>
+	<entityname.thal_oxygendock>Oxygen Refill Dock</entityname.thal_oxygendock>
+	<entitydescription.thal_oxygendock>A dock able to hold three oxygen tanks or welding tanks. Can be linked to oxygen generators to refill any contained o2 tanks, so long as the oxygen is flowing. Only has the vent tag for outpost compatibility; Does not emit oxygen into hull.</entitydescription.thal_oxygendock>
+	<entityname.thal_shuttervent>Shuttered Vent</entityname.thal_shuttervent>
+	<entitydescription.thal_shuttervent>A vent capable of having its oxygen flow turned on/off through wiring or with a wrench. Can also have things stored inside of it with a wrench, though a sharp eye will notice the jutting cover.</entitydescription.thal_shuttervent>
+	<entityname.thal_vacuum>Oxygen Vacuum</entityname.thal_vacuum>
+	<entitydescription.thal_vacuum>Machine capable of pulling the oxygen out of a room when properly powered and activated. Pulls out slightly less oxygen than an artifact. Ideal for fires and suffocating lifeforms.</entitydescription.thal_vacuum>
+	<entityname.thal_vendingmachine>Vending Machine</entityname.thal_vendingmachine>
+	<entitydescription.thal_vendingmachine>Dispenses whatever is placed inside of it. Requires a crowbar to open, and costs money to refill.</entitydescription.thal_vendingmachine>
+		<!--Item Messages-->
+	<msgnocrowbar>Cannot be pried with a crowbar.</msgnocrowbar>
+
+	<ItemMsgBreatheUse>[[use]] Breathe</ItemMsgBreatheUse>
+	<ItemMsgCrowbarRequired>Crowbar Required</ItemMsgCrowbarRequired>
+	<ItemMsgGlowRequired>Glow Crystal Required</ItemMsgGlowRequired>
+	<itemmsgopencrowbarselect>[[select]] Open (Crowbar)</itemmsgopencrowbarselect>
+	<buttoncloseshutter>Close Air Shutter</buttoncloseshutter>
+	<buttonopenshutter>Open Air Shutter</buttonopenshutter>
+	<connection.toggleshutter>toggle_shutter</connection.toggleshutter>
+	<connection.shutterclosed>shutter_closed</connection.shutterclosed>
+	
+	<ItemMsgWriteSelectPen>[[select]] Писать (Ручкой)</ItemMsgWriteSelectPen>
+	<ItemMsgDetatchUsePen>[[use]] Снять </ItemMsgDetatchUsePen>
+	<ItemMsgSitDownSelect>[[select]] Сесть</ItemMsgSitDownSelect>
+	<ItemMsgPickUpAction>[[use]] Подорать</ItemMsgPickUpAction>
+	<itemmsgconstruct>[[select]] Создать</itemmsgconstruct>
+	
+	<itemmsglocatorinteract>[[select]] Listen In</itemmsglocatorinteract>
+	<itemmsgplayselect>[[select]] Play</itemmsgplayselect>
+	<itemmsgstruggle>Struggle (Disables Movement)</itemmsgstruggle>
+	<itemmsgchannelnum>Active Channel</itemmsgchannelnum>
+	<connection.set_text>Set Text</connection.set_text>
+	<interaction.blade>Blade</interaction.blade>
+	<fabricationdescription.seed>Any plant's seed.</fabricationdescription.seed>
+	<fabricationheader.seed>Plant Seed</fabricationheader.seed>
+	<fabricationdescription.fruit>Any plant's fruit.</fabricationdescription.fruit>
+	<fabricationheader.fruit>Plant Fruit</fabricationheader.fruit>
+	<seedmodder.random>Start Genetic Testing [Plant + Seeds]</seedmodder.random>
+	<msggascylinderrequired>Требуется газовый баллон</msggascylinderrequired>
+	<itemmsgdetachcrowbar>[[use]] Detach (Crowbar)</itemmsgdetachcrowbar>
+	
+	<roomname.hydroponics>Hydroponics</roomname.hydroponics>
+		<!--Music-->
+		<entityname.thal_piano>Гранд-пианино</entityname.thal_piano>
+	<entitydescription.thal_piano>Гранд-пианино, изготовленное, по-видимому, из лиан Баласт Флоры.</entitydescription.thal_piano>
+	<entityname.thal_sheetmussubaq>Ноты: "Подводная симфония"</entityname.thal_sheetmussubaq>
+	<entityname.thal_sheetmuscatsonmars>Ноты: "Кошки на Европе"</entityname.thal_sheetmuscatsonmars>
+	<entityname.thal_sheetmusESE>Ноты: "С Земли на Европу"</entityname.thal_sheetmusESE>
+	<entityname.thal_sheetmusttd>Ноты: "В глубины"</entityname.thal_sheetmusttd>
+	<entityname.thal_sheetmusclown>Ноты: "Вступление гладиаторов"</entityname.thal_sheetmusclown>
+	<entitydescription.thal_sheetmusic>Нотный лист, созданный неизвестным автором. Надеемся, что они все еще с нами и продолжают создавать музыку.</entitydescription.thal_sheetmusic>
+		<!-- Thalamus -->
+	<entityname.thal_thalamuseye>Thalamus Eye</entityname.thal_thalamuseye>
+	<entitydescription.thal_thalamuseye>A cosmetic Thalamus Eye that looks around and makes squishy noises. Can be destroyed.</entitydescription.thal_thalamuseye>
+	<entityname.thal_thalamusseeds>Thalamus Seeds</entityname.thal_thalamusseeds>
+	<entitydescription.thal_thalamusseeds>Cosmetic Thalamus Seeds. Non-interactive. Resemble teeth.</entitydescription.thal_thalamusseeds>
+		<!-- Multitools -->
+		<!-- removed: duplicate functionality of EK armory (even though i did it first!!) >:( -->
+	<entityname.thal_headsetchannel>Мультиканальные наушники</entityname.thal_headsetchannel>
+	<entitydescription.thal_headsetchannel>Канальная гарнитура. Введите номер для смены канала.</entitydescription.thal_headsetchannel>
+	<entityname.thal_rainbowsprayer>Трёхцветный спрей</entityname.thal_rainbowsprayer>
+	<entitydescription.thal_rainbowsprayer>Модифицированный распылитель, предназначенный для окраски с более ярким набором цветов. Введите цвета в формате Красный,Зеленый,Синий,Прозрачность (в диапазоне от 0 до 255). Требуется трупная краска, изготовленная из других красок.</entitydescription.thal_rainbowsprayer>
+	<entityname.thal_sign>Табличка</entityname.thal_sign>
+	<entitydescription.thal_sign>Стандартная белая табличка для отображения текста. Может быть прикреплен к стене. Водостойкий, но легковоспламеняющийся.</entitydescription.thal_sign>
+		<!-- removed: overpowered. dislike items that make others obsolete regardless of price. -->
+	<entityname.thal_multitool>Карманный нож военно-морского флота</entityname.thal_multitool>
+	<entitydescription.thal_multitool>Перочинный нож массового производства, выданный ВЭК многим кораблям, но используемый всеми. Поставляется с встроенными инструментами, имитирующими отвертку, гаечный ключ, и поставляется со складным лезвием, разработанным с учетом незначительных инопланетных боев.</entitydescription.thal_multitool>
+		<!-- Alarms -->
+	<entityname.thal_BattleAlarm>Battle Alarm</entityname.thal_BattleAlarm>
+	<entityname.thal_Firealarm>Fire Alarm</entityname.thal_Firealarm>
+	<entityname.thal_EmergencyBuzzer>Emergency Buzzer</entityname.thal_EmergencyBuzzer>
+	<entityname.thal_Biohazard>Biohazard Alarm</entityname.thal_Biohazard>
+	
+		<!-- Handheld Maps -->
+	<entityname.thal_map>Automap</entityname.thal_map>
+	<entitydescription.thal_map>Generic Automap that scans the hull to detect the ship layout as well as any abnormalities in the shell. Useful as a map and easy on the battery.</entitydescription.thal_map>
+	<entityname.thal_mapwater>Hydromap</entityname.thal_mapwater>
+	<entitydescription.thal_mapwater>Specially designed Automap designed to not only scan the hull of the ship and the according breaches, but also the water within the ship. Created for use among Mechanics, but good for anyone looking to patch and drain a ship.</entitydescription.thal_mapwater>
+	<entityname.thal_mapair>Aeromap</entityname.thal_mapair>
+	<entitydescription.thal_mapair>Specially designed Automap designed not only to scan the hull of the ship and breaches, but also the oxygen levels within the ship. Created for use among Engineers, but good for anyone looking to detect electrical fires or general oxygen absence.</entitydescription.thal_mapair>
+	<entityname.thal_mapall>Omnimap</entityname.thal_mapall>
+	<entitydescription.thal_mapall>Advanced Automap engineered to scan for the hull, breaches, water, and oxygen levels. Its all-seeing nature consumes battery faster than usual.</entitydescription.thal_mapall>
+	<entityname.thal_foldingchair>Folding Chair</entityname.thal_foldingchair>
+	<entitydescription.thal_foldingchair>A steel folding chair that can be moved, sat on, or swung wrestling-style.</entitydescription.thal_foldingchair>
+	<entityname.thal_foldingtable>Folding Table</entityname.thal_foldingtable>
+	<entitydescription.thal_foldingtable>A steel folding table that can be picked up and moved. Players can also drop items on it.</entitydescription.thal_foldingtable>
+	<entityname.thal_attachablejunction>Detachable Junction Box</entityname.thal_attachablejunction>
+	<entitydescription.thal_attachablejunction>A junction box that can be attached and detached from a wall. Useful for electricians managing or building a power grid.</entitydescription.thal_attachablejunction>
+	<entityname.thal_dpbm>Dave's Phat Beat Machine</entityname.thal_dpbm>
+	<entitydescription.thal_dpbm>A machine that plays and layers instrumental loops. Press a button and wait no more than 9 seconds. Each loop is 9 seconds long.</entitydescription.thal_dpbm>
+	<entityname.thal_shockmodule>Discharge Module</entityname.thal_shockmodule>
+	<entitydescription.thal_shockmodule>Wireable module that can be hooked up to the wall like a button. On activation, will discharge a stunning bolt of electricity.</entitydescription.thal_shockmodule>
+	<entityname.thal_pen>Pen</entityname.thal_pen>
+	<entitydescription.thal_pen>A cheap waterproof plastic pen with an eraser on the back to rub off ink. Allows you to write on memos and signs, or stab people. Typically restricted to captains to prevent vandalism.</entitydescription.thal_pen>
+	<entityname.thal_memo>Memo</entityname.thal_memo>
+	<entitydescription.thal_memo>A small writeable note. Requires a pen to edit. The contents don't persist between rounds.</entitydescription.thal_memo>
+	<entityname.thal_memoboard>Memo Board</entityname.thal_memoboard>
+	<entitydescription.thal_memoboard>Board used for containing memos. Players can mouse over the notes to see what they say. As of Barotrauma 0.10.5.0+ notes unfortunately do not save their contents between rounds/sub editor.</entitydescription.thal_memoboard>
+	<entityname.thal_breachcharge>Breaching Charge</entityname.thal_breachcharge>
+	<entitydescription.thal_breachcharge>Shaped charge that specializes in shredding doors. Attach it next to a door, set it, and run for cover. Ideal for ruins, wrecks, and weld-ins.</entitydescription.thal_breachcharge>
+		<!-- Traitor tools -->
+	<entityname.thal_hackeruplink>r3n3g8 Uplink</entityname.thal_hackeruplink>
+	<entitydescription.thal_hackeruplink>A portable menu capable of spawning in items from the r3n3g8 catalogue, provided you have the materials.</entitydescription.thal_hackeruplink>
+	<entityname.thal_powersink>Поглотитель энергии</entityname.thal_powersink>
+	<entitydescription.thal_powersink>сконструированный r3n3g8 прикрепляемый модуль, способный при подключении к электросети создавать огромную нагрузку. Полезно для электронасосных атак, которые легко поджаривают соединения в электронике и иногда вызывают пожары.</entitydescription.thal_powersink>
+	<entityname.thal_structnanogrenade>Граната для ремонта корпуса</entityname.thal_structnanogrenade>
+	<entitydescription.thal_structnanogrenade>Одноразовая граната, которая использует наноботов для быстрого ремонта больших сегментов корпуса. Идеально подходит для чрезвычайных ситуаций, когда требуется быстрая починка.</entitydescription.thal_structnanogrenade>
+		<!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+	<entityname.thal_doorkey>Консоль отладки дверей</entityname.thal_doorkey>
+	<entitydescription.thal_doorkey>сделанная r3n3g8 консоль отладки для вскрытия дверей без монтировки и пропуска. Только на 2 использования, так что будьте аккуратны к авт. закрытию дверей.</entitydescription.thal_doorkey>
+		<!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+	<entityname.thal_signaljammer>Глушилка</entityname.thal_signaljammer>
+	<entitydescription.thal_signaljammer>спроектированный r3n3g8 коротковолновый частотный бомбардир. Легко предотвратит радиосвязь между экипажами. Однако глушение увеличивается с приближением, так что экипаж может в состоянии определить, когда источник помехов находятся поблизости.</entitydescription.thal_signaljammer>
+	
+
+	
+	
+	
+	<entityname.thal_ouijaboard>Доска Уиджа</entityname.thal_ouijaboard>
+	<entitydescription.thal_ouijaboard>Оккультная доска для установления свящи с духами с помощью полтергейзма. Используется в ритуалах.</entitydescription.thal_ouijaboard>
+	
+
+	<!-- CLOWN ITEMS -->
+	<entityname.thal_partyblower>Дуделка</entityname.thal_partyblower>
+	<entitydescription.thal_partyblower>Аналог гудка, но более надоедливый.</entitydescription.thal_partyblower>
+	<entityname.thal_whoopeecushion>Подушка-пердушка</entityname.thal_whoopeecushion>
+	<entitydescription.thal_whoopeecushion>Подушка, которая издает громкий, нелепый звук, когда ее сжимают. Можно использовать как велосипедный гудок или бросить на пол, где на него можно наступить.</entitydescription.thal_whoopeecushion>
+	<entityname.thal_confettigrenade>Конфетти граната</entityname.thal_confettigrenade>
+	<entitydescription.thal_confettigrenade>На вид выглядит как осколочная граната, но к сожалению, или к счастю, после взрыва остаётся куча конфетти.</entitydescription.thal_confettigrenade>
+	<entityname.thal_blindfold>Повязка</entityname.thal_blindfold>
+	<entitydescription.thal_blindfold>Кусок старого, грязного бинта. Подходит для того, чтобы кого-то ослепить на время.</entitydescription.thal_blindfold>
+	<entityname.thal_chaoshorn>Гудок хаоса</entityname.thal_chaoshorn>
+	<entitydescription.thal_chaoshorn>Создает звук взрыва, за вычетом самого взрыва. Ограниченное использование, и может насторожить СБ.</entitydescription.thal_chaoshorn>
+	<entityname.thal_muzzle>Намордник</entityname.thal_muzzle>
+	<entitydescription.thal_muzzle>Обычный намордник для мелких обитателей европы, хотя может понадобится чтобы заткнуть кого-нибудь.</entitydescription.thal_muzzle>
+	<entityname.thal_bananapeel>Банановая Кожура</entityname.thal_bananapeel>
+	<entitydescription.thal_bananapeel>Кожура банана. Любой, кто наступит на неё - подскользнётся и упадёт. Можно кидать сколько угодно.</entitydescription.thal_bananapeel>
+	<entityname.thal_waterballoon>Резиновый шарик.</entityname.thal_waterballoon>
+	<entitydescription.thal_waterballoon>Шарик, который можно наполнить водой, если пользователь находится в воде, и бросить. Может быть превращен в фантастическую скульптуру воздушного шара клоуном.</entitydescription.thal_waterballoon>
+		<!-- decal baloons could be implemented now, but are really for the 0.11.X.X updates where decals are permenant -->
+	<entityname.thal_paintballoon>Шарик с краской</entityname.thal_paintballoon>
+	<entitydescription.thal_paintballoon>Этот бросаемый воздушный шар был наполнен краской. При ударе он, конечно, устроит беспорядок.</entitydescription.thal_paintballoon>
+	<entityname.thal_bloodballoon>Шарик с кровью</entityname.thal_bloodballoon>
+	<entitydescription.thal_bloodballoon>Этот бросаемый шар был наполнен кровью. При ударе остаточный беспорядок, вероятно, будет выглядеть как место преступления.</entitydescription.thal_bloodballoon>
+	<entityname.thal_jokerevolver>Игрушечный револьвер</entityname.thal_jokerevolver>
+	<entitydescription.thal_jokerevolver>Револьвер, который выбрасывает флаг вместо того, чтобы стрелять пулями. Хорошо подходит для общего запугивания.</entitydescription.thal_jokerevolver>
+	<entityname.thal_bowlingball>Шар для боулинга</entityname.thal_bowlingball>
+	<entitydescription.thal_bowlingball>Отлично подходит для опрокидывания булавок и людей.</entitydescription.thal_bowlingball>
+	<entityname.thal_clownpack>Хахатун фон Хонкингтон</entityname.thal_clownpack>
+	<entitydescription.thal_clownpack>Стильный рюкзак с забавной мордашкой на нем. Частично поглощает удары и баллистику сзади, что делает побег хорошим вариантом.</entitydescription.thal_clownpack>
+	<entityname.thal_candle>Свечка</entityname.thal_candle>
+	<entitydescription.thal_candle>Декоративный источник света, который расходует воск при горении. Зажгите/потушите его, прицелившись и нажав один раз левую кнопку мыши. Гасится водой.</entitydescription.thal_candle>
+		<!-- Cultist stuff -->
+	<entityname.thal_candle>Candle</entityname.thal_candle>
+	<entitydescription.thal_candle>Decorative light source that uses up wax as it burns. Light/Snuff it by aiming and pressing left click once. Extinguished by water.</entitydescription.thal_candle>
+	<entityname.thal_paintbrush>Ritual Paintbrush</entityname.thal_paintbrush>
+	<entitydescription.thal_paintbrush>Aim and use (like you would to attach) to put down a pentagram.</entitydescription.thal_paintbrush>
+	<entityname.thal_pentagram>Summoning Pentagram</entityname.thal_pentagram>
+	<entitydescription.thal_pentagram>A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed. Place certain key items within it and press initiate to begin.</entitydescription.thal_pentagram>
+	<entityname.thal_ouijaboard>Ouija Board</entityname.thal_ouijaboard>
+	<entitydescription.thal_ouijaboard>Occultism board for establishing communications with spirits via poltergism. Used in rituals.</entitydescription.thal_ouijaboard>
+	<entityname.thal_cultistmask>Cultist Mask</entityname.thal_cultistmask>
+	<entitydescription.thal_cultistmask>Mask worn by cultists to show loyalty to the honkmother.</entitydescription.thal_cultistmask>
+	<entityname.thal_zombieknife>Resurrection Dagger</entityname.thal_zombieknife>
+	<entitydescription.thal_zombieknife>Ancient Shaman Voodoo knife. Stabbing a dead human body brings it back to “life“, and serves as a blood source for clowns.</entitydescription.thal_zombieknife>
+	<entityname.thal_restoreknife>Restoration Dagger</entityname.thal_restoreknife>
+	<entitydescription.thal_restoreknife>Ancient Shaman Voodoo knife. Stabbing a dead human body brings it back to life, restoring their soul to their body.</entitydescription.thal_restoreknife>
+	<entityname.thal_cultistcostume>Cultist Costume</entityname.thal_cultistcostume>
+	<entitydescription.thal_cultistcostume>A costume frequently donned by the order. Said to be imbued with the screams of 1000 birthday rituals.</entitydescription.thal_cultistcostume>
+	<entityname.thal_cultistknife>Gutter Dagger</entityname.thal_cultistknife>
+	<entitydescription.thal_cultistknife>A disturbing dagger with a large gutter to collect blood from the living for sacrifices with altars.</entitydescription.thal_cultistknife>
+	<entityname.thal_cultistkit>Glass Altar</entityname.thal_cultistkit>
+	<entitydescription.thal_cultistkit>An altar used for summoning items through blood ritual. Place your gutter dagger inside and select an option to summon an item, if you have the required blood.</entitydescription.thal_cultistkit>
+		<!-- Cooking tools -->
+	<entityname.thal_carver>Тесак мясника</entityname.thal_carver>
+	<entitydescription.thal_carver>Тесак, который будет разделывать туши на перерабатываемое мясо при многократном ударе по мертвому телу. Мясо можно использовать в качестве биомассы для инкубации.</entitydescription.thal_carver>
+	<entityname.thal_mediumbrain>Человеческий мозг</entityname.thal_mediumbrain>
+	<entitydescription.thal_mediumbrain>Свежий, окровавленный мозг среднего размера. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumbrain>
+	<entityname.thal_smallbrain>Маленький человеческий мозг</entityname.thal_smallbrain>
+	<entitydescription.thal_smallbrain>Свежий, маленький окровавленный мозг. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallbrain>
+	<entityname.thal_largebrain>Огромный человеческий мозг</entityname.thal_largebrain>
+	<entitydescription.thal_largebrain>Свежий, окровавленный мозг огромного размера. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_largebrain>
+	<entityname.thal_smallbreast>Маленькая окровавленная грудинка</entityname.thal_smallbreast>
+	<entitydescription.thal_smallbreast>Свежая, окровавленная крошечная грудная мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallbreast>
+	<entityname.thal_mediumbreast>Окровавленная грудинка</entityname.thal_mediumbreast>
+	<entitydescription.thal_mediumbreast>Свежая, окровавленная крупная грудная мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumbreast>
+	<entityname.thal_mediumthigh>Окровавленное бедро</entityname.thal_mediumthigh>
+	<entitydescription.thal_mediumthigh>Свежая, окровавленная, крупная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumthigh>
+	<entityname.thal_smallthigh>Маленькое Окровавленное Бедро</entityname.thal_smallthigh>
+	<entitydescription.thal_smallthigh>Свежая, окровавленная крошечная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallthigh>
+	<entityname.thal_largethigh>Большое Окровавленное Бедро</entityname.thal_largethigh>
+	<entitydescription.thal_largethigh>Свежая, окровавленная, огромная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_largethigh>
+	<entityname.thal_foodcart>Тележка с едой</entityname.thal_foodcart>
+	<entitydescription.thal_foodcart>Портативная Кухонная Станция. Может использоваться для приготовления различных блюд в зависимости от того, какой посудой его оборудовал пользователь.</entitydescription.thal_foodcart>
+	<entityname.thal_meatgrinder>Мясорубка</entityname.thal_meatgrinder>
+	<entitydescription.thal_meatgrinder>Ручная мясорубка, которую можно использовать для переработки мяса в фарш.</entitydescription.thal_meatgrinder>
+	<entityname.thal_meatgrinder>Котелок</entityname.thal_meatgrinder>
+	<entitydescription.thal_meatgrinder>Большой котелок, способный вместить большинство продуктов. Способный кипятить все, что в нем содержится, при условии наличия кулинарной станции.</entitydescription.thal_meatgrinder>
+	<entityname.thal_shroomseed>Бессвязное Злое Семя</entityname.thal_shroomseed>
+	<entitydescription.thal_shroomseed>Странно пахнущее семя, покрытое спорами, способное быть посаженным, как и любое другое. Будет производить достаточно дрожжей-грибков, чтобы сделать вас богатым, но может выпустить споры.</entitydescription.thal_shroomseed>
+	<entityname.thal_shroomcure>Анти-Мицелий</entityname.thal_shroomcure>
+	<entitydescription.thal_shroomcure>Лечит Грибообразование. Обладает отчетливой вязкостью, мало чем отличающейся от каликсанида.</entitydescription.thal_shroomcure>
+	<entityname.thal_zombieseed>семя пупы</entityname.thal_zombieseed>
+	<entitydescription.thal_zombieseed>Странное, холодное семя. Вырастет в Куколку Стебель, на котором вырастет личинка улья, которую можно разорвать на физраствор. Личинки оживляют мертвых существ так что будьте осторожны!</entitydescription.thal_zombieseed>
+	<entityname.thal_maggothive>Улей личинок</entityname.thal_maggothive>
+	<entitydescription.thal_maggothive>Разрывается на личинки, если будет уничтожено</entitydescription.thal_maggothive>
+
+	
+	<entityname.thal_rustseed>Ржаво-увядающие семя</entityname.thal_rustseed>
+	<entitydescription.thal_rustseed>Дурно пахнущее семя, которое вырастает в ржавое увядающее растение. Завод производит опиум, но также выпускает едкие облака, которые могут прожечь окружающие стены и истощить кислород. Несколько высокое техническое обслуживание.</entitydescription.thal_rustseed>
+	
+	<entityname.thal_wheatseed>Семена пшеницы</entityname.thal_wheatseed>
+	<entitydescription.thal_wheatseed>Семена пшеницы с Земли, генетически модифицированные, чтобы быстрее расти в гидропонных условиях. Необходим для приготовления муки.</entitydescription.thal_wheatseed>
+
+	<entityname.thal_randomseed>Random Seed</entityname.thal_randomseed>
+	<entitydescription.thal_randomseed>This item is not meant to be seen. If you're a modder, you only need to edit that one item to make the seedmodder give your modded seeds.</entitydescription.thal_randomseed>
+	
+	<entityname.thal_clownseed>Семя циркачного прига</entityname.thal_clownseed>
+	<entitydescription.thal_clownseed>Забавно пахнущее семя, которое вырастает в цирковое растение. Растение выращивает несколько непредсказуемую продукцию и имеет тенденцию к утечке сельтерской воды.</entitydescription.thal_clownseed>
+	
+	<entityname.thal_wheat>Пшеница</entityname.thal_wheat>
+	<entitydescription.thal_wheat>Пучок пшеницы.</entitydescription.thal_wheat>
+	
+	<entityname.thal_sugarcane>Сахарный тростник</entityname.thal_sugarcane>
+	<entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydroponic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
+	
+	
+	<entityname.thal_botanistsuit>Защитный костюм гидропоники</entityname.thal_botanistsuit>
+	<entitydescription.thal_botanistsuit>Легкий костюм, предназначенный для использования с летучей флорой. Мягко сопротивляется ожогам и рваным ранам.</entitydescription.thal_botanistsuit>
+	<entityname.thal_botanistmask>Аэрозольный респиратор</entityname.thal_botanistmask>
+	<entitydescription.thal_botanistmask>Маска промышленного класса со встроенной системой фильтрации воздуха, в первую очередь для защиты от воздействия токсичных паров растений. Может быть загружен кислородом, чтобы работать как водолазная маска.</entitydescription.thal_botanistmask>
+	<entityname.thal_fumigator>Фумигатор</entityname.thal_fumigator>
+	<entitydescription.thal_fumigator>Модифицированный огнемет, который выпускает газы из любого газового баллона, загруженного в него.</entitydescription.thal_fumigator>
+	<entityname.thal_assembler>Атомный преобразователь</entityname.thal_assembler>
+	<entitydescription.thal_assembler>Ручной субатомный фабрикатор, который преобразует входной элемент в выходной, снабжен схемой. Вставьте чип данных "схемы", затем вставьте материал или элемент, указанный схемой.</entitydescription.thal_assembler>
+	<entityname.thal_constructor>Универсальный конструктор</entityname.thal_constructor>
+	<entitydescription.thal_constructor>Прикрепляемый фабрикатор с потенциалом 3D - печати чрезвычайно сложного оборудования с возможностями квантовой манипуляции.</entitydescription.thal_constructor>
+	<entityname.thal_recipeconstructor>Схема: Слиток из Титана-алюминия -&gt; Универсальный конструктор</entityname.thal_recipeconstructor>
+	<entitydescription.thal_recipeconstructor>Микросхема с данными, содержащая инструкции Атомного преобразователя для превращения титано-алюминиевого сплава в Универсальный конструктор, устройство, способное создавать предметы, позволяющие получить доступ к высшим эшелонам науки.\n\nВставить в Атомный преобразователь рядом с: Титано-алюминиевый слиток</entitydescription.thal_recipeconstructor>
+	<entityname.thal_recipeplanter>Схема: Металлический ящик -&gt; Небольшой ящик для рассады</entityname.thal_recipeplanter>
+	<entitydescription.thal_recipeplanter>Микросхема с данными, содержащая инструкции Атомного преобразователя для преобразования Металлического ящика в Небольшой ящик для рассады, устройство, способное выращивать семена, помещенные внутри него.\n\nВставить в Атомный преобразователь рядом с: Металлическим ящиком</entitydescription.thal_recipeplanter>
+	<entityname.thal_recipefumigator>Схема: Сварочный инструмент -&gt; Фумигатор</entityname.thal_recipefumigator>
+	<entitydescription.thal_recipefumigator>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Сварочного инструмента в Фумигатор, устройство, способное выбрасывать газы под давлением.\n\nВставить в Атомный преобразователь вместе с: Сварочным инструментом</entitydescription.thal_recipefumigator>
+	<entityname.thal_recipebotanistmask>Схема: Подводная маска -&gt; Респиратор</entityname.thal_recipebotanistmask>
+	<entitydescription.thal_recipebotanistmask>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Водолазной маски в аэрозольный респиратор, устройство, способное отфильтровывать ядовитые газы.\n\nВставить в Атомный преобразователь вместе с: Подводной маской</entitydescription.thal_recipebotanistmask>
+	<entityname.thal_recipedischarger>Схема: Ручной сонар -&gt; Разрядник</entityname.thal_recipedischarger>
+	<entitydescription.thal_recipedischarger>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Ручного сонара в Разрядник, слабый перезаряжаемый пистолет.\n\nВставить в Атомный преобразователь рядом с а: Ручной гидролокатор</entitydescription.thal_recipedischarger>
+	<entityname.thal_recipefungicide>Схема: Бессвязное Злое Семя -&gt; Фунгицид</entityname.thal_recipefungicide>
+	<entitydescription.thal_recipefungicide>Микросхема с данными, содержит инструкции Атомнного преобразователя для превращения Бессвязного Злого Семени в аэрозольный фунгицидный цилиндр, герметичный фумигаторный цилиндр для остановки вспышек грибов.\n\nВставьте в атомный преобразователь рядом с: Бессвязное Злое Семя</entitydescription.thal_recipefungicide>
+	<entityname.thal_recipegeneticinit>Схема: Антирад -&gt; Решение CRISPR-Cas9</entityname.thal_recipegeneticinit>
+	<entitydescription.thal_recipegeneticinit>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования введенного в раствор CRISPR Cas9 микрожидкости, способной нацеливаться на гены для трансплантации.\n\nВставить в атомный преобразователь рядом с: Антирад</entitydescription.thal_recipegeneticinit>
+	<entityname.thal_recipegeneticgraft>Схема: Шприц-пистолет - &gt; ДНК-графтер</entityname.thal_recipegeneticgraft>
+	<entitydescription.thal_recipegeneticgraft>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Шприц-пистолета в ДНК-графтер, специализированную подкожную иглу, которая может быть загружена ДНК для трансплантации.\n\nВставить в Атомный преобразователь вместе с: Шприц-пистолетом</entitydescription.thal_recipegeneticgraft>
+	<entityname.thal_cylinderspore>Бессвязный Споровый цилиндр</entityname.thal_cylinderspore>
+	<entitydescription.thal_cylinderspore>Баллон с газом под давлением, содержащий частицы споры для Бродячих Злых грибов. Избегайте падения.</entitydescription.thal_cylinderspore>
+	<entityname.thal_cylinderlaughing>Баллон с закисью азота</entityname.thal_cylinderlaughing>
+	<entitydescription.thal_cylinderlaughing>Газовый баллон под давлением, содержащий закись азота, обычный газ с обезболивающим действием, возникающим из-за недостатка кислорода в мозге. Избегайте падения.</entitydescription.thal_cylinderlaughing>
+	<entityname.thal_cylinderfreeze>Баллон с жидким азотом</entityname.thal_cylinderfreeze>
+	<entitydescription.thal_cylinderfreeze>Газовый баллон под давлением, содержащий жидкий азот, криогенную жидкость с чрезвычайно низкой температурой кипения, способную быстро замораживать живые ткани.</entitydescription.thal_cylinderfreeze>
+	<entityname.thal_cylindershroomcure>Аэрозольный Фунгицидный баллон</entityname.thal_cylindershroomcure>
+	<entitydescription.thal_cylindershroomcure>Баллон с газом под давлением, содержащий испаренный Анти-мицелий. Убивает бродячие грибы и дезинфицирует жертвы грибообразования.</entitydescription.thal_cylindershroomcure>
+	<entityname.thal_cylinderteargas>Газовый баллон CS</entityname.thal_cylinderteargas>
+	<entitydescription.thal_cylinderteargas>Баллон с газом под давлением, содержащий 2-хлорбензальмалонитрил, модифицированный для использования в качестве воздушного раздражителя. Если газ попадет в глаза, это приведет к временному раздражению и слепоте. Полезно для самозащиты.</entitydescription.thal_cylinderteargas>
+	<entityname.thal_hydrophonicsign>Знак опасности Гидропоники</entityname.thal_hydrophonicsign>
+	<entitydescription.thal_hydrophonicsign>Знак, который может быть брошен на пол или прикреплен к стене, чтобы указать область ботанической опасности, начиная от взрывающихся помегренад и заканчивая инфекционными спорами.</entitydescription.thal_hydrophonicsign>
+	<entityname.thal_botanistbook>Альманах ботаника</entityname.thal_botanistbook>
+	<entitydescription.thal_botanistbook>Книга подробно описывает уход за различными культурами и растениями, способными быть выращенными ботаником.</entitydescription.thal_botanistbook>
+	<entityname.thal_discourager>Обескураживатель статики</entityname.thal_discourager>
+	<entitydescription.thal_discourager>Оружие самообороны, которое управляет контролируемым шоком, который поражает нервную систему. Отсутствие полной недееспособности делает его идеальным оружием для самообороны.</entitydescription.thal_discourager>
+	<entityname.thal_cultistbook>Сокращенный Некрономикон</entityname.thal_cultistbook>
+	<entitydescription.thal_cultistbook>Книга подробно описывает основы роли культиста. Удерживая нажатой клавишу для чтения, введите самую верхнюю строку для навигации.</entitydescription.thal_cultistbook>
+	<entityname.thal_singularity>Гравитационная сингулярность"</entityname.thal_singularity>
+	<entitydescription.thal_singularity>Ужасная гравитационная аномалия, которая растет, чем больше персонажей втягивается в нее.</entitydescription.thal_singularity>
+	<entityname.thal_secondchance>Инжектор Феникса</entityname.thal_secondchance>
+	<entitydescription.thal_secondchance>Стероидный раствор адреналина, предназначенный для автоматического введения в горячую ванну тяжелораненого. Переход в критическое состояние с этим в вашем горячем баре временно оживляет вас, позволяя вам обратиться за медицинской помощью.</entitydescription.thal_secondchance>
+	<entityname.thal_geneticinit>Решение CRISPR-Cas9</entityname.thal_geneticinit>
+	<entitydescription.thal_geneticinit>Шприц, используемый для инициации сплайсинга генов. Возьмите его в руки и выберите, с какой частью тела вы хотите слить ДНК. То, что происходит с частью тела, зависит от слитой ДНК; Посмотрите на описание. После выбора сделайте себе инъекцию шприцем, а затем сделайте себе инъекцию заряженным трансплантатом.</entitydescription.thal_geneticinit>
+	<entityname.thal_geneticgraft>ДНК-графтер</entityname.thal_geneticgraft>
+	<entitydescription.thal_geneticgraft>Шприц, в который можно вставить образцы ДНК. При инъекции в кого-то, подвергающегося индуцированному CRISPR-Cas9 расплавлению, это прикрепляет ДНК к разрезанным участкам, что приводит к сплайсингу генов en vivo. Сращивание генов можно использовать для лечения генетических нарушений и даже для трансформации частей тела. Требуется, чтобы пациенту сначала ввели раствор CRISPR-Cas9.</entitydescription.thal_geneticgraft>
+	
+	<entityname.thal_disordersave>DNA Transplanter</entityname.thal_disordersave>
+	<entitydescription.thal_disordersave>Transfers genetic disorders or mutations, storing them for future use.</entitydescription.thal_disordersave>
+
+
+			<!--Achievements-->
+
+	<talentname.thal_Achievement_gene>You have genetically modified yourself.</talentname.thal_Achievement_gene>
+	<Achievement.unlock>You have unlocked an achievement.</Achievement.unlock>
+
+			<!--Afflictions-->
+	<afflictiondescription.thal_scan>The patient is being scanned or analyzed by a nearby scanner.</afflictiondescription.thal_scan>
+	<causeofdeathdescription.thal_scan>fucking fell and died</causeofdeathdescription.thal_scan>
+	<self_causeofdeathdescription.thal_scan>you have fallen down and died somehow</self_causeofdeathdescription.thal_scan>
+	
+	<afflictionname.thal_apostleinfection>Apostle infection</afflictionname.thal_apostleinfection>
+	<afflictiondescription.thal_apostleinfection>The patient is rapidly transforming into an apostle.</afflictiondescription.thal_apostleinfection>
+	<causeofdeathdescription.thal_apostleinfection>Reborn as an apostle</causeofdeathdescription.thal_apostleinfection>
+	<self_causeofdeathdescription.thal_apostleinfection>You have been reborn as an apostle.</self_causeofdeathdescription.thal_apostleinfection>
+	
+	<afflictionname.thal_maggotinfection>Maggot Infestation</afflictionname.thal_maggotinfection>
+	<afflictiondescription.thal_maggotinfection>The patient's skin ripples with thousands of tiny maggots underneath the epidermis, burrowing holes in necrotic tissue and gnawing at the nervous system.</afflictiondescription.thal_maggotinfection>
+	<causeofdeathdescription.thal_maggotinfection>Infested by maggots</causeofdeathdescription.thal_maggotinfection>
+	<self_causeofdeathdescription.thal_maggotinfection>You have been infested by maggots.</self_causeofdeathdescription.thal_maggotinfection>
+	
+	<afflictionname.thal_full>Repletion</afflictionname.thal_full>
+	<afflictiondescription.thal_full>The patient's stomach is busy digesting food; At maximum affliction, they are full. When repletion reaches 100, they will be unable to consume any food. Notably separate from nutrition, which is beneficial.</afflictiondescription.thal_full>
+	<causeofdeathdescription.thal_full>Ate themselves to death.</causeofdeathdescription.thal_full>
+	<self_causeofdeathdescription.thal_full>You have become an Ouroboros.</self_causeofdeathdescription.thal_full>
+	
+	<afflictionname.thal_mimeaffliction>Mimetated</afflictionname.thal_mimeaffliction>
+	<afflictiondescription.thal_mimeaffliction>The patient is a mime and has taken a miming oath. They cannot speak.</afflictiondescription.thal_mimeaffliction>
+	<causeofdeathdescription.thal_mimeaffliction>The mime mistakenly tried to mimic a dead person.</causeofdeathdescription.thal_mimeaffliction>
+	<self_causeofdeathdescription.thal_mimeaffliction>You have died from being a mime(?).</self_causeofdeathdescription.thal_mimeaffliction>
+	
+	<afflictionname.thal_diarrhea>Explosive Diarrhea</afflictionname.thal_diarrhea>
+	<afflictiondescription.thal_diarrhea>The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines causes painful, loud, and unflattering happenings near the colon. It will go away with time, unless it is being caused by a separate factor (like a genetic disorder).</afflictiondescription.thal_diarrhea>
+	<causeofdeathdescription.thal_diarrhea>Died of dysentery.</causeofdeathdescription.thal_diarrhea>
+	<self_causeofdeathdescription.thal_diarrhea>You have died of dysentery.</self_causeofdeathdescription.thal_diarrhea>
+	
+	<afflictionname.thal_disorderhammer>Freeze Ray Allele</afflictionname.thal_disorderhammer>
+	<afflictiondescription.thal_disorderhammer>A genetic allele that allows patients with the Hammerhead Head Splice to gain the ability to shoot laserbeams when attacking. \nCan be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderhammer>
+		<!-- GOOD DISORDERS -->
+	<afflictionname.thal_disordercurse>God-Forsaken Syndrome</afflictionname.thal_disordercurse>
+	<afflictiondescription.thal_disordercurse>Генетическое заболевание. Ваше генетическое вмешательство так ужасно исказило вашу естественную человечность, что вы являетесь актом против бога. Просто быть живым постепенно увеличивает уровень проклятия вашей команды. Можно вылечить, пересадив неповрежденную человеческую ДНК.	</afflictiondescription.thal_disordercurse>
+	<afflictionname.thal_disorderclown>Jugglernaut Allele</afflictionname.thal_disorderclown>
+	<afflictiondescription.thal_disorderclown>Генетическая аллель, которая заставляет пациента набирать сопротивляемость и силу, когда он носит костюм клоуна. Вдобавок ко всему, когда они пьют, они приобретают регенеративные способности. Может быть возвращена путем прививки неповрежденной человеческой ДНК.	</afflictiondescription.thal_disorderclown>
+	<afflictionname.thal_disordercard>Карточка коллектора аллель</afflictionname.thal_disordercard>
+	<afflictiondescription.thal_disordercard>Генетическая аллель. Наличие карты, принадлежащей профессии, в вашем непосредственном инвентаре дает вам бафф, связанный с этой работой.\nАссистент: Все навыки постепенно повышаются\nИнженер: Ожоги со временем заживают.\nМеханик: Скорость увеличилась.\nКлоун: Опьянение постепенно придает бодрости.\nМедик: Иммунитет к передозу опиатами.\nУченый: Любой эффект, считающийся "ядом", уменьшается в силе или замедляется.\nСотрудник Безопасности: Кровотечение Уменьшено.\nКапитан: Таймер оглушения уменьшается быстрее.</afflictiondescription.thal_disordercard>
+	<afflictionname.thal_disordersmart>Аллель скрытых талантов</afflictionname.thal_disordersmart>
+	<afflictiondescription.thal_disordersmart>Генетическая аллель, которая повышает все навыки пациента, делая получение опыта для повышения уровня навыков гораздо более быстрым. Может быть возвращена путем прививки неповрежденной человеческой ДНК. </afflictiondescription.thal_disordersmart>
+	<afflictionname.thal_disorderpoison>Аллель Пикового здоровья</afflictionname.thal_disorderpoison>
+	<afflictiondescription.thal_disorderpoison>Генетическая аллель. Когда пациент находится в полном здравии, прогрессирование большинства ядов и инфекций возвращается и удерживается на ранних стадиях до тех пор, пока здоровье пациента не упадет ниже полного или болезнь не будет излечена. Может быть возвращена путем прививки неповрежденной человеческой ДНК.</afflictiondescription.thal_disorderpoison>
+	<afflictionname.thal_disorderthresher>Глубинная Аллель Тигровой Акулы</afflictionname.thal_disorderthresher>
+	<afflictiondescription.thal_disorderthresher>Генетический аллель, которая повышает эффективность генетического сращивания туловища Тигровой Акулы, чтобы выдерживать давление на глубине 10 км под водой вместо обычных 5 км. Может быть возвращена путем прививки неповрежденной человеческой ДНК.</afflictiondescription.thal_disorderthresher>
+	<afflictionname.thal_disordercrawler>Аллель Драку-Лектерного ползуна</afflictionname.thal_disordercrawler>
+	<afflictiondescription.thal_disordercrawler>Генетическая аллель, которая позволяет пациентам с соединением Головы Ползуна пить кровь из трупов, пока они не высосаны досуха, и быть устойчивыми к пищевым отравлениям. Может быть возвращена путем прививки неповрежденной человеческой ДНК.</afflictiondescription.thal_disordercrawler>
+	<afflictionname.thal_disordermudraptor>Аллель скоростного дайвера Грязевого Раптора</afflictionname.thal_disordermudraptor>
+	<afflictiondescription.thal_disordermudraptor>Генетическая аллель, которая позволяет пациентам с сращиванием хвоста грязевого раптора получить временное сопротивление давлению в воде, позволяя на 30 секунд больше времени, прежде чем быть раздавленным. Может быть возвращена путем прививки неповрежденной человеческой ДНК.</afflictiondescription.thal_disordermudraptor>
+	<afflictionname.thal_disorderbaptism>Аллель Святой Воды</afflictionname.thal_disorderbaptism>
+	<afflictiondescription.thal_disorderbaptism>Генетическая аллель. Ваша генетическая модификация фактически сделала вас новым существом, "рожденным свыше". Погружение в святую воду Европы постепенно смывает уровень проклятия вашей команды. Может быть возвращена путем прививки неповрежденной человеческой ДНК.</afflictiondescription.thal_disorderbaptism>
+	
+		<!--GENETIC afflictions-->
+	
+	
+	<afflictionname.thal_meltdownhead>Genetic Meltdown (Head)</afflictionname.thal_meltdownhead>
+	<afflictionname.thal_meltdowntorso>Genetic Meltdown (Torso)</afflictionname.thal_meltdowntorso>
+	<afflictionname.thal_meltdownlimbs>Genetic Meltdown (Limbs)</afflictionname.thal_meltdownlimbs>
+	
+	<afflictionname.thal_meltdown>Genetic Meltdown</afflictionname.thal_meltdown>
+	<afflictiondescription.thal_meltdown>The patient's cellular DNA is compromised. With cells unable to reproduce, the patient is slowly 'melting' into dead cells. Locate a DNA graft to resupply the affected area with fresh DNA. The longer meltdown persists, the more genetic disorders are introduced to the patient's genes.</afflictiondescription.thal_meltdown>
+	<causeofdeathdescription.thal_meltdown>Melted into DNA-less goop.</causeofdeathdescription.thal_meltdown>
+	<self_causeofdeathdescription.thal_meltdown>You have melted into goop.</self_causeofdeathdescription.thal_meltdown>
+	
+	<afflictionname.thal_tarnishedmeltdown>Genetic Corruption</afflictionname.thal_tarnishedmeltdown>
+	<afflictiondescription.thal_tarnishedmeltdown>The patient's cellular DNA is being corrupted. With cells unable to reproduce. Locate a DNA graft to resupply the affected area with fresh DNA.</afflictiondescription.thal_tarnishedmeltdown>
+	<causeofdeathdescription.thal_tarnishedmeltdown>Melted into DNA-free goop</causeofdeathdescription.thal_tarnishedmeltdown>
+	<self_causeofdeathdescription.thal_tarnishedmeltdown>Your DNA has been tarnished, and you have melted into goop.</self_causeofdeathdescription.thal_tarnishedmeltdown>
+	
+	<afflictionname.thal_mudraptorhead>Mudraptor Genes (Head)</afflictionname.thal_mudraptorhead>
+	<afflictionname.thal_mudraptortorso>Mudraptor Genes (Torso)</afflictionname.thal_mudraptortorso>
+	<afflictionname.thal_mudraptorlimbs>Mudraptor Genes (Limbs)</afflictionname.thal_mudraptorlimbs>
+	<afflictiondescription.thal_mudraptor>The patient's DNA is spliced with that of a mudraptor.</afflictiondescription.thal_mudraptor>
+	
+	<afflictionname.thal_maggothead>Genetic Genes (Head)</afflictionname.thal_maggothead>
+	<afflictionname.thal_maggottorso>Genetic Genes (Torso)</afflictionname.thal_maggottorso >
+	<afflictionname.thal_maggotlimbs>Genetic Genes (Limbs)</afflictionname.thal_maggotlimbs>
+	<afflictiondescription.thal_maggot>The patient's DNA is spliced with that of a Maggot.</afflictiondescription.thal_maggot>
+	
+	<afflictionname.thal_mushroomhead>Genetic Genes (Head)</afflictionname.thal_mushroomhead>
+	<afflictionname.thal_mushroomtorso>Genetic Genes (Torso)</afflictionname.thal_mushroomtorso>
+	<afflictionname.thal_mushroomlimbs>Genetic Genes (Limbs)</afflictionname.thal_mushroomlimbs>
+	<afflictiondescription.thal_mushroom>The patient's DNA is spliced with that of a Mushroom.</afflictiondescription.thal_mushroom>
+	
+	<afflictionname.thal_crawlerhead>Genetic Genes (Head)</afflictionname.thal_crawlerhead>
+	<afflictionname.thal_crawlertorso>Genetic Genes (Torso)</afflictionname.thal_crawlertorso>
+	<afflictionname.thal_crawlerlimbs>Genetic Genes (Limbs)</afflictionname.thal_crawlerlimbs>
+	<afflictiondescription.thal_crawler>The patient's DNA is spliced with that of a Crawler.</afflictiondescription.thal_crawler>
+	
+	<afflictionname.thal_thresherhead>Genetic Genes (Head)</afflictionname.thal_thresherhead>
+	<afflictionname.thal_threshertorso>Genetic Genes (Torso)</afflictionname.thal_threshertorso>
+	<afflictionname.thal_thresherlimbs>Genetic Genes (Limbs)</afflictionname.thal_thresherlimbs>
+	<afflictiondescription.thal_thresher>The patient's DNA is spliced with that of a Thresher.</afflictiondescription.thal_thresher>
+	
+	<afflictionname.thal_hammerhead>Genetic Genes (Head)</afflictionname.thal_hammerhead>
+	<afflictionname.thal_hammertorso>Genetic Genes (Torso)</afflictionname.thal_hammertorso>
+	<afflictionname.thal_hammerlimbs>Genetic Genes (Limbs)</afflictionname.thal_hammerlimbs>
+	<afflictiondescription.thal_hammer>The patient's DNA is spliced with that of a Hammerhead.</afflictiondescription.thal_hammer>
+	
+	<afflictionname.thal_thalamushead>Genetic Genes (Head)</afflictionname.thal_thalamushead>
+	<afflictionname.thal_thalamustorso>Genetic Genes (Torso)</afflictionname.thal_thalamustorso>
+	<afflictionname.thal_thalamuslimbs>Genetic Genes (Limbs)</afflictionname.thal_thalamuslimbs>
+	<afflictiondescription.thal_thalamus>The patient's DNA is spliced with that of a Thalamus.</afflictiondescription.thal_thalamus>
+	
+	<afflictionname.thal_huskhead>Genetic Genes (Head)</afflictionname.thal_huskhead>
+	<afflictionname.thal_husktorso>Genetic Genes (Torso)</afflictionname.thal_husktorso>
+	<afflictionname.thal_husklimbs>Genetic Genes (Limbs)</afflictionname.thal_husklimbs>
+	<afflictiondescription.thal_husk>The patient's DNA is spliced with that of a Husk.</afflictiondescription.thal_husk>
+	
+
+	<!--GENETIC MUTATIONS-->
+	<entityname.thal_disdatexplode>Combustion Syndrome</entityname.thal_disdatexplode>
+	<entityname.thal_disdatseizure>Stumble Syndrome</entityname.thal_disdatseizure>
+	
+	<entityname.thal_disdatfart>Indigestion Syndrome</entityname.thal_disdatfart>
+	<entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
+		
+	<entityname.thal_disdatfire>Thermal Syndrome</entityname.thal_disdatfire>
+	<entityname.thal_disdatairloss>Vacuum Syndrome</entityname.thal_disdatairloss>
+	<entityname.thal_disdatbreathe>Lung Failure Syndrome</entityname.thal_disdatbreathe>
+	<entityname.thal_disdatemp>EMP Syndrome</entityname.thal_disdatemp>
+	<entityname.thal_disdathypo>Hypothermia Syndrome</entityname.thal_disdathypo>
+	<entityname.thal_disdatbloodloss>Pressurized Blood Syndrome</entityname.thal_disdatbloodloss>
+	<entityname.thal_disdatacid>Acid Gas Syndrome</entityname.thal_disdatacid>
+	<entityname.thal_disdatstupid>Retardation Syndrome</entityname.thal_disdatstupid>
+	<entityname.thal_disdatweapon>PTSD Syndrome</entityname.thal_disdatweapon>
+	<entityname.thal_disdatid>Authority Arrest Syndrome</entityname.thal_disdatid>
+	<entityname.thal_disdatrad>Rad Sensitivity Syndrome</entityname.thal_disdatrad>
+	<entityname.thal_disdatmumble>Mumble Syndrome</entityname.thal_disdatmumble>
+	<entityname.thal_disdatbait>Bait Syndrome</entityname.thal_disdatbait>
+	<entityname.thal_disdatdeath>Sudden Death Syndrome</entityname.thal_disdatdeath>
+	<entityname.thal_disdatpressure>InstaCrush Syndrome</entityname.thal_disdatpressure>
+	<entityname.thal_disdatthal>Thalassophobia Syndrome</entityname.thal_disdatthal>
+	<entityname.thal_disdatbuff>High Metabolism Syndrome</entityname.thal_disdatbuff>
+	<entityname.thal_disdathusk>Topped-Off Husk Syndrome</entityname.thal_disdathusk>
+	
+	<entityname.thal_disdatclown>Jugglernaut Mutation</entityname.thal_disdatclown>
+	<entityname.thal_disdatcard>Card Collector Mutation</entityname.thal_disdatcard>
+	<entityname.thal_disdatsmart>Hidden Talent Mutation</entityname.thal_disdatsmart>
+	<entityname.thal_disdatpoison>Peak Health Mutation</entityname.thal_disdatpoison>
+	<entityname.thal_disdatcrawler>Crawler Dracu-Lecter Mutation</entityname.thal_disdatcrawler>
+	<entityname.thal_disdatthresher>Thresher Abyssal Mutation</entityname.thal_disdatthresher>
+	<entityname.thal_disdathammer>Hammer Freeze-Ray Mutation</entityname.thal_disdathammer>
+	<entityname.thal_disdatmudraptor>Mudraptor Speed-Diver Mutation</entityname.thal_disdatmudraptor>
+
+	
+	<afflictionname.template>Syndrome</afflictionname.template>
+	<afflictiondescription.template>A genetic disorder.</afflictiondescription.template>
+	<causeofdeathdescription.template>Killed by a genetic disorder.</causeofdeathdescription.template>
+	<self_causeofdeathdescription.template>Your genetic disorder has killed you.</self_causeofdeathdescription.template>
+		
+	<afflictionname.thal_disorderexplode>Combustion Syndrome</afflictionname.thal_disorderexplode>
+	<afflictiondescription.thal_disorderexplode>A genetic disorder that causes random igniting explosions when explosives are held. May or may not lead to chain reactions, especially with unstable compounds. \nCan be cured by grafting human DNA.</afflictiondescription.thal_disorderexplode>
+	<causeofdeathdescription.thal_disorderexplode>Killed by an explosive genetic disorder.</causeofdeathdescription.thal_disorderexplode>
+	<self_causeofdeathdescription.thal_disorderexplode>Your explosive genetic disorder has killed you.</self_causeofdeathdescription.thal_disorderexplode>
+
+		<!-- BAD DISORDERS -->
+	<afflictionname.disorderexplode>Взрывное Расстройство</afflictionname.disorderexplode>
+	<afflictiondescription.disorderexplode>Это генетическое заболевание, которое вызывает случайные взрывы, когда взрывчатые вещества хранятся в вашем инвентаре. Это может привести в действие и другие взрывчатые вещества. Это можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderexplode>
+	<afflictionname.disorderfart>пищеварения Расстройство</afflictionname.disorderfart>
+	<afflictiondescription.disorderfart>Это генетическое заболевание, которое ставит под угрозу переваривание пищи. Употребление любой пищи может вызвать у вас диарею. Это можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderfart>
+	<afflictionname.disorderseizure>Расстройство неуклюжести</afflictionname.disorderseizure>
+	<afflictiondescription.disorderseizure>Когда у пациента есть это заболевание, они иногда падают при ходьбе или беге. Это можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderseizure>
+	<afflictionname.disorderfire>Расстройство тепла тела</afflictionname.disorderfire>
+	<afflictiondescription.disorderfire>ККогда у пациента есть эта болезнь, он случайно поджигает свое окружение. Это можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderfire>
+	<afflictionname.disorderairloss>Расстройство вакуума</afflictionname.disorderairloss>
+	<afflictiondescription.disorderairloss>Когда у пациента есть эта болезнь, комната, в которой он находится, иногда теряет весь воздух. Это можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderairloss>
+	<afflictionname.disorderbreathe>Расстройство Легочной недостаточности</afflictionname.disorderbreathe>
+	<afflictiondescription.disorderbreathe>Когда у пациента есть это заболевание, он не может дышать воздухом вокруг себя. Пациент должен использовать водолазную маску, туловище Ползуна или другой источник воздуха.</afflictiondescription.disorderbreathe>
+	<afflictionname.disorderemp>Электромагнитное расстройство</afflictionname.disorderemp>
+	<afflictiondescription.disorderemp>Когда у пациента есть это заболевание, он не может дышать воздухом вокруг себя. Пациент должен использовать водолазную маску, туловище Ползуна или другой источник воздуха.</afflictiondescription.disorderemp>
+	<afflictionname.disorderhypo>Синдром гипотермии</afflictionname.disorderhypo>
+	<afflictiondescription.disorderhypo>Генетическое расстройство, которое приводит к тому, что кожа пациента реагирует с чрезвычайной чувствительностью к холодной воде. Будет постепенно замораживать и замедлять пациента при длительном воздействии. Можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderhypo>
+	<afflictionname.disorderbloodloss>Артериальная гипертензия</afflictionname.disorderbloodloss>
+	<afflictiondescription.disorderbloodloss>Генетическое заболевание, которое резко повышает кровяное давление, делая кровотечение гораздо более смертельным. Можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderbloodloss>
+	<afflictionname.disorderacid>Синдром слезоточивого газа</afflictionname.disorderacid>
+	<afflictiondescription.disorderacid>Генетическое заболевание, которое заставляет поры на коже клиента выделять аэрозольный слезоточивый газ, который ослепляет всех вокруг. Может быть вылечен путем прививки неповрежденной ДНК человека.</afflictiondescription.disorderacid>
+	<afflictionname.disorderstupid>Синдром Альцгеймера</afflictionname.disorderstupid>
+	<afflictiondescription.disorderstupid>Генетическое заболевание, которое резко влияет на интеллект и знания пациента, снижая все его навыки. Может быть вылечен путем прививки неповрежденной ДНК человека.</afflictiondescription.disorderstupid>
+	<afflictionname.disorderweapon>Синдром ПТСР</afflictionname.disorderweapon>
+	<afflictiondescription.disorderweapon>Генетическое расстройство, которое вызывает у пациента парализующий страх перед оружием. Держание оружия в руке постепенно вызовет у пациента тошноту и воспоминания. Можно вылечить, пересадив неповрежденную человеческую ДНК.</afflictiondescription.disorderweapon>
+	<afflictionname.disorderid>Синдром превышения полномочий</afflictionname.disorderid>
+	<afflictiondescription.disorderid>Генетическое расстройство, которое "надевает наручники" на руки пациента, когда удостоверение личности, принадлежащее охраннику, капитану или любой другой подобной роли власти, находится в вашем непосредственном инвентаре. Распространяется и на популярные моды! Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disorderid>
+	<afflictionname.disorderrad>Синдром лучевой чувствительности</afflictionname.disorderrad>
+	<afflictiondescription.disorderrad>Кожное заболевание, при котором кожа горит и покрывается волдырями при хранении обычно безвредных радиоактивных материалов, таких как руды или топливные стержни. Может быть вылечен путем прививки неповрежденной ДНК человека. </afflictiondescription.disorderrad>
+	<afflictionname.disordermumble>Синдром бормотания</afflictionname.disordermumble>
+	<afflictiondescription.disordermumble>Расстройство, из-за которого пациент не может говорить, когда его лицо закрыто чем-то. Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disordermumble>
+	<afflictionname.disorderbait>Синдром приманки</afflictionname.disorderbait>
+	<afflictiondescription.disorderbait>Расстройство, которое заставляет пациента издавать европейский брачный зов на частотах, неслышимых для людей. Шум привлекает существ на многие мили вокруг. Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disorderbait>
+	<afflictionname.disorderdeath>Синдром внезапной смерти</afflictionname.disorderdeath>
+	<afflictiondescription.disorderdeath>Расстройство, которое полностью убирает критическое состояние пациента. Вместо того, чтобы рухнуть и отправится в крит, падение здоровья ниже нуля мгновенно убивает пациента. Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disorderdeath>
+	<afflictionname.disorderpressure>Синдром мгновенного Раздавливания</afflictionname.disorderpressure>
+	<afflictiondescription.disorderpressure>Расстройство, которое полностью снимает обратный отсчет давления. Попадание под незащищенное давление воды мгновенно убивает пациента. Давние игроки баротравмы, возможно, знакомы с этой концепцией. Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disorderpressure>
+	<afflictionname.disorderthal>Синдром талассофобии</afflictionname.disorderthal>
+	<afflictiondescription.disorderthal>Расстройство, которое заставляет игрока смертельно бояться глубоких вод. Пациент замедляется до ползания в глубинах океана, независимо от защиты. Можно вылечить, пересадив неповрежденную человеческую ДНК. </afflictiondescription.disorderthal>
+	<afflictionname.disorderbuff>Синдром быстрого метаболизма</afflictionname.disorderbuff>
+	<afflictiondescription.disorderbuff>Расстройство, из-за которого эффекты остаются лишь на долю времени, которое они обычно проводят, делая большинство из них бесполезными. Можно вылечить, пересадив неповрежденную человеческую ДНК.	</afflictiondescription.disorderbuff>
+	<afflictionname.disorderhusk>Синдром Полного здоровья хаска</afflictionname.disorderhusk>
+	<afflictiondescription.disorderhusk>Расстройство, из-за которого у пациента низкая вероятность случайного заражения паразитом при полном здоровье. Постарайся не получать урон, если сможешь. Можно вылечить, пересадив неповрежденную человеческую ДНК.	</afflictiondescription.disorderhusk>
+	
+	<entityname.thal_dnascanner>ДНК-сканер</entityname.thal_dnascanner>
+	<entitydescription.thal_dnascanner>ДНК-сканер, который собирает ДНК из молекул слюны живых существ. Не будет работать на мертвых существах. Прикрепитесь к стене и взаимодействуйте с ней. Сканирует все, что находится под ним, но со временем ломается.</entitydescription.thal_dnascanner>
+	<scannerinfo.ready>Scanner Ready - Insert Conscious Specimen Into Beam</scannerinfo.ready>
+	<scannerinfo.hammerhead>Hammerhead DNA Detected</scannerinfo.hammerhead>
+	<scannerinfo.thresher>Thresher DNA Detected</scannerinfo.thresher>
+	<scannerinfo.mushroom>Mushroom DNA Detected</scannerinfo.mushroom>
+	<scannerinfo.maggot>Maggot DNA Detected</scannerinfo.maggot>
+	<scannerinfo.crawler>Crawler DNA Detected</scannerinfo.crawler>
+	<scannerinfo.mudraptor>Mudraptor DNA Detected</scannerinfo.mudraptor>
+	<scannerinfo.humanoid>Humanoid DNA Detected</scannerinfo.humanoid>
+	<scannerinfo.husk>Husk DNA Detected</scannerinfo.husk>
+	<scannerinfo.xeno>Xenomorph DNA Detected</scannerinfo.xeno>
+	<scannerinfo.unknown>Uncatalogued DNA Detected</scannerinfo.unknown>
+	
+	<entityname.thal_geneharvester>Uncatalogued DNA</entityname.thal_geneharvester>
+	<entitydescription.thal_geneharvester>Use a station's Genetic Research Station to obtain a random gene.</entitydescription.thal_geneharvester>
+	
+	
+	<entityname.thal_dnabox>Холодильник для ДНК</entityname.thal_dnabox>
+	<entitydescription.thal_dnabox>Ручной криогенный холодильник, предназначенный для хранения и сохранения ДНК без деградации. В случае потери холодильника, ДНК также можно сохранить, погрузив его в воду.</entitydescription.thal_dnabox>
+	<entityname.thal_dnahatcher>Биоморфная Инкубационная капсула</entityname.thal_dnahatcher>
+	<entitydescription.thal_dnahatcher>Стручок используется для создания существ из ДНК и биомассы. Вставляйте мясо до тех пор, пока не будет достаточно биомассы для желаемого существа, затем вставьте его ДНК и нажмите кнопку engage, чтобы начать формирование и воспитание эмбриона. </entitydescription.thal_dnahatcher>
+	<entityname.thal_dnahuman>ДНК человека</entityname.thal_dnahuman>
+	<entitydescription.thal_dnahuman>Полная генетическая последовательность стандартного Homo Sapiens. Может быть использован для разработки антигуманоидных технологий или в ДНК-трансплантатах для возвращения человека к нормальной жизни. Прививка этой ДНК вернет все изменения в части(частях) тела, которые в настоящее время находятся в расплавленном состоянии, а также вернет любые генетические нарушения. </entitydescription.thal_dnahuman>
+	<entityname.thal_dnamudraptor>ДНК грязевого раптора</entityname.thal_dnamudraptor>
+	<entitydescription.thal_dnamudraptor>Полная генетическая последовательность стандартного европейского грязевого раптора. Может быть использован для разработки технологий борьбы с грязевыми хищниками или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (спина): Медленно ломайте двери, используя атаку существа.\nТуловище (панцирь): Получите пуленепробиваемую грязевую броню раптора на позвоночнике.\nКонечности (Хвост): Скорость плавания значительно увеличивается.</entitydescription.thal_dnamudraptor>
+	<entityname.thal_dnacrawler>ДНК Ползуна</entityname.thal_dnacrawler>
+	<entitydescription.thal_dnacrawler>Полная генетическая последовательность стандартного европейского ползунаа. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (клыки): Укус Лайфстила при нажатии на атаку существа.\nТуловище (жабры): Фильтруют кислород из воды даже тогда, когда его нет в атмосфере.\nКонечности (Хвост): Общее увеличение скорости движения.</entitydescription.thal_dnacrawler>
+	<entityname.thal_dnathresher>ДНК Тигровой акулы</entityname.thal_dnathresher>
+	<entitydescription.thal_dnathresher>Полная генетическая последовательность стандартной европейской тигровой акулы. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (Костяная челюсть): Очень медленно разрушайте стены и двери, используя атаку существ.\nТуловище (Экзоскелет): Сопротивление давлению.\nКонечности (Биолюминесценция): Излучают свет.</entitydescription.thal_dnathresher>
+	<entityname.thal_dnahammer>ДНК Молотоглава</entityname.thal_dnahammer>
+	<entitydescription.thal_dnahammer>Полная генетическая последовательность стандартного европейского Молотглава. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (Молот): Разрушайте стены, целясь и нажимая на атаку существа.\nТуловище (родовой мешок): Разрушительный взрыв при смерти.\nКонечности (адреналин): Скорость и сопротивление увеличиваются по мере снижения жизненной силы.</entitydescription.thal_dnahammer>
+	<entityname.thal_dnamaggot>ДНК личинки</entityname.thal_dnamaggot>
+	<entitydescription.thal_dnamaggot>Полная генетическая последовательность стандартной личинки Улья. Может быть использован для разработки технологий борьбы с личинками или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (офис): Цельтесь в пол и нажмите атаку существа, чтобы родить личинку ценой здоровья. Перезарядка 4с.\nТуловище (Куколочный мешок): Лопается на личинки при смерти.\nКонечности (Регенерация): Массово увеличенное заживление кровоточащего недуга.</entitydescription.thal_dnamaggot>
+	<entityname.thal_dnaramblin>ДНК грибов</entityname.thal_dnaramblin>
+	<entitydescription.thal_dnaramblin>Полная генетическая последовательность Бродячего" Злого гриба". Может быть использован для разработки противогрибковых технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:\nГолова (колпачок): Цельтесь в пол и нажимайте на атаку существа, чтобы выпустить бодрящие газы.\nТорс (Versicolor): "Грибовидное" недомогание сильно исцеляет вас.\nКонечности (Стопа спортсмена): Скорость бега существенно увеличилась, скорость плавания незначительно снизилась.</entitydescription.thal_dnaramblin>
+	
+
+	<entityname.thal_planter>Коробка рассады гидропоники</entityname.thal_planter>
+	<entitydescription.thal_planter>Усовершенствованная рассадная коробка, предназначенная для улучшенных научных измерений и анализа ботанических показателей, необходимых ботанику. Вот в чем разница между садовником-любителем и настоящим ученым. </entitydescription.thal_planter>
+	<entityname.thal_geneticsign>Знак Генетической опасности</entityname.thal_geneticsign>
+	<entitydescription.thal_geneticsign>Знак, который может быть брошен на пол или прикреплен к стене, чтобы указать область генопасности, начиная от ионизирующего излучения ДНК и заканчивая химическими веществами для манипулирования генами.</entitydescription.thal_geneticsign>
+	<entityname.thal_geneticistsuit>Защитный костюм гинетика</entityname.thal_geneticistsuit>
+	<entitydescription.thal_geneticistsuit>Легкий костюм, предназначенный для использования в слаборадиоактивных средах. Слабо сопротивляется радиации и возможности генетического повреждения.</entitydescription.thal_geneticistsuit>
+		<!-- Enfocer Gear -->
+	<entityname.thal_enforcerhelmet>Enforcer Helmet</entityname.thal_enforcerhelmet>
+	<entitydescription.thal_enforcerhelmet>A modified diving mask combined with a helmet. Offers improved head protection combined with the functionality of a diving mask.</entitydescription.thal_enforcerhelmet>
+		
+		
+		<!-- Energy Weapons -->
+	<entityname.thal_glowsaber>Световой меч</entityname.thal_glowsaber>
+	<entitydescription.thal_glowsaber>Чрезвычайно мощный энергетический меч, который наносит большой урон от ожогов и способен прорубать стены и двери. Его источником топлива являются экзотические "светящиеся кристаллы", полученные с помощью распространителей антиматерии.</entitydescription.thal_glowsaber>
+	<entityname.thal_glowcrystal>Светящийся кристалл</entityname.thal_glowcrystal>
+	<entitydescription.thal_glowcrystal>Кристаллический источник энэргии для различного мощного энергетического оружия. Несколько редко; Используйте с умом.</entitydescription.thal_glowcrystal>
+	<entityname.thal_frostcrystal>Ледяной свечащийся кристалл</entityname.thal_frostcrystal>
+	<entitydescription.thal_frostcrystal>Минусовой кристаллический источник боеприпасов для различного мощного энергетического оружия. Его холодная сердцевина придает ему синий оттенок. Несколько редко; Используйте с умом.</entitydescription.thal_frostcrystal>
+	<entityname.thal_synthcrystal>Синтетический светящийся кристалл</entityname.thal_synthcrystal>
+	<entitydescription.thal_synthcrystal>Искуственно синтезированный кристаллический источник энэргии для различного мощного энергетического оружия. Его искусственная природа придает ему красный оттенок. Очень редко; Используйте с умом.</entitydescription.thal_synthcrystal>
+		<!-- Explosives -->
+	<entityname.thal_tripmine>Лазерная Мина</entityname.thal_tripmine>
+	<entitydescription.thal_tripmine>Мина, которая активируется, когда находится в пределах досягаемости существа. Срабатывает тем лучше, чем ближе мина к туловищу.</entitydescription.thal_tripmine>
+		<!-- Collars -->
+	<entityname.thal_bombcollar>Взрывной Ошейник</entityname.thal_bombcollar>
+	<entitydescription.thal_bombcollar>Чрезвычайно опасный предмет. После того, как вы наденете его, попытка снять ошейник без обезвреживания вызовет смертельный взрыв. Имеет случайный шанс взорваться, когда взведён. Может быть отключен с помощью ключа-деактиватора.</entitydescription.thal_bombcollar>
+	<entityname.thal_bombcollartimed>Взрывной Ошейник с таймером</entityname.thal_bombcollartimed>
+	<entitydescription.thal_bombcollartimed>Особенно садистский вариант взрывного ошейника, когда он взводится не только предотвращает снятие, но и запускает обратный отсчет до автоматической детонации ошейника. Имеет случайный шанс взорваться, когда работает. Соберите инструмент ДЛЯ ОБЕЗВРЕЖИВАНИЯ КАК можно скорее!</entitydescription.thal_bombcollartimed>
+	<entityname.thal_bombcollarkey>САПЕРНЫЙ НАБОР</entityname.thal_bombcollarkey>
+	<entitydescription.thal_bombcollarkey>Тащите к ошейнику, чтобы обезвредить.</entitydescription.thal_bombcollarkey>
+	<entityname.thal_bombvest>Жилет смертника</entityname.thal_bombvest>
+	<entitydescription.thal_bombvest>Жилет начинён несколькими высокосортными взрывчатыми веществами, которые взорвутся после смерти пользователя. Это может заставить кого-то дважды подумать, прежде чем убить тебя.</entitydescription.thal_bombvest>
+	<entityname.thal_nukevest>Жилет судного дня</entityname.thal_nukevest>
+	<entitydescription.thal_nukevest>Жилет начинён различными радиоактивными материалами, которые вызовут ядерный взрыв при смерти пользователя. Взрыв примечателен не столько физическим ущербом, который он наносит, сколько чрезвычайно токсичными радиоактивными осадками, оставшимися после него.</entitydescription.thal_nukevest>
+	<!-- Turrets -->
+	<entityname.trirailgunloader>Tri-Railgun Loader</entityname.trirailgunloader>
+	<entitydescription.trirailgunloader>Designed to efficiently load three rounds of railgun ammunition into a linked railgun system.</entitydescription.trirailgunloader>
+	<entityname.grapplingturret>Carving Laser</entityname.grapplingturret>
+	<entitydescription.grapplingturret>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.grapplingturret>
+	<entityname.grapplingturretloader>Carving Laser Loader</entityname.grapplingturretloader>
+	<entitydescription.grapplingturretloader>Used for loading oxygen into the cutting laser.</entitydescription.grapplingturretloader>
+	<entityname.grapplingturretbeam>Carving Laser Beam</entityname.grapplingturretbeam>
+	<entitydescription.grapplingturretbeam>Projectile shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.grapplingturretbeam>
+
+	<entityname.grapplingturretammobox>Oxygenite Plasma Pack</entityname.grapplingturretammobox>
+	<entitydescription.grapplingturretammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.grapplingturretammobox>
+	<entityname.carvinglaser>Carving Laser</entityname.carvinglaser>
+	<entitydescription.carvinglaser>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.carvinglaser>
+	<entityname.carvinglaserloader>Carving Laser Loader</entityname.carvinglaserloader>
+	<entitydescription.carvinglaserloader>Used for loading oxygen into the cutting laser.</entitydescription.carvinglaserloader>
+	<entityname.carvinglaserbeam>Carving Laser Beam</entityname.carvinglaserbeam>
+	<entitydescription.carvinglaserbeam>Projectile shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.carvinglaserbeam>
+	<entityname.carvinglaserammobox>Oxygenite Plasma Pack</entityname.carvinglaserammobox>
+	<entitydescription.carvinglaserammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.carvinglaserammobox>
+	<entityname.emcannon>Electromagnetic Cannon</entityname.emcannon>
+	<entitydescription.emcannon>Renegade-invented directed-energy weapon capable of directionally firing a pulse that will cause minor burns, but more importantly destroy electrical equipment or entities. The loud dazzling projectile may attract attention of listeners and watchers alike.</entitydescription.emcannon>
+	<entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
+	<entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
+		<!--WIP-->
+	<entityname.thal_apc>Area Power Controller</entityname.thal_apc>
+	<entitydescription.thal_apc>Device serving as a junction box with a built-in circuit breaker that also maintains a charge like a battery. Intended for power control interface for a single room; A "player-friendly" relay with minor backup power to keep the lights on for a little longer once external power goes out. Can be manually loaded with batteries to recharge.</entitydescription.thal_apc>
+	
+	<entityname.thal_locator>Acoustic HAM Radio</entityname.thal_locator>
+	<entitydescription.thal_locator>A radio that detects acoustic transmissions through water. Can be used to listen in on communications in nearby areas to give your crew sidequests.</entitydescription.thal_locator>
+		<!-- TRANSMISSION BRIEFINGS -->
+	<transmission.cache.1>The local AHAM Radio has intercepted an unencrypted Coalition-signed transmission from a search drone to a map server. Analytics suggest it is heading towards a wildlife research wreck. If you choose to take the cache for yourself, the Coalition will not know it was you.\n[The location of the cache has been marked on the sonar.] </transmission.cache.1>
+	<transmission.cache.2>The on-ship AHAM Radio has deciphered a distress signal from a nearby cargo ship carrying a significant surplus of equipment. Public shipment records indicate the ship was thought to be lost years ago and was effectively forgotten. If you choose to salvage the cache for yourself, nobody will know. \n[The location of the cache has been marked on the sonar.]</transmission.cache.2>
+	<transmission.cache.3>The onboard AHAM Radio has intercepted a series of standby transmissions in the nearby area. Status reports reveal that the ship was an independent mercenary attack sub, and all life support systems are dead, citing an attack by monsters. If you can clear the monsters, the guns would be yours.\n[The location of the cache has been marked on the sonar.] </transmission.cache.3>
+	<transmission.cache.4>A local AHAM Radio has intercepted a residual frequency from a nearby data cube containing instructions to a "hidden treasure trove". The source is unidentified, and the transmission is unsigned. If you choose to investigate, it may be a trap, so come armed.\n[The location of the cache has been marked on the sonar.] </transmission.cache.4>
+
+	<entityname.thal_lootcrate>Abandoned Beacon Crate</entityname.thal_lootcrate>
+	<entitydescription.thal_lootcrate>An Abandoned Beacon Crate, found lost amidst the wreckage. Finders, keepers.</entitydescription.thal_lootcrate>
+	
+	<lootlabel.weapons>Treasure:\nWeapon Cache</lootlabel.weapons>
+	<lootlabel.medicine>Treasure:\nMedicine Depot</lootlabel.medicine>
+	<lootlabel.ores>Treasure:\nRare Materials</lootlabel.ores>
+	<lootlabel.dna>Treasure:\nScience Cache</lootlabel.dna>
+	<lootlabel.money>Treasure:\nCredits</lootlabel.money>
+	
+	<lootlabel.alien>Sidequest:\nAnomaly</lootlabel.alien>
+	<lootlabel.monster>Sidequest:\nBoss Creature</lootlabel.monster>
+	
+	<uilabel.apcpower>Backup Power Bank</uilabel.apcpower>
+	<uilabel.apcbat>Charge APC via Battery</uilabel.apcbat>
+	<buttoncircuitbreaker>Circuit Breaker</buttoncircuitbreaker>
+	<buttonautolimit>Auto Limit Output on Backup Low</buttonautolimit>
+	<entityname.radbeam>Radiation Beam</entityname.radbeam>
+	<entitydescription.radbeam>Beam radiation emitter capable of causing severe burns to living organisms but completely useless against everything else.</entitydescription.radbeam>
+	<entityname.radbeamloader>Radiation Beam Loader</entityname.radbeamloader>
+	<entitydescription.radbeamloader>Used for loading fuel rods into Radiation Beam.</entitydescription.radbeamloader>
+	<entityname.piano>Grand Piano</entityname.piano>
+	<entitydescription.piano>An expensive Grandwin and Sons Piano. The music is only as good as the pianist. Place away from reactors, vents, sides of the ship, and other noisemakers for best results!</entitydescription.piano>
+		<!-- GUIDE -->
+	<thal_guidegen_introlabel>ПОМОЩЬ</thal_guidegen_introlabel>
+	<entityname.thal_guidegen_intro>ඞПОМОЩЬ\n\n	Эта книга служит введением в генетическую систему талассофобии. Навигация по нему осуществляется путем взятия в руки книги и нажатия на название страницы, которую вы хотите посетить, в правой части экрана. Как только вы это сделаете, всплывающая подсказка описания (та, которую вы сейчас читаете) обновится. Все гиды работают так.\nРекомендуется читать страницы по порядку сверху вниз. ИНДЕКС содержит сводную информацию о том, что содержат страницы.
+	</entityname.thal_guidegen_intro>
+	<thal_guidegen_indexlabel>ИНДЕКС</thal_guidegen_indexlabel>
+	<entityname.thal_guidegen_index>ඞИНДЕКС\n\nНиже приводится оглавление с кратким изложением каждой страницы:\n\n-СКАНЕР: Как получить ДНК сканером\n-ДНК: Правильное обращение С ДНК, деление\n-СПЛАЙСИНГ: Как сращивать ДНК для применения трансплантатов\n-ИЗВЕСТНЫЕ ТРАНСПЛАНТАТЫ: База данных известных трансплантатов\n-МУТАЦИИ: Краткое описание нарушений/аллелей\n-ТРАНСПЛАНТАЦИЯ: Пересадка, Выделение Аллелей\n-КЛОНИРОВАНИЕ: Биомасса, Клонирование для получения свежей ДНК</entityname.thal_guidegen_index>
+	<thal_guidegen_scannerlabel>СКАНИРОВАНИЕ</thal_guidegen_scannerlabel>
+	<entityname.thal_guidegen_scanner>ඞСКАНИРОВАНИЕ\n\nКаждый генетик начинает со сканера, чтобы получить ДНК, сканируя существ. ДНК-это основа генетики.\nВы можете удерживать правую кнопку мыши, чтобы прицелиться, и нажать E или левую кнопку мыши, чтобы прикрепить сканер к стене. Прикрепленный, вы можете взаимодействовать со сканером, чтобы включать и выключать его. Испускаемый луч опасен и будет оказывать медленное, но смертельное воздействие на окружающих людей, оставаясь включенным слишком долго. Он также будет быстро разрушаться во время активности, поэтому используйте его экономно. Чтобы отсоединить сканер, используйте гаечный ключ. Вы также можете подключить сканер для удаленной работы с сигналами.\nЧтобы получить ДНК, *ЖИВОЕ* существо должно стоять под лучом сканера в течение ~30 секунд. Ход сканирования можно увидеть на сканере в виде индикатора выполнения, который постепенно заполняется во время сканирования. Если существо выйдет из луча, планка быстро истощится: сохраняйте свое положение любыми необходимыми средствами.\nИнститут рекомендует ученым использовать парализатор, чтобы сохранить существо живым, но неподвижным. Однако надежные ученые, как известно, используют другие уловки, чтобы избежать потери парализатора. Помните, что безопасность экипажа на первом месте!\nКак только бар заполнится, из сканера выпадет свежий фрагмент ДНК. Положите его в холодильник как можно скорее.</entityname.thal_guidegen_scanner>
+	<thal_guidegen_dnalabel>ОБРАБОТКА ДНК</thal_guidegen_dnalabel>
+	<entityname.thal_guidegen_dna>ඞОБРАБОТКА ДНК\n	\nДНК-это тонкий, ценный ресурс. Он, естественно, дефицитен (если только он не поставляется с вашей подводной лодкой), и его трудно получить, так как он требует сканирования. Самое главное, hy67909DNA разрушается, когда она не погружена в воду или не находится в специальных контейнерах для хранения холода, таких как ваш охладитель ДНК. Повреждение/эрозия необратимы; Состояние ДНК может только ухудшиться. Если ждать достаточно долго, вся ДНК неизбежно полностью разрушится, независимо от того, насколько вы осторожны. Но то, как быстро и чисто вы его используете, определяет его долговечность.\n ДНК, которая полностью разрушилась, будет повреждена. Поврежденная ДНК ведет себя беспорядочно, и непроизвольное использование на предметах считается неэтичной халатностью. Несмотря на это, эксперименты с добровольными испытуемыми поощряются, поскольку многие из его побочных эффектов потенциально полезны для выживания человека на Европе и могут помочь вашему экипажу.</entityname.thal_guidegen_dna>
+	<thal_guidegen_splicelabel>СРАЩИВАНИЕ</thal_guidegen_splicelabel>
+	<entityname.thal_guidegen_splice>ඞСРАЩИВАНИЕ\n\nДНК может быть сращена с ДНК вас или членов вашего экипажа, чтобы получить новые способности.\n		 ДНК может быть привита к трем типам целевых слотов: "Голова", "Туловище" и "Конечности". Каждый трансплантат имеет различный эффект, зависящий от слота и используемой ДНК. Каждый слот может иметь только одну мутацию; Сплайсинг в слот вернет все существующие ранее существовавшие там трансплантаты.\nВсе, что привито к слоту для головы, является активной способностью, то есть вы можете нажать "Атака существа" (средняя мышь по умолчанию), чтобы использовать ее.\nCRISPR-Cas9-это внутриклеточный раствор, который подготавливает ДНК субъекта к трансплантации. Он потребляется при одном использовании, что делает его драгоценным и равноценным одному привитому по стоимости.\nЧтобы использовать CRISPR, оборудуйте его. Меню здоровья должно быть закрыто, иначе оно не будет работать. На экране вы увидите три кнопки. Нажмите на один из них в зависимости от желаемого слота. Впрысните его в того, кого вы хотите сращивать. Теперь они войдут в "расплав": они готовы к трансплантации.\nЗатем поместите свою ДНК в ДНК-графтер. Будьте быстры, чтобы свести к минимуму повреждение ДНК. Введите графтер в человека, переживающего расплавление. Они должны рухнуть и вскоре встать с новой способностью. Поздравляю!\nКогда люди с трансплантатами умирают, их ДНК разрушается, и они тают. Оживление, извлечение органов и другие вещи, зависящие от трупов, не сработают.</entityname.thal_guidegen_splice>
+	<thal_guidegen_graftslabel>ИЗВЕСТНЫЕ ТРАНСПЛАНТАТЫ</thal_guidegen_graftslabel>
+	<entityname.thal_guidegen_grafts>ИЗВЕСТНЫЕ ГРАФТЫ\n\nНиже приведен список известных трансплантатов, обнаруженных Институтом до сих пор. Вы можете увидеть все 3 слота трансплантата ДНК и то, что они делают, в описании наведения мыши на образец ДНК. Это дело европейских генетиков, чтобы найти остальное!\n\n			 КОНЕЧНОСТЬ-ГРЯЗЕВОГО-РАПТОРА\n				 Хвост, увеличивающий скорость плавания.\n				 ТУЛОВИЩЕ-ПОЛЗУНА\n				 Жабры, которые обеспечивают воздух под водой.\n				 ТУЛОВИЩЕ-ГРИБА\n				 Поры, которые восстанавливают здоровье в облаках спор.\n				 ГОЛОВА-ЛИЧИНКИ\n				 Запускает пользователя в структуре/сущности при использовании.\n				 ТУЛОВИЩЕ-АКУЛЬЕГО-ТИГРА\n				 Оболочка невосприимчива к давлению до 4000 м.\n				 ГОЛОВА-МОЛОТОГЛАВА\n				 Гребень головы, который заставляет других существ летать.\n\n				 Можете ли ВЫ исследовать все 21 трансплантат? Лучше займитесь сканированием!	</entityname.thal_guidegen_grafts>
+	<thal_guidegen_mutationlabel>МУТАЦИИ</thal_guidegen_mutationlabel>
+	<entityname.thal_guidegen_mutation>ඞМУТАЦИИ\n\nМУТАЦИИ - это побочный эффект генетической халатности. Институт решительно не рекомендует использовать мутации для широкой публики, но поощряет контролируемые исследования на испытуемых для изучения и каталогизации мутаций. Всего существует 30 мутаций.\nПри трансплантации ПОВРЕЖДЕННОЙ ДНК у пациента может появиться случайное число мутаций (от 1 до 7) наряду с обычным трансплантатом. Мутации бывают двух типов: НАРУШЕНИЯ и АЛЛЕЛИ. РАССТРОЙСТВА в основном вредны, в то время как АЛЛЕЛИ полезны. Расстройства обозначаются розовым значком FUSCHIA, где обычно отображаются расстройства, а аллели обозначаются ЖЕЛТО-ЗЕЛЕНЫМ. Конкретные мутации, которые вы получаете от поврежденной ДНК, по сути, являются удачей: изначально вы должны "охотится" за желаемыми мутациями.\nВсе мутации будут отменены, если вы привьете человеческую ДНК. Это эффективный способ лечения всех расстройств в чрезвычайной ситуации или после случайного использования поврежденной ДНК.</entityname.thal_guidegen_mutation>
+	<thal_guidegen_transplantlabel>ПЕРЕСАДКА</thal_guidegen_transplantlabel>
+	<entityname.thal_guidegen_transplant>ඞПЕРЕСАДКА\n\nЧтобы сделать вещи менее случайными, существует элемент, который "удерживает" некоторые мутации из розыгрыша, которые вы хотите сохранить.\nТрансплантатор ДНК-это элемент, который копирует, редактирует и передает мутации. Инъекция кому-то пустого трансплантатора ДНК сохранит их мутации, если они у них есть. Звук и двоичный эффект произойдут, если хранение будет успешным, и сохраненные недуги будут перечислены в описании наведения курсора мыши. После этого момента инъекция любого человека с одним и тем же трансплантатом даст ему все сохраненные мутации. В зависимости от тяжести мутаций состояние трансплантанта будет снижаться. Более опасные или более полезные мутации (такие как аллели), как правило, быстрее снижают состояние. Когда условие достигает нуля, трансплантат и его содержимое уничтожаются. Это служит способом передачи мутаций от одного человека к другому, ограниченное количество раз.\nПередача также может удалить определенные черты. Оснащение трансплантатора и нажатие кнопки "Отбраковка мутаций" позволяет просматривать содержимое трансплантатора при наведении курсора мыши, например, маску для дайвинга или пояс с инструментами. Отсюда вы можете вытащить любые мутации, которые вам не нужны в трансплантаторе, чтобы изолировать их. Нажатие кнопки "Отбраковка мутаций" сокращает использование трансплантата до одного раза, но вы можете поместить свои отбракованные мутации на чистый объект, а затем использовать свежий трансплантат для сканирования от указанного объекта.</entityname.thal_guidegen_transplant>
+	<thal_guidegen_clonelabel>КЛОНИРОВАНИЕ</thal_guidegen_clonelabel>
+	<entityname.thal_guidegen_clone>ඞКЛОНИРОВАНИЕ\n\nЕсли ваша ДНК изнашивается и повреждается, есть способ извлечь свежую ДНК из поврежденного образца. Клонирование позволяет вырастить оригинальное существо из поврежденной ДНК, что позволяет сканировать неповрежденную ДНК этого существа.\nЧтобы клонировать, держите свой биоморфный инкубационный стручок в руках, прицелитесь правой кнопкой мыши и нажмите E или левую мышь, чтобы прикрепить его. Уронить его на землю не получится. При правильном прикреплении Инкубатор покажет показания того, сколько килограммов "биомассы" он содержит. Для каждого существа требуется разное количество биомассы, а для человека-60 кг.\nБиомассу (то есть органический материал) можно получить, поместив в инкубатор любые мясистые органы существ. Генетики размножаются с помощью Мясорубки, которая позволяет им вырезать мясо из трупов, чтобы получить биомассу. Несколько раз ударяйте по трупам, пока повсюду не хлынет кровь и не вылезут внутренности.\nКак только биомасса будет получена, взаимодействуйте с инкубатором. Вы увидите один слот для предметов и кнопку инициализации. Поместите свою биомассу в слот для предметов, и она должна мгновенно измельчиться, а счетчик должен подняться. Как только их будет достаточно, вставьте ДНК нужного существа и инициируйте клонирование. Затем вы сможете сканировать существо, чтобы получить неповрежденную ДНК.\n\nПоздравляю с окончанием руководства! Если вы действительно настоящий профессионал в области генетики, вы можете деконструировать эту книгу для бесплатного набора инструментов генетики.</entityname.thal_guidegen_clone>
+	
+
+	<entityname.thal_necro_description>Book detailing the basics of the cultist role. Hold to read, type in the topmost bar to navigate.</entityname.thal_necro_description>
+	<entityname.thal_necro_intro>---WELCOME---\nWelcome to the Abridged Necronomicon!\n\nThis book is for cultists who don't have time to read the long, boring Necronomicon, teaching you the basics of occultism like summoning scary stuff, communicating with the dead, and the fundamentals of blood rituals!\n\nThis electronic book is navigated by entering terms into the topmost box. Press 'index' to view available terms.</entityname.thal_necro_intro>
+	<entityname.thal_necro_index>---INDEX---\nHere is an index of available terms followed by what their pages are:\nglassaltar: directions for using the blood altar to obtain items\npentagram: basic usage of the summoning pentagram\ncoldcavern: ritual directions for summoning the 'Cold Cavern Sampler'\nglow: ritual directions for summoning the 'Glowpocalypse'\n: ritual directions for summoning the 'Calyx Outbreak'.</entityname.thal_necro_index>
+	<entityname.thal_necro_glassaltar>---GLASS ALTAR + GUTTER DAGGER---\nCongratulations on your purchase of a Honkcraftian altar and dagger combo! These items serve to aid in collecting blood and summoning items.\n\nYour GUTTER DAGGER has a bar indicating how much blood it has collected. Stab things to collect blood! While you may be tempted to stab your colleagues, remember that Euopan creatures provide more blood overall. Only draw blood from human subjects with their consent.\n\nYour GLASS ALTAR is where blood can be redeemed for special items via blood rituals. Place your GUTTER DAGGER inside the altar, and equip the altar in your hand to see the options. You must have the indicated amount of blood in the dagger or the ritual will not work! Wait for the ritual to finish, and your item will appear inside the altar, allowing removal.</entityname.thal_necro_glassaltar>
+	<entityname.thal_necro_pentagram>---SUMMONING PENTAGRAM---\nIf you want to bring forsaken life into the world, look no further than your SUMMONING PENTAGRAM.\n\nYou can create a summoning pentagram with your GLASS ALTAR provided you have enough blood (refer to section 'glassaltar'). Equip it, aim with the right mouse button, and place it with your USE key (E or left mouse). Once your pentagram is laid out, it cannot be removed nondestructively!\n\nYou can now SUMMON CREATURES. Various SUMMONING ITEMS in the game can be placed in your pentagram to initiate a ritual, and they will also spawn some LOOT, provided you don't mind a little bit of fighting! Refer to these sections to learn about a few basic summons!\ncoldcavern: ritual directions for summoning the 'Cold Cavern Sampler'\nglow: ritual directions for summoning the 'Glowpocalypse'\nhusk: ritual directions for summoning the 'Calyx Outbreak'\n...and many more! Experiment with items closely associated with living creatures (e.g., husk stingers for husks, paralyzant for thalamus, etc).</entityname.thal_necro_pentagram>	
+	<entityname.thal_necro_coldcavern>---RITUAL: COLD CAVERN SAMPLER---\nSummoning Item: Mudraptor Shell\nSummons Per Item: 2\nTime Required: 45 seconds\nSuccessful Outcome: 3 Hydrophixate, 1 Stantium, 2 Crawlers\nChance of Failure: 5%\nFailure Outcome: Pentagram Destroyed, 3 Mudraptors, 1 Crawler\n\nAn ideal summon for newbie cultists of underarmed ships. The low risks, easily obtainable item, and pushover success enemies make it a reliable source of basic resources.</entityname.thal_necro_coldcavern>	
+	<entityname.thal_necro_husk>---RITUAL: CALYX OUTBREAK---\nSummoning Item: Husk Stinger\nSummons Per Item: 3\nTime Required: 60 seconds\nSuccessful Outcome: 1 Calyxanide, 1 Husk Eggs, 2 Husks\nChance of Failure: 15%\nFailure Outcome: Pentagram Destroyed, 1 Husked Crawler, 2 Husks, 1 Husk Eggs\n\nFew enemies summoned ensure that smaller crews will be less overwhelmed, but being caught off guard by a failure may easily result in a husk outbreak among the crew. Stay vigilant with this one, and you will find yourself with plenty of calyxanide.</entityname.thal_necro_husk>	
+	<entityname.thal_necro_glow>---RITUAL: GLOWPOCALYPSE---\nSummoning Item: Glow/Synth/Frost Crystal\nSummons Per Item: 3\nTime Required: 40 seconds\nSuccessful Outcome: 2 Uranium, 1 Thorium, 1 Glowraptor\nChance of Failure: 30%\nFailure Outcome: Pentagram Destroyed, Small Nuclear Explosion, 3 Glowraptors\n\nA somewhat risky gamble with an alluring payoff of lots of fuel for the reactor. It is recommended that your crew has the firepower to back up this venture.</entityname.thal_necro_glow>
+	
+	<entityname.thal_necro_section>Enter Index/Section/Page Here (lowercase)</entityname.thal_necro_section>
+	
+	
+	<necro.welcome>The Abridged Necronomicon\n\nHubismal and Sons Publishing\n\nCopyright 2036\n\nType 'intro' into the topmost box and then press Enter to begin.</necro.welcome>
+	
+	<necro.intro>---WELCOME---</necro.intro>
+	<necro.index>---INDEX---</necro.index>
+	<necro.glassaltar>---GLASS ALTAR + GUTTER DAGGER---</necro.glassaltar>
+	<necro.pentagram>---SUMMONING PENTAGRAM---</necro.pentagram>
+	<necro.coldcavern>---RITUAL: COLD CAVERN SAMPLER---</necro.coldcavern>
+	<necro.husk>---RITUAL: CALYX OUTBREAK---</necro.husk>
+	<necro.glow>---RITUAL: GLOWPOCALYPSE---</necro.glow>
+	
+	
+	<label.analyze>Analyze DNA (Requires Adequate Biomass)</label.analyze>
+
+
+	<!--Traitor-->
+	<thal_timedcollar_traitormissionstartinfotext>Bomb-Voyage</thal_timedcollar_traitormissionstartinfotext>
+
+	<thal_timedcollar_traitorobjectivestartmessage1>Now that your crew has settled into the ship, you might finally have a chance to make some easy cash at long last. First thing's first:\n[traitorgoalinfos]</thal_timedcollar_traitorobjectivestartmessage1>
+	<thal_timedcollar_goalinfotext_1>In the [targethullname], check the cabinets. You can see the room names on a Status Monitor or an Automap.</thal_timedcollar_goalinfotext_1>
+	<thal_timedcollar_objectivefailmessage1>Welp. You couldn't even manage to get the collar somehow, and that's probably the end of your payment opportunity. Guess it's back to the classifieds of The Europan.</thal_timedcollar_objectivefailmessage1>
+	<thal_timedcollar_objectivesuccessmessage1>This is it. A weapons dealer "commissioned" you to try this on a live subject. You'd hate to have one of these strapped around your neck, and normally you'd hate to do the strapping, but you need the credits.</thal_timedcollar_objectivesuccessmessage1>
+
+	<thal_timedcollar_traitorobjectivestartmessage2>Careful not to use it on accident. Now, you'll need a diversion for everyone to occupy themselves with while you find a subject.\n[traitorgoalinfos]</thal_timedcollar_traitorobjectivestartmessage2>
+	<thal_timedcollar_goalinfotext_2>Sabotage the engine. It needs to be disabled to distract the attention of the others.</thal_timedcollar_goalinfotext_2>
+	<thal_timedcollar_objectivefailmessage2>So much for disabling the engine. Without a proper distraction, this mission has already failed.</thal_timedcollar_objectivefailmessage2>
+	<thal_timedcollar_objectivesuccessmessage2>Nice. That'll slow the ship down and get heads turning.</thal_timedcollar_objectivesuccessmessage2>
+
+	<thal_timedcollar_traitorobjectivestartmessage3>It's showtime! Your contractor spent hours searching for a test subject who would not be missed. Now their fate has arrived.\n[traitorgoalinfos]</thal_timedcollar_traitorobjectivestartmessage3>
+	<thal_timedcollar_goalinfotext_3>Knock out [targetname] somehow and strap the collar onto their head. Survive and evade detainment during the countdown, and see the collar to its detonation!</thal_timedcollar_goalinfotext_3>
+	<thal_timedcollar_objectivefailmessage3>Shit! Almost. Your contractor wanted the collar to kill the subject alive and nothing else. Unfortunately, you'll have to find work elsewhere, maybe in a restaurant or something, because this mission just flopped.</thal_timedcollar_objectivefailmessage3>
+	<thal_timedcollar_objectivesuccessmessage3>Holy shit! They're fucking dead. Obviously. Okay, don't panic, you need to get the hell out of here!</thal_timedcollar_objectivesuccessmessage3>
+
+	<thal_timedcollar_traitorobjectivestartmessage4>You need to escape before things get worse. The operative said you'd be picked up, and you can't afford to stay on this ship any longer!\n[traitorgoalinfos]</thal_timedcollar_traitorobjectivestartmessage4>
+	<thal_timedcollar_goalinfotext_4>Put a distance of 200 meters between yourself and the sub, whether through shuttle or underwater scooter.</thal_timedcollar_goalinfotext_4>
+	<thal_timedcollar_objectivefailmessage4>Oops. That did not work out the way you were expecting it to at all.</thal_timedcollar_objectivefailmessage4>
+	<thal_timedcollar_objectivesuccessmessage4>That should be far enough. You see what looks like a well armed military shuttle in the distance and hail to them. They slow to pick you up. Here comes the money!</thal_timedcollar_objectivesuccessmessage4>
+	
+		<!--cultistkit-->
+
+	
+	<cultistkit.wireband>Wire Bind [50pct Dagger]</cultistkit.wireband>
+	<cultistkit.muzzle>Muzzle [70pct Dagger]</cultistkit.muzzle>
+	<cultistkit.blindfold>Blindfold [60pct Dagger]</cultistkit.blindfold>
+	<cultistkit.candle>Candle [10pct Dagger]</cultistkit.candle>
+	<cultistkit.ouija>Ouija Board [20pct Dagger]</cultistkit.ouija>
+	<cultistkit.huskcostume>Husk Costume [30pct Dagger]</cultistkit.huskcostume>
+	<cultistkit.resurrection>Resurrection Dagger [90pct Dagger]</cultistkit.resurrection>
+	<cultistkit.paintbrush>Ritual Paintbrush [100pct Dagger]</cultistkit.paintbrush>
+	<cultistkit.cultistkit_placeable>Placeable Glass Altar [100pct Dagger]</cultistkit.cultistkit_placeable>
+
+
+		<!--Mime Items-->
+
+	
+	<entityname.thal_mimecase>Entertainment Briefcase</entityname.thal_mimecase>
+	<entitydescription.thal_mimecase>It's a sophisticated miniature leather briefcase. NOT a purse. Advanced mime trickery allows it to carry unusually large objects. Only openable by the mime.</entitydescription.thal_mimecase>
+	
+	<entityname.thal_mimeberet>Black Beret</entityname.thal_mimeberet>
+	<entitydescription.thal_mimeberet>French head garment and standard mimewear. Silly but sophisticated.</entitydescription.thal_mimeberet>
+	
+	<entityname.thal_mimecostume>Mime Costume</entityname.thal_mimecostume>
+	<entitydescription.thal_mimecostume>A more subtle costume for a more refined entertainment. When worn by a mime, it increases agility.</entitydescription.thal_mimecostume>
+
+	<entityname.thal_invisiblewall>Invisible Wall</entityname.thal_invisiblewall>
+	<entitydescription.thal_invisiblewall>Only usable by the mime. Can be used to shove people around, and even defend against bullets. Similar to the mudraptor shell.</entitydescription.thal_invisiblewall>
+	
+	<entityname.thal_mimespray>Industry Grade Tongue Tier</entityname.thal_mimespray>
+	<entitydescription.thal_mimespray>An industry-grade spray that silences people for a limited amount of time. Only usable by mimes.</entitydescription.thal_mimespray>
+
+	<entityname.thal_mimeinflictor>Mime Inflictor</entityname.thal_mimeinflictor>
+	<entitydescription.thal_mimeinflictor>Gives the holder mime affliction.</entitydescription.thal_mimeinflictor>
+	
+	<entitydescription.thal_vent>Place this vent and hide within it.</entitydescription.thal_vent>
+	
+
+
+
+	<!--Talents-->
+		
+			<!--Scientists-->
+			
+	<talentname.thal_botanysuit>Protective Gear</talentname.thal_botanysuit>
+	<talentdescription.thal_botanysuit>Welcome, researcher. It's time to get suited up.</talentdescription.thal_botanysuit>
+
+	<talentname.thal_geneharvester>Genetic Harvesting</talentname.thal_geneharvester>
+	<talentdescription.thal_geneharvester>When looting a creature, there is a [probability]% chance of finding a [itemname] on it.</talentdescription.thal_geneharvester>
+	
+	<talentname.thal_geneformulation>Gene Formulation</talentname.thal_geneformulation>
+	<talentdescription.thal_geneformulation>After months of research, you can now extract DNA from living creatures.</talentdescription.thal_geneformulation>
+	
+	<talentname.thal_blackmarketgenes>Secret Vendors</talentname.thal_blackmarketgenes>
+	<talentdescription.thal_blackmarketgenes>Shops in Research Stations and Cities can sell [itemname].</talentdescription.thal_blackmarketgenes>
+
+	<talentname.thal_juniorresident>Junior Resident</talentname.thal_juniorresident>
+	<talentdescription.thal_juniorresident>[role] costs [amount]% less to hire.</talentdescription.thal_juniorresident>
+
+	<talentname.thal_PRT>Positive reinforcement training</talentname.thal_PRT>
+	
+	<talentname.thal_seedmodder>Seed Enhancer</talentname.thal_seedmodder>
+
+		<!--Clown-->
+
+	<talentname.thal_deathbycomedy>The Madman's Laugh</talentname.thal_deathbycomedy>
+	<talentdescription.thal_deathbycomedy>Upon death, the bearer violently explodes, potentially harming anything in close proximity, be it crew or otherwise.</talentdescription.thal_deathbycomedy>
+
+	<!--Cultist-->
+	
+	<talentname.indoctrination>Церемония Индоктринации</talentname.indoctrination>
+	<talentdescription.indoctrination>После выполнения каждой миссии в одежде [cultist] или [zealot] вы зарабатываете [reputation] репутацию для [faction].</talentdescription.indoctrination>
+
+	<talentname.spreadtheword>Распространение Слова</talentname.spreadtheword>
+	<talentdescription.spreadtheword>Вы получаете способность создавать скульптуры из плоти. Поклонение этим статуям дарует вам [affliction].</talentdescription.spreadtheword>
+	
+	<talentname.devoutest>Самый преданный</talentname.devoutest>
+	<talentdescription.devoutest>Ваше тело адаптировалось к самым суровым условиям Европы; вам больше не нужен кислород для дыхания, и вы иммунны к окружающему давлению.</talentdescription.devoutest>
+
+	<talentname.preacher>Проповедник</talentname.preacher>
+	<talentdescription.preacher>Теперь вам поручено распространять слово [faction] и ее цели.</talentdescription.preacher>
+
+
+	<!--Talent Items-->
+
+	<entityname.thal_geneticmaterial_unresearched>Некаталогизированная ДНК</entityname.thal_geneticmaterial_unresearched>
+	<entitydescription.thal_geneticmaterial_unresearched>Эта ДНК еще не была исследована достаточно, чтобы определить ее происхождение.</entitydescription.thal_geneticmaterial_unresearched>
+
+	<entityname.thal_seedmodder>Усилитель семян</entityname.thal_seedmodder>
+	<entitydescription.thal_seedmodder>Это устройство облегчает гибридизацию семян различных фаун Европы, позволяя выращивать растения, ранее не пригодные для подводной среды. Оно также позволяет создавать совершенно новые виды растений путем генетической рекомбинации.</entitydescription.thal_seedmodder>
+
+	<entityname.thal_radsuit>Радиационный костюм</entityname.thal_radsuit>
+	<entitydescription.thal_radsuit>Современный костюм, в основном используемый учеными для работы с высокорадиоактивными материалами. Хотя он не обеспечивает защиту от давления или удушья, он почти полностью защищает от ожогов, радиации и свечения.</entitydescription.thal_radsuit>
+
+	<entityname.thal_botanyradsuit>Костюм для гидропоники</entityname.thal_botanyradsuit>
+	<entitydescription.thal_botanyradsuit>Современный костюм, преимущественно носимый ботаниками при работе с взрывчатой фауной. Хотя он не защищает от давления или удушья, он обеспечивает иммунитет к воздействию вредных растений.</entitydescription.thal_botanyradsuit>
+
+</infotexts>

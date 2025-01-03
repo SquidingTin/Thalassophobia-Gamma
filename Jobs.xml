@@ -1,174 +1,239 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Jobs>
-  <Job identifier="thal_clown" minnumber="0" maxnumber="1" minkarma="40" initialcount="0" uicolor="0.80,0.20,0.80" vitalitymodifier="-40">
-    <Jobicon>
-      <sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,256,128,128" origin="0.5,0.5" />
-    </Jobicon>
-    <Skills>
-      <Skill identifier="helm" level="0,50" />
-      <Skill identifier="weapons" level="0,30" />
-      <Skill identifier="mechanical" level="0,50" />
-      <Skill identifier="electrical" level="0,50" />
-      <Skill identifier="medical" level="10,50" />
-      <!--<Skill identifier="resolution" level="20,100"/>-->
-      <Skill identifier="initiative" level="0,100" />
-    </Skills>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="thal_clownpack" equip="true">
-        <Item identifier="thal_bananapeel" />
-        <Item identifier="thal_partyblower" />
-      </Item>
-      <Item identifier="clownmask" equip="true" />
-      <Item identifier="clowncostume" equip="true" outfit="true" />
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false" />
-      </Item>
-      <Item identifier="bikehorn" equip="false"></Item>
-      <Item identifier="thal_clownkit" equip="false" />
-      <Item identifier="thal_miniwardrobe" equip="false">
-        <Item identifier="captainsuniform1" showpreview="false" />
-        <Item identifier="orangejumpsuit1" showpreview="false" />
-        <Item identifier="thal_huskcostume" showpreview="false" />
-        <Item identifier="securityuniform1" showpreview="false" />
-      </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="thal_cultistmask" equip="true" />
-      <Item identifier="thal_cultistcostume" equip="true" outfit="true" />
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false" />
-      </Item>
-      <Item identifier="toolbox" equip="true">
-        <Item identifier="thal_cultistknife" />
-        <Item identifier="thal_cultistkit" />
-        <Item identifier="ethanol" />
-      </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="thal_mimeberet" equip="true" />
-      <Item identifier="thal_mimecostume" equip="true" outfit="true" />
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false" />
-      </Item>
-      <Item identifier="thal_mimecase" equip="true">
-        <Item identifier="thal_invisiblewall" showpreview="true" />
-        <Item identifier="thal_mimespray" />
-        <Item identifier="thal_muzzle" />
-        <Item identifier="thal_pen" />
-        <Item identifier="thal_sign" />
-      </Item>
-      <Item identifier="thal_mimeinflictor" showpreview="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <PortraitClothing>
-      <sprite name="Portrait Clothing Captain" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,0" />
-    </PortraitClothing>
-    <AutonomousObjectives>
-      <Order identifier="extinguishfires" prioritymodifier="1" />
-      <Order identifier="steer" option="maintainposition" prioritymodifier="0.5" />
-    </AutonomousObjectives>
-    <AppropriateOrders>
-      <Order identifier="steer" />
-    </AppropriateOrders>
-  </Job>
-  <Job identifier="thal_scientist" minnumber="0" maxnumber="4" minkarma="40" initialcount="0" uicolor="0.50,1.00,0.80" vitalitymodifier="-20">
-    <Jobicon>
-      <sprite name="sci icon" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="768,256,128,128" origin="0.5,0.5" />
-    </Jobicon>
-    <Skills>
-      <Skill identifier="helm" level="0,10" />
-      <Skill identifier="weapons" level="0,5" />
-      <Skill identifier="mechanical" level="0,5" />
-      <Skill identifier="electrical" level="0,5" />
-      <Skill identifier="medical" level="20,30" />
-      <!--<Skill identifier="resolution" level="20,100"/>-->
-    </Skills>
-    <!-- botanist -->
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="thal_botanistsuit" equip="true" outfit="true" />
-      <Item identifier="thal_botanistmask" equip="true" />
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false" />
-      </Item>
-      <Item identifier="toolbelt">
-        <Item identifier="thal_recipefumigator" equip="false" showpreview="false" />
-        <Item identifier="thal_recipeconstructor" equip="false" showpreview="false" />
-        <Item identifier="thal_recipefungicide" equip="false" showpreview="false" />
-        <Item identifier="thal_cylinderlaughing" equip="false" />
-        <Item identifier="thal_cylinderteargas" equip="false" />
-        <Item identifier="thal_cylinderlaughing" equip="false" />
-        <Item identifier="thal_sprinkler" equip="false" />
-        <Item identifier="thal_hydrophonicsign" equip="false" />
-        <Item identifier="thal_hydrophonicsign" equip="false" showpreview="false" />
-      </Item>
-      <Item identifier="smallplanter" equip="false" />
-      <Item identifier="wateringcan" equip="false" />
-      <Item identifier="thal_fumigator" equip="false" />
-      <Item identifier="seedbag" equip="false" showpreview="false" >
-        <Item identifier="thal_shroomseed" equip="false" showpreview="false" />
-        <Item identifier="thal_zombieseed" equip="false" showpreview="false" />
-        <Item identifier="thal_rustseed" equip="false" showpreview="false" />
-      </Item>
-      <Item identifier="thal_assembler" equip="false"  showpreview="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <!-- itemset 2:geneticist -->
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="thal_geneticistsuit" equip="true" outfit="true" />
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="healthscanner" equip="true" />
-        <Item identifier="batterycell" showpreview="false" />
-      </Item>
-      <Item identifier="toolbelt" equip="true" >
-        <Item identifier="thal_recipeconstructor" equip="false"  showpreview="false" />
-        <Item identifier="thal_recipegeneticinit" equip="false"  showpreview="false" />
-        <Item identifier="thal_recipegeneticgraft" equip="false"  showpreview="false" />
-      <Item identifier="thal_assembler" equip="false" showpreview="false" />
-        <Item identifier="thal_geneticsign" equip="false" />
-      </Item>
-      <Item identifier="thal_guidegen" equip="false" showpreview="false" />
-      <Item identifier="thal_dnascanner" equip="false" />
-      <Item identifier="thal_dnabox" equip="false" >
-				<Item identifier="thal_dnahuman" equip="false" showpreview="false" />
-				</Item>
-      <Item identifier="thal_carver" equip="false" />
-      <Item identifier="thal_dnahatcher" equip="false" />
-				<Item identifier="thal_geneticinit" equip="false" />
-				<Item identifier="thal_geneticgraft" equip="false" />
-					<Item identifier="thal_disordersave" equip="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <PortraitClothing>
-      <sprite name="Portrait Clothing Captain" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,0" />
-    </PortraitClothing>
-    <AutonomousObjectives>
-      <Order identifier="extinguishfires" prioritymodifier="1" />
-      <Order identifier="steer" option="maintainposition" prioritymodifier="0.5" />
-    </AutonomousObjectives>
-    <AppropriateOrders>
-      <Order identifier="steer" />
-    </AppropriateOrders>
-  </Job>
+	<Job identifier="thal_clown" minnumber="0" maxnumber="1" minkarma="40" initialcount="0" uicolor="0.80,0.20,0.80" vitalitymodifier="-40">
+		<Jobicon>
+			<sprite texture="%ModDir%/UI/MainIconsAtlas.png" sourcerect="640,256,128,128" origin="0.5,0.5" />
+		</Jobicon>
+		<Skills>
+			<Skill identifier="weapons" level="20,30"/>
+			<Skill identifier="mechanical" level="20,30"/>
+			<Skill identifier="electrical" level="20,30"/>
+			<Skill identifier="medical" level="20,30"/>
+			<Skill identifier="helm" level="17.5,20"/>
+			<Skill identifier="initiative" level="0,100" />
+		</Skills>
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false" />
+			<Item identifier="thal_clownpack" equip="true">
+				<Item identifier="bananapeel" />
+				<Item identifier="thal_partyblower" />
+			</Item>
+			<Item identifier="clownmask" equip="true" />
+			<Item identifier="clowncostume" equip="true" outfit="true" />
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="bikehorn"/>
+			<Item identifier="thal_clownkit" />
+			<Item identifier="thal_miniwardrobe"/>
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false" />
+			<Item identifier="thal_mimeberet" equip="true" />
+			<Item identifier="thal_mimecostume" equip="true" outfit="true" />
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="thal_mimecase" equip="true"/>
+			<Item identifier="thal_mimeinflictor" showpreview="false" />
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<PortraitClothing>
+			<sprite name="Portrait Clothing Captain" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,0" />
+		</PortraitClothing>
+		<AutonomousObjectives>
+			<Order identifier="extinguishfires" prioritymodifier="1" />
+			<Order identifier="steer" option="maintainposition" prioritymodifier="0.5" />
+		</AutonomousObjectives>
+		<AppropriateOrders>
+			<Order identifier="cleanupitems" />
+		</AppropriateOrders>
+	</Job>
+	<Job identifier="thal_cultist" minnumber="0" maxnumber="1" minkarma="40" initialcount="0" uicolor="0.186,0.85,0.211" vitalitymodifier="-30">
+		<Jobicon>
+			<sprite texture="%ModDir%/UI/MainIconsAtlas.png" sourcerect="128,256,128,128" origin="0.5,0.5" />
+		</Jobicon>
+		<Skills>
+			<Skill identifier="weapons" level="20,30"/>
+			<Skill identifier="mechanical" level="20,30"/>
+			<Skill identifier="electrical" level="20,30"/>
+			<Skill identifier="medical" level="20,30"/>
+			<Skill identifier="helm" level="17.5,20"/>
+			<Skill identifier="initiative" level="0,100" />
+		</Skills>
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false" />
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="thal_cultistmask" equip="true" />
+			<Item identifier="thal_cultistcostume" equip="true" outfit="true" />
+			<Item identifier="thal_cultistkit">
+				<Item identifier="thal_cultistknife"/>
+				<Item identifier="ethanol"/>
+			</Item>
+			<Item identifier="thal_cultistbook"/>
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<PortraitClothing>
+			<sprite name="Portrait Clothing Cultist" texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="340,54,62,48" />
+		</PortraitClothing>
+		<AutonomousObjectives>
+			<Order identifier="extinguishfires" prioritymodifier="1" />
+			<Order identifier="steer" option="maintainposition" prioritymodifier="0.5" />
+		</AutonomousObjectives>
+		<AppropriateOrders>
+			<Order identifier="cleanupitems" />
+		</AppropriateOrders>
+	</Job>
+	<Job identifier="thal_scientist" minnumber="0" maxnumber="4" minkarma="40" initialcount="0" uicolor="0.50,1.00,0.80" vitalitymodifier="-20">
+		<Jobicon>
+			<sprite name="sci icon" texture="%ModDir%/UI/MainIconsAtlas.png" sourcerect="768,256,128,128" origin="0.5,0.5" />
+		</Jobicon>
+		<Skills>
+			<Skill identifier="medical" level="40,50" primary="true"/>
+			<Skill identifier="weapons" level="15,25"/>
+			<Skill identifier="mechanical" level="15,25"/>
+			<Skill identifier="electrical" level="15,25"/>
+			<Skill identifier="helm" level="5,10"/>
+		</Skills>
+		<!-- botanist -->
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false" />
+			<Item identifier="thal_botanistsuit" equip="true" outfit="true" />
+			<Item identifier="thal_botanistmask" equip="true" />
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="toolbelt">
+				<Item identifier="thal_recipefumigator" showpreview="false" />
+				<Item identifier="thal_recipeconstructor" showpreview="false" />
+				<Item identifier="thal_cylinderlaughing" />
+				<Item identifier="thal_cylinderteargas" />
+				<Item identifier="thal_cylinderlaughing" />
+				<Item identifier="thal_sprinkler" />
+				<Item identifier="thal_hydrophonicsign" />
+				<Item identifier="thal_guidecylinder" showpreview="false" />
+			</Item>
+			<Item identifier="smallplanter" />
+			<Item identifier="wateringcan" />
+			<Item identifier="thal_fumigator" />
+			<Item identifier="seedbag" showpreview="false">
+				<Item identifier="thal_shroomseed" showpreview="false" />
+				<Item identifier="thal_zombieseed" showpreview="false" />
+				<Item identifier="thal_rustseed" showpreview="false" />
+			</Item>
+			<Item identifier="thal_assembler" showpreview="false" />
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<!-- geneticist -->
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false" />
+			<Item identifier="thal_geneticistsuit" equip="true" outfit="true" />
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="healthscanner" equip="true" />
+			<Item identifier="toolbelt" equip="true">
+				<Item identifier="thal_recipeconstructor" showpreview="false" />
+				<Item identifier="thal_recipegeneticinit" showpreview="false" />
+				<Item identifier="thal_recipegeneticgraft" showpreview="false" />
+				<Item identifier="thal_assembler" showpreview="false" />
+				<Item identifier="thal_geneticsign" />
+			</Item>
+			<Item identifier="thal_guidegen" showpreview="false" />
+			<Item identifier="thal_dnascanner" />
+			<Item identifier="thal_dnabox" showpreview="false">
+				<Item identifier="thal_dnahuman" />
+				<Item identifier="thal_dnahatcher" />
+				<Item identifier="thal_geneticinit" />
+				<Item identifier="thal_geneticgraft" />
+				<Item identifier="thal_disordersave" />
+			</Item>
+			<Item identifier="thal_carver" />
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<PortraitClothing>
+			<sprite name="Portrait Clothing Captain" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,0" />
+		</PortraitClothing>
+		<AutonomousObjectives>
+			<Order identifier="extinguishfires" prioritymodifier="1" />
+			<Order identifier="steer" option="maintainposition" prioritymodifier="0.5" />
+		</AutonomousObjectives>
+		<AppropriateOrders>
+			<Order identifier="cleanupitems" />
+		</AppropriateOrders>
+	</Job>
+	<Job identifier="thal_enforcer" maxnumber="2" minkarma="0" uicolor="0.57,0.48,0.43" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Patrol" hiddenjob="true">
+		<Jobicon>
+			<sprite texture="%ModDir%/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5"/>
+		</Jobicon>
+		<JobiconSmall>
+			<sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,640,28,28" origin="0.5,0.5"/>
+		</JobiconSmall>
+		<Skills>
+			<Skill identifier="weapons" level="50,60" primary="true"/>
+			<Skill identifier="medical" level="15,35"/>
+			<Skill identifier="mechanical" level="10,25"/>
+			<Skill identifier="electrical" level="10,25"/>
+			<Skill identifier="helm" level="5,10"/>
+		</Skills>
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false"/>
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="handcuffs" />
+			<Item identifier="smg">
+				<Item identifier="smgmagazine" />
+			</Item>
+			<Item identifier="smgmagazine" />
+			<Item identifier="smgmagazine" />
+			<Item identifier="stunbaton">
+				<Item identifier="batterycell" showpreview="false"/>
+			</Item>
+			<Item identifier="bodyarmor" equip="true" />
+			<Item identifier="thal_enforcerhelmet" equip="true" />
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<ItemSet>
+			<Item identifier="idcard" equip="true" showpreview="false"/>
+			<Item identifier="headset" equip="true" showpreview="false"/>
+			<Item identifier="handcuffs" />
+			<Item identifier="smg">
+				<Item identifier="smgmagazine" />
+			</Item>
+			<Item identifier="smgmagazine" />
+			<Item identifier="smgmagazine" />
+			<Item identifier="divingknife" />
+			<Item identifier="bodyarmor" equip="true" />
+			<Item identifier="thal_enforcerhelmet" equip="true" />
+			<Item identifier="divingmask">
+				<Item identifier="oxygentank" />
+			</Item>
+			<PreviewSprites dims="120,109">
+				<sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_3.png" sourcerect="2,38,120,109" offset="0,0" />
+				<sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_3.png" sourcerect="121,0,76,80" offset="-20,15" />
+			</PreviewSprites>
+		</ItemSet>
+		<AutonomousObjectives>
+			<Order identifier="fightintruders" prioritymodifier="1"/>
+			<Order identifier="rescue" prioritymodifier="1"/>
+			<Order identifier="extinguishfires" prioritymodifier ="0.75"/>
+			<Order identifier="operatereactor" option="powerup" prioritymodifier="0.2"/>
+			<Order identifier="fixleaks" prioritymodifier="0.1"/>
+		</AutonomousObjectives>
+		<AppropriateOrders>
+			<Order identifier="assaultenemy"/>
+			<Order identifier="fightintruders"/>
+			<Order identifier="prepareforexpedition"/>
+		</AppropriateOrders>
+	</Job>
 </Jobs>

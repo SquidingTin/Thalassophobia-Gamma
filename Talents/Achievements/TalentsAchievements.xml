@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+	<!-- Ijecting yourself with genes -->
+	<Talent identifier="thal_Achievement_gene">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,6" sheetelementsize="128,128"/>
+		<Description tag="Achievement.unlock" />
+	</Talent>
+	<!-- The last laugh -->
+	<Talent identifier="thal_Achievement_Deadman">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,6" sheetelementsize="128,128"/>
+		<Description tag="Achievement.unlock" />
+	</Talent>
+	<!-- The last laugh -->
+	<Talent identifier="thal_Achievement_ClowningAround">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,6" sheetelementsize="128,128"/>
+		<Description tag="Achievement.unlock" />
+	</Talent>
+	<!-- Blackhole -->
+	<Talent identifier="thal_Achievement_Blackhole">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,6" sheetelementsize="128,128"/>
+		<Description tag="Achievement.unlock" />
+	</Talent>
+	<!-- Destoryer of worlds -->
+	<Talent identifier="thal_Achievement_IAmDeath">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,6" sheetelementsize="128,128"/>
+		<Description tag="Achievement.unlock" />
+	</Talent>
+</Talents>

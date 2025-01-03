@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	
+	<Item nameidentifier="op_huskstatue1" identifier="thal_huskstatue3" width="207" height="157" scale="0.5" category="Decorative">
+		<sprite texture="Content/Map/Outposts/Art/HuskDistrict.png" sourcerect="812,393,207,157" depth="0.8" premultiplyalpha="False" origin="0.5,0.5" />
+		<Body width="31" height="25" density="15" />
+		<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="itemmsgdetachcrowbar" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="True" aimable="True">
+			<RequiredItem items="crowbar" type="Equipped" />
+		</Holdable>
+		<Controller UserPos="-50,0" direction="Right" hidehud="False" canbeselected="True">
+			<!--limbposition limb="Head" position="90,50" />
+			<limbposition limb="Torso" position="90,50" depth="0.122" />
+			<limbposition limb="Waist" position="90,0" />
+			<limbposition limb="RightFoot" position="120,0" />
+			<limbposition limb="LeftFoot" position="90,0" /-->
+			
+			<limbposition limb="LeftHand" position="80,-50" />
+			<limbposition limb="RightHand" position="90,-50" />
+			<StatusEffect type="OnActive" target="Character" >
+				<ReduceAffliction type="huskinfection" amount="1.5" />
+			</StatusEffect>
+		</Controller>
+	</Item>
+	
+	<Item nameidentifier="op_huskstatue1" identifier="thal_huskstatue4" variantof="thal_huskstatue3" width="259" height="187" scale="0.4" category="Decorative">
+		<sprite texture="Content/Map/Outposts/Art/HuskDistrict.png" sourcerect="277,246,259,187" depth="0.8" premultiplyalpha="False" origin="0.5,0.5" />
+	</Item>
+	
+	<Item nameidentifier="op_huskgraffiti" identifier="thal_huskgraffiti" width="159" height="181" scale="0.5" category="Decorative">
+		<InventoryIcon texture="%ModDir%/Items/Jobgear/Cultist/paintcan.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<ContainedSprite texture="Content/Map/Outposts/Art/HuskDistrict.png" sourcerect="540,252,159,181" depth="0.8" premultiplyalpha="False" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Tools/tools.png" sourcerect="379,78,27,58" depth="0.6" origin="0.5,0.5" />
+		<Body width="31" height="25" density="15" />
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="True" aimable="True">
+			<StatusEffect type="OnUse" target="This">	
+				<Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="huskgraffiti" decalsize="0.5" />
+				<Remove />
+			</StatusEffect>
+		</Holdable>
+	</Item>
+	
+	<Item nameidentifier="graffiti1" identifier="thal_graffiti" variantof="thal_huskgraffiti" width="175" height="163" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+		<ContainedSprite texture="Content/Map/Outposts/Art/GenericAssets2.png" sourcerect="1250,299,175,163" depth="0.8" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Tools/tools.png" sourcerect="379,78,27,58" depth="0.6" origin="0.5,0.5" />
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="True" aimable="True">
+			<StatusEffect type="OnUse" target="This">	
+				<Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="huskgraffiti2" decalsize="0.5" />
+				<Remove />
+			</StatusEffect>
+		</Holdable>
+	</Item>
+	
+	<Item nameidentifier="huskfigurine" description="" identifier="thal_huskfigurine" variantof="huskfigurine" category="Misc" maxstacksize="4" Tags="smallitem" scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true">
+		<Price baseprice="50" canbespecial="false" sold="false">
+			<Price storeidentifier="merchanthusk" minavailable="1" maxavailable="4" sold="true">
+				<Reputation faction="huskcult" min="75"/>
+			</Price>
+		</Price>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="True">
+			<RequiredItem identifier="aluminium" amount="2"/>
+			<RequiredItem identifier="huskeggsbasic" />
+		</Fabricate>
+	</Item>
+	
+	<Item nameidentifier="rituallantern" description="" identifier="thal_rituallantern" variantof="rituallantern" category="Equipment" maxstacksize="12" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,huskcult" impactsoundtag="impact_soft" isshootable="True">
+			<Deconstruct time="5">
+				<Item identifier="huskeggsbasic" />
+			</Deconstruct>
+			<Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="True">
+				<Item identifier="steel" />
+				<Item identifier="huskeggsbasic" amount="2"/>
+			</Fabricate>
+			<Fabricate suitablefabricators="fabricator" requiredtime="15" displayName="recycleitem" requiresrecipe="True">
+				<RequiredItem identifier="rituallantern" mincondition="0.0" usecondition="False" />
+				<RequiredItem identifier="huskeggsbasic" />
+			</Fabricate>
+		</Item>
+
+</Items>

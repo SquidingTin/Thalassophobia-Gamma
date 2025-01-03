@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+	<Override>
+
+		<!-- The Madmans Laugh -->
+			<!--On death you fucking explode-->
+		<Talent identifier="thal_deathbycomedy">
+			<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,7" sheetelementsize="128,128" />
+			<Description tag="talentdescription.thal_deathbycomedy" />
+			<AbilityGroupInterval interval="0.9">
+				<Abilities>
+					<CharacterAbilityApplyStatusEffects>
+						<StatusEffects>
+							<StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+								<Affliction identifier="thal_lastlaughdeath" amount="1.0"/>
+							</StatusEffect>
+						</StatusEffects>
+					</CharacterAbilityApplyStatusEffects>
+				</Abilities>
+			</AbilityGroupInterval>
+		</Talent>
+	</Override>
+</Talents>

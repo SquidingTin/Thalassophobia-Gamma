@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+	<TalentTree jobidentifier="thal_clown">
+		<SubTree identifier="thal_clown_primary" nameidentifier="talenttree.primary" type="primary">
+			<TalentOptions>
+				<TalentOption identifier="enrollintoclowncollege"/>
+			</TalentOptions>
+			<TalentOptions requiredtalents="2" maxchosentalents="2">
+				<TalentOption identifier="waterprankster"/>
+				<TalentOption identifier="inspiringtunes"/>
+			</TalentOptions>
+		</SubTree>
+		<SubTree identifier="clown" type="specialization" requires="thal_clown_primary" blocks="">
+			<TalentOptions>
+				<TalentOption identifier="chonkyhonks"/>
+				<TalentOption identifier="chonkyhonks"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_deathbycomedy"/>
+				<TalentOption identifier="psychoclown"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="truepotential"/>
+			</TalentOptions>
+		</SubTree>
+	</TalentTree>
+
+	<TalentTree jobidentifier="thal_scientist">
+		<SubTree identifier="thal_scientist_primary" nameidentifier="talenttree.primary" type="primary">
+			<TalentOptions>
+				<TalentOption identifier="thal_botanysuit"/>
+				<TalentOption identifier="thal_mule"/>
+				<TalentOption identifier="thal_assembler"/>
+			</TalentOptions>
+			<TalentOptions requiredtalents="2" maxchosentalents="2">
+				<TalentOption identifier="drsubmarine"/>
+				<TalentOption identifier="thal_PRT"/>
+				<TalentOption identifier="vitaminsupplements"/>
+			</TalentOptions>
+		</SubTree>
+		<SubTree identifier="Chemist" type="specialization" requires="thal_scientist_primary" blocks="">
+			<TalentOptions>
+				<TalentOption identifier="thal_blackmarketgenes"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="labcontacts"/>
+				<TalentOption identifier="thal_juniorresident"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_geneformulation"/>
+				<TalentOption identifier="thal_geneharvester"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_samplergun"/>
+			</TalentOptions>
+		</SubTree>
+		<SubTree identifier="Botanist" type="specialization" requires="thal_scientist_primary" blocks="">
+			<TalentOptions>
+				<TalentOption identifier="thal_PRT"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_mutatedmedical"/>
+				<TalentOption identifier="thal_plantstudies"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_seedmodder"/>
+			</TalentOptions>
+		</SubTree>
+		<!--SubTree identifier="thal_synth" type="specialization" requires="thal_scientist_primary" blocks="">
+			<TalentOptions>
+				<TalentOption identifier="thal_PRT"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_mutatedmedical"/>
+				<TalentOption identifier="thal_plantstudies"/>
+			</TalentOptions>
+			<TalentOptions>
+				<TalentOption identifier="thal_seedmodder"/>
+			</TalentOptions>
+		</SubTree-->
+	</TalentTree>	
+	
+	<TalentTree jobidentifier="thal_Cultist">
+			<SubTree identifier="cultist" type="specialization" requires="assistant_primary" blocks="clown">
+				<TalentOptions>
+					<TalentOption identifier="indoctrination"/> <!--Completing a mission while wearing the robes gives you +1 rep but -1 rep to clowns-->
+				</TalentOptions>
+				<TalentOptions>
+					<TalentOption identifier="spreadtheword"/> <!--Can craft husk statues-->
+				</TalentOptions>
+				<TalentOptions>
+					<TalentOption identifier="devoutest"/> <!--Prevents transformation into a husk and gives regen-->
+					<TalentOption identifier="preacher"/> <!--Can craft the Ritual Lantern-->
+				</TalentOptions>
+			</SubTree>
+		</TalentTree>
+	
+</TalentTrees>

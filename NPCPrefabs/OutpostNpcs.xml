@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+	<npcset identifier="thal_hirablenpcs">
+		<npc identifier="thal_hireableclown" job="thal_clown" behavior="StayInHull" skillmultiplier="2.0" experiencepoints="2000">
+			<Character speciesname="human" experiencepoints="6000" additionaltalentpoints="0" personality="joker">
+				<job identifier="thal_clown">
+					<skill identifier="electrical" level="17" />
+					<skill identifier="mechanical" level="22" />
+					<skill identifier="weapons" level="35" />
+					<skill identifier="medical" level="12" />
+					<skill identifier="helm" level="15" />
+				</job>
+				<savedstatvalues />
+				<talents>
+					<talent identifier="enrollintoclowncollege"/>
+				</talents>
+			</Character>
+			<ItemSet commonness="0.5">
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="thal_clownpack" equip="true">
+					<Item identifier="thal_bananapeel" />
+					<Item identifier="thal_partyblower" />
+				</Item>
+				<Item identifier="clownmask" equip="true" />
+				<Item identifier="clowncostume" equip="true" outfit="true" />
+				<Item identifier="headset" equip="true"/>
+				<Item identifier="bikehorn"/>
+				<Item identifier="thal_clownkit" />
+				<Item identifier="thal_miniwardrobe"/>
+			</ItemSet>
+			<ItemSet commonness="0.5">
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="thal_mimeberet" equip="true" />
+				<Item identifier="thal_mimecostume" equip="true" outfit="true" />
+				<Item identifier="headset" equip="true"/>
+				<Item identifier="thal_mimecase" equip="true"/>
+				<Item identifier="thal_mimeinflictor" />
+			</ItemSet>
+		</npc>
+		<npc identifier="thal_hireablecultist" job="thal_cultist" behavior="StayInHull" skillmultiplier="2.0" experiencepoints="2000">
+			<Character speciesname="human" experiencepoints="6000" additionaltalentpoints="0" personality="crazy">
+				<job identifier="thal_cultist">
+					<skill identifier="electrical" level="37" />
+					<skill identifier="mechanical" level="42" />
+					<skill identifier="weapons" level="23" />
+					<skill identifier="medical" level="46" />
+					<skill identifier="helm" level="11" />
+				</job>
+				<savedstatvalues />
+				<talents>
+					<talent identifier="bloodybusiness"/>
+					<talent identifier="spreadtheword"/>
+				</talents>
+			</Character>
+			<ItemSet>
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="thal_cultistmask" equip="true" />
+				<Item identifier="thal_cultistcostume" equip="true" outfit="true" />
+				<Item identifier="headset" equip="true"/>
+				<Item identifier="thal_cultistkit">
+					<Item identifier="thal_cultistknife"/>
+				</Item>
+				<Item identifier="thal_cultistbook"/>
+			</ItemSet>
+		</npc>
+		<npc identifier="thal_hireablescientist" job="thal_scientist" behavior="StayInHull" skillmultiplier="2.0">
+			<Character speciesname="human" experiencepoints="6000" additionaltalentpoints="0" personality="professional">
+				<job identifier="thal_scientist">
+					<skill identifier="electrical" level="21" />
+					<skill identifier="mechanical" level="15" />
+					<skill identifier="weapons" level="32" />
+					<skill identifier="medical" level="59" />
+					<skill identifier="helm" level="11" />
+				</job>
+				<savedstatvalues />
+				<talents>
+					<talent identifier="blooddonor"/>
+					<talent identifier="thal_botanysuit"/>
+				</talents>
+			</Character>
+			<ItemSet commonness="0.5">
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="thal_botanistsuit" equip="true" outfit="true" />
+				<Item identifier="thal_botanistmask" equip="true" />
+				<Item identifier="headset" equip="true"/>
+				<Item identifier="toolbelt">
+					<Item identifier="thal_recipefumigator" />
+					<Item identifier="thal_recipeconstructor" />
+					<Item identifier="thal_recipefungicide" />
+					<Item identifier="thal_cylinderlaughing" />
+					<Item identifier="thal_cylinderteargas" />
+					<Item identifier="thal_cylinderlaughing" />
+					<Item identifier="thal_sprinkler" />
+					<Item identifier="thal_hydrophonicsign" />
+					<Item identifier="thal_guidecylinder" />
+				</Item>
+				<Item identifier="smallplanter" />
+				<Item identifier="wateringcan" />
+				<Item identifier="thal_fumigator" />
+				<Item identifier="seedbag">
+					<Item identifier="thal_shroomseed" />
+					<Item identifier="thal_zombieseed" />
+					<Item identifier="thal_rustseed" />
+				</Item>
+				<Item identifier="thal_assembler" />
+			</ItemSet>
+			<ItemSet commonness="0.5">
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="thal_geneticistsuit" equip="true" outfit="true" />
+				<Item identifier="headset" equip="true"/>
+				<Item identifier="healthscanner" equip="true" />
+				<Item identifier="toolbelt" equip="true">
+					<Item identifier="thal_recipeconstructor" />
+					<Item identifier="thal_recipegeneticinit" />
+					<Item identifier="thal_recipegeneticgraft" />
+					<Item identifier="thal_assembler" />
+					<Item identifier="thal_geneticsign" />
+				</Item>
+				<Item identifier="thal_guidegen" showpreview="false" />
+				<Item identifier="thal_dnascanner" />
+				<Item identifier="thal_dnabox">
+					<Item identifier="thal_dnahuman" />
+					<Item identifier="thal_dnahatcher" />
+					<Item identifier="thal_geneticinit" />
+					<Item identifier="thal_geneticgraft" />
+					<Item identifier="thal_disordersave" />
+				</Item>
+				<Item identifier="thal_carver" />
+			</ItemSet>
+		</npc>
+		
+		<npc identifier="hireableenforcer" job="thal_enforcer" tags="securitynpc" skillmultiplier="1.5" experiencepoints="2000">
+			<Character speciesname="human" experiencepoints="6000" additionaltalentpoints="0" personality="professional">
+				<job identifier="thal_enforcer">
+					<skill identifier="weapons" level="80" />
+					<skill identifier="helm" level="50" />
+					<skill identifier="mechanical" level="15" />
+					<skill identifier="electrical" level="10" />
+					<skill identifier="medical" level="10" />
+				</job>
+				<savedstatvalues />
+				<talents>
+					<talent identifier="commando"/>
+					<talent identifier="stonewall"/>
+				</talents>
+			</Character>
+			<ItemSet>
+				<Item identifier="securityuniform2" equip="true" />
+				<Item identifier="idcard" equip="true" />
+				<Item identifier="handcuffs" />
+				<Item identifier="smg">
+					<Item identifier="smgmagazine" />
+				</Item>
+				<Item identifier="smgmagazine" />
+				<Item identifier="smgmagazine" />
+				<Item identifier="divingknife" />
+				<Item identifier="bodyarmor" equip="true" />
+				<Item identifier="thal_enforcerhelmet" equip="true" />
+				<Item identifier="divingmask">
+					<Item identifier="oxygentank" />
+				</Item>
+			</ItemSet>
+		</npc>
+	</npcset>
+</npcsets>

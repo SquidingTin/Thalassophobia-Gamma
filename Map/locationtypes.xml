@@ -1,21 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <locationtypes>
-<!-- mines-->
-    <thal_blackSite
-    identifier="thal_blackSite"
-    namefile="Mods/Thalassophobia/Map/locationNames/blackSite.txt"
-    commonnessperzone="1: 0.0, 2: 0.0, 3: 0.0" 
-    hasoutpost="true" >
+	<!-- Black Site-->
+	<thal_blackSite identifier="thal_blackSite" replaceinradiation="Abandoned" namefile="%ModDir%/Map/locationNames/blackSite.txt" commonnessperzone="1: 0.0, 2: 0.0, 3: 0.0" hasoutpost="true" mincountperzone="1: 1" AllowAsBiomeGate="true">
+		<Symbol texture="%ModDir%/Map/MapAtlas.png" sourcerect="640,640,128,128" color="100,150,100,255" />
+		<RadiationSymbol texture="Content/Map/MapAtlas.png" sourcerect="896,512,128,128" color="245,105,105"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining1.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining2.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMilitary3.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining4.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		
+		<Hireable identifier="thal_scientist" commonness="10" />
+		<Hireable identifier="thal_enforcer" commonness="5" />
+		
+		<!-- can become a specialized outpost if there are no adjacent lairs -->
+		<ChangeTo type="Military" probability="0.2" requireddurationrange="2,5" disallowedadjacentlocations="Lair" disallowedproximity="2" messagetag="locationchange.outpost.changeto.military"/>
 
-    <Symbol texture="Mods/Thalassophobia/Map/MapAtlas.png" sourcerect="640,640,128,128" color="100,150,100,255"/>
-    <Portrait texture="Content/Map/LocationPortraits/Colony.png" premultiplyalpha="false"/>
+		<ChangeTo type="Research" probability="0.2" requireddurationrange="2,5" disallowedadjacentlocations="Lair" disallowedproximity="2" messagetag="locationchange.outpost.changeto.research"/>
+		
+		<ChangeTo type="Abandoned" requireddurationrange="1,1" messagetag="locationchange.outpost.changeto.abandoned">
+			<Requirement requirehuntinggrounds="true" probability="0.5" requiredproximity="0" />	
+		</ChangeTo>
 
-    <Hireable identifier="assistant" commonness="10"/>
-    <Hireable identifier="engineer" commonness="3"/>
-    <Hireable identifier="mechanic" commonness="3"/>
-    <Hireable identifier="medicaldoctor" commonness="1"/>
-    <Hireable identifier="securityofficer" commonness="1"/>
-    <Hireable identifier="captain" commonness="1"/>
-    
-  </thal_blackSite>
+		<Store maxreputationmodifier="0.1" sellpricemodifier="0.3" dailyspecialpricemodifier="0.5" requestgoodpricemodifier="2" initialbalance="6000" pricemodifierrange="5" dailyspecialscount="3" requestedgoodscount="3" />
+	</thal_blackSite>
+	
+	<!-- Cartel-->
+	<thal_cartel identifier="thal_Cartel" replaceinradiation="none" namefile="%ModDir%/Map/locationNames/cartel.txt" commonnessperzone="1: 0.0, 2: 0.0, 3: 0.0" hasoutpost="true" mincountperzone="1: 1" AllowAsBiomeGate="false">
+		<Symbol texture="%ModDir%/UI/CampaignUIAtlas2.png" sourcerect="644,523,128,128" color="100,75,75,255" />
+		<RadiationSymbol texture="Content/Map/MapAtlas.png" sourcerect="896,512,128,128" color="245,105,105"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining1.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining2.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMilitary3.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		<Portrait texture="Content/Map/LocationPortraits/WorkCampMining4.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+		
+		<Hireable identifier="assistant" commonness="10" />
+		<Hireable identifier="medicaldoctor" commonness="1" />
+		<Hireable identifier="securityofficer" commonness="1" />
+		<!-- can become a specialized outpost if there are no adjacent lairs -->
+		<ChangeTo type="Abandoned" probability="0.2" requireddurationrange="2,5" disallowedadjacentlocations="Lair" disallowedproximity="2" messagetag="locationchange.outpost.changeto.military"/>
 
+		<Store maxreputationmodifier="0.1" sellpricemodifier="0.3" dailyspecialpricemodifier="0.5" requestgoodpricemodifier="2" initialbalance="6000" pricemodifierrange="5" dailyspecialscount="3" requestedgoodscount="3" />
+	</thal_cartel>
 </locationtypes>

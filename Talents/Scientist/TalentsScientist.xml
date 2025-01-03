@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+		<!--Botanist-->
+
+	<Talent identifier="thal_plantstudies">
+		<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,5" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_plantstudies">
+			<Replace tag="[probability]" value="20" color="gui.green"/>
+		</Description>
+		<AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
+			<Conditions>
+				<AbilityConditionServerRandom randomchance="0.2"/>
+				<AbilityConditionItem tags="plantitem"/>
+			</Conditions>
+			<Abilities>
+				<CharacterAbilityModifyValue multiplyvalue="2"/>
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>
+	
+			<!-- Craft pet food-->
+	<Talent identifier="thal_PRT">
+		<Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,0" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.food" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_petfood"/>
+	</Talent>
+	
+			<!-- Craft mutated medical-->
+	<Talent identifier="thal_mutatedmedical">
+		<Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,0" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_mutatedmedical">
+			<Replace tag="[Item1]" value="entityname.pomegrenadeextract" color="gui.orange"/>
+			<Replace tag="[Item2]" value="entityname.raptorbaneextract" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_raptorbaneextract"/>
+		<AddedRecipe itemidentifier="thal_pomegrenadeextract"/>
+	</Talent>
+
+	
+		<!-- Craft seedmodder-->
+	<Talent identifier="thal_seedmodder">
+		<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="7,1" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.thal_seedmodder" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_seedmodder"/>
+	</Talent>
+	
+		<!--Chemist-->
+		
+	<!--Craft suits-->
+	
+	<!--More medical space-->
+	<Talent identifier="thal_mule">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="0,4" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_mule">
+			<Replace tag="[amount]" value="3" color="gui.green"/>
+		</Description>
+		<AbilityGroupEffect abilityeffecttype="None">
+			<Abilities>
+				<CharacterAbilityGivePermanentStat stattype="InventoryExtraStackSize" statidentifier="medical" value="3" />
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>
+	
+	<!--Craft Assembler-->
+	<Talent identifier="thal_assembler" >
+		<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,3" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.thal_assembler" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_assembler"/>
+	</Talent>
+	
+	<!--Craft suits-->
+	<Talent identifier="thal_botanysuit" >
+		<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,3" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.thal_botanyradsuit, entityname.thal_radsuit" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_botanyradsuit"/>
+		<AddedRecipe itemidentifier="thal_radsuit"/>
+	</Talent>
+	
+	<!--Craft Sampler-Gun-->
+	<Talent identifier="thal_samplergun" >
+		<Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,3" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.thal_samplergun" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_samplergun"/>
+	</Talent>
+	
+	<!--Give thalassophobia genes-->
+	<Talent identifier="thal_geneharvester">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_geneharvester">
+			<Replace tag="[itemname]" value="entityname.thal_geneticmaterial_unresearched" color="gui.green"/>
+			<Replace tag="[probability]" value="20" color="gui.green"/>
+		</Description>
+		<AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+			<Abilities>
+				<CharacterAbilityResetPermanentStat statidentifier="thal_geneharvester_*" value="1" setvalue="true"/>
+			</Abilities>
+		</AbilityGroupEffect>
+		<AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+			<Conditions>
+				<AbilityConditionCharacter targettype="Monster">
+					<Conditional maxhealth="gt 25"/>
+					<Conditional ismachine="false" />
+					<Conditional ispet="false" />
+				</AbilityConditionCharacter>
+				<AbilityConditionCharacterNotLooted identifier="thal_geneharvester"/>
+				<AbilityConditionServerRandom randomchance="0.2" />
+			</Conditions>
+			<Abilities>
+				<CharacterAbilityApplyStatusEffects>
+					<StatusEffects>
+						<StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
+							<SpawnItem identifiers="thal_geneticmaterial_unresearched" spawnposition="ThisInventory" />
+						</StatusEffect>
+					</StatusEffects>
+				</CharacterAbilityApplyStatusEffects>
+			</Abilities>
+		</AbilityGroupEffect>
+		<AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+			<Conditions>
+				<AbilityConditionCharacter targettype="Monster" />
+				<AbilityConditionCharacterNotLooted identifier="thal_geneharvester"/>
+			</Conditions>
+			<Abilities>
+				<CharacterAbilityMarkAsLooted identifier="thal_geneharvester"/>
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>
+	
+	<!-- genes formulation allows you to craft the scnaners-->
+	<Talent identifier="thal_geneformulation">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_geneformulation"/>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.thal_dnascanner, entityname.thal_dnabox" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_dnascanner"/>
+		<AddedRecipe itemidentifier="thal_dnabox"/>
+	</Talent>
+	
+		<!-- Buying genees-->
+	<Talent identifier="thal_blackmarketgenes">
+		<Icon texture="Content/UI/TalentsIcons1.png" sheetindex="2,6" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_blackmarketgenes">
+			<Replace tag="[itemname]" value="entityname.thal_geneticmaterial_unresearched" color="gui.orange"/>
+		</Description>
+		<AddedStoreItem itemtag="Uncatalogued_DNA" />
+	</Talent>
+	
+		<!-- Buying doctors cheaper-->
+	<Talent identifier="thal_juniorresident">
+		<Icon texture="Content/UI/TalentsIcons4.png" sheetindex="4,2" sheetelementsize="128,128"/>
+		<Description tag="talentdescription.thal_juniorresident">
+			<Replace tag="[role]" value="jobname.medicaldoctor" color="gui.green"/>
+			<Replace tag="[amount]" value="20" color="gui.green"/>
+		</Description>
+		<AbilityGroupEffect abilityeffecttype="None">
+			<Abilities>
+				<CharacterAbilityGivePermanentStat stattype="HireCostMultiplier" statidentifier="medicaldoctor" value="-0.2" />
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>
+
+	
+</Talents>

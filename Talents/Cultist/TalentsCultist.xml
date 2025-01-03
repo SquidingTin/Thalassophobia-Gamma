@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+	<Talent identifier="indoctrination">
+		<Description tag="talentdescription.indoctrination">
+			<Replace tag="[cultist]" value="entityname.cultistrobes"/>
+			<Replace tag="[zealot]" value="entityname.zealotrobes"/>
+			<Replace tag="[reputation]" value="1" color="gui.orange"/>
+			<Replace tag="[faction]" value="faction.huskcult" color="gui.green"/>
+		</Description>
+		<Icon texture="%ModDir%/Talents/Cultist/icons.png" sourcerect="0,0,118,118" origin="0.5,0.5"/>
+		<AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+			<Conditions>
+				<AbilityConditionHasItem tags="huskcult"/>
+			</Conditions>
+			<Abilities>
+				<TriggerEvent identifier="huskcult_rep_indoctrination" />
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>
+	
+	<Talent identifier="spreadtheword">
+		<Description tag="talentdescription.spreadtheword">
+			<Replace tag="[affliction]" value="afflictionname.huskinfectionresistance" color="gui.green"/>
+		</Description>
+		<Icon texture="%ModDir%/Talents/Cultist/icons.png" sourcerect="118,0,118,118" origin="0.5,0.5"/>
+		<AddedRecipe itemidentifier="thal_huskstatue1"/>
+		<!--AddedRecipe itemidentifier="thal_huskstatue2"/-->
+		<AddedRecipe itemidentifier="thal_huskstatue3"/>
+		<AddedRecipe itemidentifier="thal_huskstatue4"/>
+		<AddedRecipe itemidentifier="thal_huskgraffiti"/>
+		<AddedRecipe itemidentifier="thal_graffiti"/>
+	</Talent>
+	
+	<Talent name="Devoutest" identifier="devoutest" coloroverride="0.65,0.73,0.8">
+		<Description tag="talentdescription.devoutest">
+			<Replace tag="[affliction]" value="afflictionname.huskinfectionresistance" color="gui.green"/>
+		</Description>
+		<Icon texture="%ModDir%/Talents/Cultist/icons.png" sourcerect="236,0,118,118" origin="0.5,0.5"/>
+		<AbilityGroupInterval interval="0.1">
+			<Abilities>
+				<CharacterAbilityApplyStatusEffects>
+					<StatusEffects>
+						<StatusEffect type="Always" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+							<AbilityFlag flagtype="ImmuneToPressure" />
+							<ReduceAffliction identifier="oxygenlow" strength="0.5"/>
+							<ReduceAffliction identifier="huskinfection" strength="5"/>
+							<Affliction identifier="huskimmunity" amount="100.0"/>
+						</StatusEffect>
+					</StatusEffects>
+				</CharacterAbilityApplyStatusEffects>
+			</Abilities>
+		</AbilityGroupInterval>
+	</Talent>
+	
+	<Talent name="Preacher" identifier="preacher" coloroverride="0.65,0.73,0.8">
+		<Icon texture="%ModDir%/Talents/Cultist/icons.png" sourcerect="236,118,118,118" origin="0.5,0.5"/>
+		<Description tag="talentdescription.preacher">
+			<Replace tag="[faction]" value="faction.huskcult" color="gui.green"/>
+		</Description>
+		<Description tag="talentdescription.unlockrecipe">
+			<Replace tag="[itemname]" value="entityname.rituallantern" color="gui.orange"/>
+		</Description>
+		<AddedRecipe itemidentifier="thal_rituallantern"/>
+	</Talent>
+
+</Talents>

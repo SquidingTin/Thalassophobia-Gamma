@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+	<Affliction name="" identifier="thal_lastlaughdeath" selfcauseofdeathdescription="causeofdeathdescription.unknown" type="talentbuff" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="1000" treatmentthreshold="1000" maxstrength="1">
+		<Effect minstrength="0" maxstrength="1">
+			<StatusEffect type="OnDeath" target="Character" delay="0.1" hidden="true">
+				<ParticleEmitter particle="blood" copyentityangle="true" anglemin="0" anglemax="0" particlespersecond="45" velocitymin="65" velocitymax="220" scalemin="1.5" scalemax="2.8" />
+				<GiveTalentInfo talentidentifiers="thal_Achievement_Deadman" />
+				<Explosion range="500.0" ballastfloradamage="100" structuredamage="150" itemdamage="500" force="15" severlimbsprobability="0.5" debris="true" decal="blood" decalsize="0.5" penetration="0.5">
+					<Affliction identifier="explosiondamage" strength="250" dividebylimbcount="true"/>
+					<Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false"/>
+					<Affliction identifier="bleeding" strength="40" probability="0.05" dividebylimbcount="false"/>
+					<Affliction identifier="stun" strength="7" />
+					<Affliction identifier="thal_lastlaughdeath" strength="100" />
+				</Explosion>
+			</StatusEffect>
+		</Effect>
+	</Affliction>
+	<Affliction nameidentifier="thal_lastlaughdeath" identifier="thal_TLL" type="talentbuff" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="1000" treatmentthreshold="1000" maxstrength="1">
+		<Effect minstrength="0" maxstrength="100">			
+			<GiveTalentInfo talentidentifiers="thal_Achievement_ClowningAround" />
+		</Effect>
+	</Affliction>
+</Afflictions>

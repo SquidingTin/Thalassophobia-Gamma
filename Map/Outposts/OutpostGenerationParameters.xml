@@ -1,26 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <OutpostGenerationParameters>
-  
-  <OutpostConfig
-    identifier="blackSite"
-    totalmodulecount="4" minhallwaylength="0"
-    allowedlocationtypes="thal_blackSite">
-    <modulecount flag="BsAirlock" count="1"/>
-    <modulecount flag="BsDecontamination" count="2"/>
-    <modulecount flag="EngineeringModule" count="1"/>
-    <modulecount flag="BsTechChamber" count="1"/>
-
-    <npcs>
-      <npc from="outpostnpcs1" identifier="researcher"/>
-      <npc from="thal_generalnpcs" identifier="enforcer"/>
-      <npc from="thal_generalnpcs" identifier="enforcer"/>
-      <npc from="thal_generalnpcs" identifier="enforcer"/>
-      <npc from="thal_generalnpcs" identifier="enforcer"/>
-      <npc from="outpostnpcs1" identifier="subupgradenpc"/>
-      <npc from="outpostnpcs1" identifier="subsalesnpc"/>
-      <npc from="outpostnpcs1" identifier="merchant"/>
-    </npcs>
-    
-  </OutpostConfig>
-
+	<OutpostConfig identifier="thal_blackSite" replaceinradiation="abandonedoutpost" totalmodulecount="4" appendtoreachtotalmodulecount="false" minhallwaylength="400" allowedlocationtypes="thal_blackSite,Military">
+		<modulecount flag="BsAirlock" count="1" />
+		<modulecount flag="BsDecontamination" count="2" />
+		<modulecount flag="EngineeringModule" count="1" />
+		<modulecount flag="BsTechChamber" count="1" />
+		<modulecount flag="SecurityModule" count="1"/>
+		<modulecount flag="Bs_AdminModule" count="1"/>
+		<npcs>
+			<npc from="outpostnpcs1" identifier="researcher" faction="thal_confederacy"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_confederacy"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_confederacy"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_confederacy"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_confederacy"/>
+			<npc from="outpostnpcs1" identifier="subupgradenpc" faction="thal_confederacy"/>
+			<npc from="outpostnpcs1" identifier="subsalesnpc" faction="thal_confederacy"/>
+			<npc from="outpostnpcs1" identifier="merchantarmory" faction="thal_confederacy"/>
+		</npcs>
+	</OutpostConfig>
+	
+	<OutpostConfig identifier="thal_cartel" replaceinradiation="none" totalmodulecount="1" appendtoreachtotalmodulecount="false" minhallwaylength="0" removeunusedgaps="false" allowedlocationtypes="Outpost">
+		<modulecount flag="Barsuk_torp" count="1"/>
+		<modulecount flag="Winterhalter" count="1"/>
+		<npcs>
+			<npc from="outpostnpcs1" identifier="researcher" faction="thal_cartel"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_cartel"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_cartel"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_cartel"/>
+			<npc from="thal_generalnpcs" identifier="enforcer" faction="thal_cartel"/>
+			<npc from="outpostnpcs1" identifier="subupgradenpc" faction="thal_cartel"/>
+			<npc from="outpostnpcs1" identifier="subsalesnpc" faction="thal_cartel"/>
+			<npc from="outpostnpcs1" identifier="merchantarmory" faction="thal_cartel"/>
+		</npcs>
+	</OutpostConfig>
 </OutpostGenerationParameters>

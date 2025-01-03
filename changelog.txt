@@ -1,13 +1,283 @@
-Barotrauma: Thalassophobia (0.9.7.0) Comprehensive list of changes:
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.7) Comprehensive list of changes:
+
+Added:
+Russian and Chinese languages
+Crafting recipie for husk artwork
+Datachips can now spawn in containers rarely
+Added Biohazardous gasses Guidebook
+Started rework on events.
+
+Removed:
+All maps are now unoptainable and are just there for legacy reasons
+
+Updated:
+Cleaned up Glow Sabors code allowing for modded crystals
+
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.6) Comprehensive list of changes:
+
+Added:
+Hireable Enforcer at the blacksite
+(security with lower stats of everything but higher stats for weapons)
+added new main menu styles for Chinese like the base game
+
+Modder notes:
+Cleaned up files
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.5) Comprehensive list of changes:
+
+Added:
+Pet watcher egg
+(This creature has been in the mod forever, just had no way to get it legitimately)
+
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.4) Comprehensive list of changes:
+
+Updated:
+Made the nuke vest require a dirty bomb rather then fuelrod
+Fixed the "Beat Machine"
+Made wheat give the actual wheat item rather then the placeholder items
+
+WIP:
+Gummy infections head currently is inside your chest, not a massive issue just something to be fixed later
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.3) Comprehensive list of changes:
+
+Updates:
+Reworked the glow saber crystals, they now spawn in ruins
+
+Added:
+Added Cartel and the Confederacy as a merchant faction 
+Gave the Cartel and Confederacy icons that relate to their lore
+(Gartel stations are subs so they get a sub icon)
+(Confederacy is a group of sepertists)
+
+Modders notes:
+If you can make higher quaility and up to date station parts for Thalassophobia, i will review them and might even put them in the mod!
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.2) Comprehensive list of changes:
+
+Added:
+2 new Factions
+Added the option to date to the UES
+
+Fixed:
+Lowered the tint on some helmets
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.1) Comprehensive list of changes:
+
+Added:
+Added 4 alarms and buzzers
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.9.0) Comprehensive list of changes:
+
+Updates:
+Reworked maggots and made them slightly less annoying
+Made more items and afflictions work with translation files
+
+Added:
+Crafting recipie to disco ball and they are also buyable
+Made it require power and can change its color
+
+Fixed:
+Jobs getting extremely low skills
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.9) Comprehensive list of changes:
+
+Added:
+Re-added "Abridged Necronomicon"
+Re-added "Genetics Guidebook"
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.8) Comprehensive list of changes:
+
+Updates:
+Husk outfit makes you bent to look like a husk
+Husk outfit now has the arms out and make husk sounds when you shoot
+Fixed stray pixels on the clowns wardrobe item and added icon for the inventory
+Fixed errors about spawning characters
+
+Added:
+New Railgun loader (3 Railgun shells)
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.7) Comprehensive list of changes:
+
+Added:
+New clown music sheet
+
+Future proofing:
+Changes all of the items to have correct categories
+Cleaned up the code for a few items
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.6) Comprehensive list of changes:
+
+Updates:
+Separated the cultist and clown roles 
+Made you grab the DNA scanner and cultist fabricator when you interact with it
+Made the O2 shelf have the correct icons
+Updated the GnitterBuss'es items to make sure they dont fall onto the ground
+
+Modders notes:
+mod support for the "Seed Enhancer", just add your seeds to thal_randomseed list
+
+Added:
+Added mod talents to the scientist
+Added cultist talents
+Added the "Seed Enhancer" which is an end of talent tree item, allowing you to get modded seeds
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.5) Comprehensive list of changes:
+
+Updates:
+Made the muzzle use its correct icon
+Made the clown husk costume work again
+Made the slave collar have an editable description
+Made the Watcher pet much smaller and gave it pet AI
+Made the Watcher pet give you buffs rather then Watcher's Gaze
+Gave the fumigator a crosshair
+Made meat stack up to 8 in inventory and 32 in cabinets
+Made the gummy infection transfer the players inventory
+Made the cleaver give random meat rather then all 3 at once
+
+Future proofing:
+Added all genetic mutations to a text file (will eventually need to update the lang for others)
+Made the fumigator work with projectile items, could be usful for modded fuel tanks or o2
+Cleaned up the carvers knife code to make fixing it easier, could also very very easly add modded creatures now
+
+Fixed:
+Spelling issues(shodow)
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.4) Comprehensive list of changes:
+
+Updates:
+Added a hood to the cultist costume
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.3) Comprehensive list of changes:
+
+Added: 
+Added a completely new Apostle model, it is now using the human skeleton
+Readded the Explosive Collar
+Readded the DISARM Tool
+
+Updates:
+Updated the bomb collar texture to remove the "redo" text
+Fixed audio issues on piano
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.2) Comprehensive list of changes:
+
+Added: 
+New icon for the mod
+Added a spawnable item called the "Restoration Dagger" for custom modes.
+
+Future proofing:
+Moved more text to the English file
+
+Updates:
+FIXED THE RESURRECTION DAGGER!
+Made DNA spawn in a DNA Box to prevent them from starting degradation on spawn
+Made music sheets spawn in wrecks and stations
+Made the grand piano placeable
+New icon (removed the beta word and added what was missing behind the text)
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.1) Comprehensive list of changes:
+
+Added: 
+Gene harvester talent that only gives this mods genes
+ADDED TALENTS TO JOBS!
+Added way to craft hazmat suits
+Added Uncatalogued DNA which needs to be refinded into true DNA 
+Added husk genes as a WIP item
+Added placeable Glass Alter
+Added fake vent to mimes
+Added lobby music
+
+Current notes:
+Fixing the Resurrection Dagger
+
+Future proofing:
+Added more text to the english.xml such as text within items
+Made items spawn in job containers rather then being in the job itself, allowing for modded classes to access them eaiser
+
+Updates:
+Updated the sprinkler to show water, also made it craftable and placeable
+Made many items slightly transparent such as the Aerosol Respirator
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.8.0) Comprehensive list of changes:
 
 Main Menu:
--(Map/locationTypes.xml)				New Main Menu Background from Mining Outposts
--(UI/style.xml)							New Logo
+Added the old soundtrack
+
+Bug Fixes:
+fixed suits not working inside diving suit lockers 
+fixed the main menu not displaying the mods name and music
+fixed the oxygen dock holding more items then it should
+Fixed clown husk suit not having a texture, it now uses the wrecked diving suit texture
+Fixed the botanist mask not protecting you from glowing
+Fixed the knife not gutting creatures
+
+Fixed waaaaaay to many bugs to list
+
+Future proofing:
+Made many items use variants of their vanilla versions
+Changed the thal_scan affliction to check for groups rather then set species allowing for modded creatures to work if their groups are set correctly
+Made the glowing raptor a variant of the normal mud raptor to allow for mods to change it easier
+Cleaned up headset code allowing for modded batteries
+
+Optimizations:
+Removed many unused backup files
+compressed all of the English files into 1 file
+
+Updates:
+Made the Radiation Gear have transparent heads
+Folding chair now has a weapon sprite, so you can beat people with a folded chair
+fixed folding chair causing massive lag due to errors
+
+----------------------------------------------------------------------------------------------
+
+Thalassophobia (0.9.7.0) Comprehensive list of changes:
+
+Main Menu:
+New Main Menu Background from Mining Outposts
+New Logo
 
 Submarines and Structures:
--(Map/StructurePrefabs.xml)				New more plain walls and materials to allow for greater customization
+New more plain walls and materials to allow for greater customization
 
 Campaign:
--(Map/locationTypesOverride.xml)		Ruin Location Types Re-enabled, but everything else in "Vanilla" Disabled (standard Mines, Cities, Outposts, Etc)
--(Map/locationTypesCoalition)			New Coalition Outpost types added indicated by blue colors. Coalition Outposts will wage war with any non-coalition faction assuming they have interest and the might to do so. Likewise, Coalition Locations will fall to any attacking factions if they cannot defend themselves.
--(Map/locationTypesCoalition/Renegade)	Each outpost type has been split into specialization subsets that affect what they sell. Mines can specialize in radioactive materials, metals, and anomalous materials. Military outposts can specialize in normal weaponry, nuclear weaponry, and alien weaponry. These subtypes can change between one another under correct circumstances.
+Ruin Location Types Re-enabled, but everything else in "Vanilla" Disabled (standard Mines, Cities, Outposts, Etc)
+New Coalition Outpost types added indicated by blue colors. Coalition Outposts will wage war with any non-coalition faction assuming they have interest and the might to do so. Likewise, Coalition Locations will fall to any attacking factions if they cannot defend themselves.
+Each outpost type has been split into specialization subsets that affect what they sell. Mines can specialize in radioactive materials, metals, and anomalous materials. Military outposts can specialize in normal weaponry, nuclear weaponry, and alien weaponry. These subtypes can change between one another under correct circumstances.

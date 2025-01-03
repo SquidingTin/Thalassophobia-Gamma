@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+		<!-- Talent items -->
+	
+	<Item nameidentifier="raptorbaneextract" identifier="thal_raptorbaneextract" variantof="raptorbaneextract" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,poison,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" hideinmenus="true">
+		<Fabricate suitablefabricators="medicalfabricator" requiredtime="40" requiresrecipe="True">
+			<RequiredSkill identifier="medical" level="20" />
+			<RequiredItem identifier="badraptorbane" />
+			<RequiredItem identifier="badraptorbane" />
+			<RequiredItem />
+			<RequiredItem />
+		</Fabricate>
+	</Item>
+	
+	<Item nameidentifier="pomegrenadeextract" identifier="thal_pomegrenadeextract" variantof="pomegrenadeextract" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" hideinmenus="true">
+		<Fabricate suitablefabricators="medicalfabricator" requiredtime="15" requiresrecipe="True">
+			<RequiredSkill identifier="medical" level="20" />
+			<RequiredItem identifier="badcreepingorange" amount="1" />
+		</Fabricate>
+	</Item>
+	
+	
+	<Item name="" description="" identifier="thal_samplergun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+		<PreferredContainer primary="medcab" />
+		<Price baseprice="500" minavailable="1">
+			<Price storeidentifier="merchantoutpost" multiplier="1.5" />
+			<Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false" />
+			<Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="3" />
+			<Price storeidentifier="merchantmilitary" multiplier="1.2" />
+			<Price storeidentifier="merchantmine" multiplier="1.25" />
+			<Price storeidentifier="merchantarmory" multiplier="1.2" />
+		</Price>
+		<Deconstruct time="10">
+			<Item identifier="steel" />
+			<Item identifier="silicon" />
+			<Item identifier="tin" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="True">
+			<RequiredSkill identifier="medical" level="30" />
+			<RequiredItem identifier="steel" amount="2" />
+			<RequiredItem identifier="silicon" amount="2" />
+			<RequiredItem identifier="tin" amount="2" />
+		</Fabricate>
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,203,181,39" depth="0.55" origin="0.5,0.5" />
+		<Body width="180" height="30" density="25" />
+		<Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="35,-10" aimpos="45,-10" handle1="-20,-6" handle2="30,10" holdangle="-40" msg="ItemMsgPickUpSelect" />
+		<RangedWeapon reload="1.2" launchimpulse="15.0" barrelpos="85,14" spread="1" unskilledspread="1" combatPriority="500" drawhudwhenequipped="true" crosshairscale="0.2">
+			<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+			<CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+			<Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+			<Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+			<Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+			<StatusEffect type="OnUse">
+				<SpawnItem identifiers="thal_samplerspear" spawnposition="ThisInventory" />
+				<Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+			</StatusEffect>
+			<RequiredItems items="thal_samplerspear" type="Contained" />
+		</RangedWeapon>
+		<ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="1" maxstacksize="1" showcontainedstateindicator="false" containedspritedepths="0.551,0.552,0.553,0.554,0.555,0.556" spawnWithId="thal_samplerspear">
+			<Containable items="harpoonammo" />
+			<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="0,448,64,64" origin="0.5,0.5" />
+			<SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+		</ItemContainer>
+		<aitarget sightrange="0" soundrange="0" fadeouttime="2" />
+	</Item>
+
+	<Item name="Sampler Spear" descriptionidentifier="entitydescription.spear" identifier="thal_samplerspear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,968,55,55" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,368,168,11" depth="0.55" origin="0.5,0.5" />
+		<Body width="160" height="10" density="1" />
+		<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+		<Rope sourcepullforce="0" targetpullforce="0" projectilepullforce="20" maxlength="1450" snaponcollision="false" spritewidth="5" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.1" snapwhennotaimed="false">
+			<Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
+		</Rope>
+		<Projectile characterusable="false" launchimpulse="23.0" sticktocharacters="true" sticktoitems="false" sticktostructures="false" sticktodeflective="true">
+			<Attack structuredamage="0" itemdamage="0" targetforce="0" severlimbsprobability="0.0" penetration="1">
+				<Affliction identifier="stun" strength="2" />
+			</Attack>
+			<!-- apply stun -->
+			<!-- Sound/Effects -->
+			<StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And" stackable="false" setvalue="true" voltage="2.0">
+				<Conditional Snapped="false" />
+				<Conditional InWater="false" />
+				<Conditional IsStuckToTarget="true" />
+				<Conditional Stun="lt 1" />
+				<ParticleEmitter particle="thal_binary" particleamount="1" particlespersecond="1" scalemin="0.6" scalemax="0.6" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/dataTransfer.ogg" range="800.0" loop="true" />
+			</StatusEffect>
+			<!-- human -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="3">
+				<Conditional speciesgroup="human" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnahuman" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- mudraptor -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="mudraptor" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnamudraptor" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- crawler -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="crawler" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnacrawler" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- maggot -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="maggot" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnamaggot" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- unknown -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="unknown" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnathalamus" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- xeno -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="xeno" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnathalamus" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- ramblin -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="ramblin" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnaramblin" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- hammer -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="hammerhead" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnahammer" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+			<!-- thresher -->
+			<StatusEffect type="OnActive" target="UseTarget,This" tags="scanhuman" checkconditionalalways="true" comparison="And" stackable="false" delay="5">
+				<Conditional speciesgroup="thresher" />
+				<RemoveItem />
+				<SpawnItem identifier="thal_dnathresher" />
+				<Conditional Snapped="false" />
+				<Conditional Stun="lt 1" />
+				<Conditional IsStuckToTarget="true" />
+			</StatusEffect>
+		</Projectile>
+		<LightComponent range="250" lightcolor="150,255,255,150" IsOn="true" minvoltage="1" powerconsumption="1" flicker="0.9" flickerspeed="3" allowingameediting="false"/>
+	</Item>
+	
+	<Item name="" identifier="thal_geneticmaterial_unresearched" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,Uncatalogued_DNA,unidentifiedgeneticmaterial" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_soft" hideinmenus="true">
+		<PreferredContainer primary="medfabcab" spawnprobability="0"/>
+		<PreferredContainer secondary="abandonedmedcab,wreckmedcab,outpostmedcab" spawnprobability="0.3"/>
+		<PreferredContainer secondary="geneticstorage" spawnprobability="0.6" />
+		<PreferredContainer secondary="abandonedmedcab,wreckmedcab,outpostmedcab,researchcontainer" spawnprobability="0.02"/>		
+		<Price baseprice="300" sold="false" requiresunlock="true">
+			<Price storeidentifier="merchantcity" sold="true" minavailable="5" maxavailable="10"/>
+			<Price storeidentifier="merchantresearch" sold="true" multiplier="1.2" minavailable="10" maxavailable="15" />
+		</Price>
+		<Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+			<Item identifier="thal_dnacrawler" commonness="3" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			<Item identifier="thal_dnamudraptor" commonness="3" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			<Item identifier="thal_dnathresher" commonness="3" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			
+			<Item identifier="thal_dnaramblin" commonness="2" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			<Item identifier="thal_dnahammer" commonness="2" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			<Item identifier="thal_dnamaggot" commonness="1" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			
+			<Item identifier="thal_dnathalamus" commonness="0.5" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+			<!--Item identifier="thal_dnahusk" commonness="1" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" /-->
+			<Item identifier="thal_dnahuman" commonness="0.1" requiredotheritem="stabilozine" activatebuttontext="researchstation.research" infotext="researchstation.research.infotext" infotextonotheritemmissing="researchstation.combine.missingitem" />
+		</Deconstruct>
+		<Sprite name="dna" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+		<Body width="15" radius="15" density="20" />
+		<Pickable slots="Any" />
+		<Upgrade Tags="unidentifiedgeneticmaterial" />
+	</Item>
+
+	<Item name="" identifier="thal_assembler" category="Machine" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true">
+		<Sprite name="assembler Sprite" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="178,93,60,56" depth="0.6" origin="0.5,0.5" />
+		<Body width="30" height="15" density="400" />
+		<Fabricate suitablefabricators="fabricatorm" requiredtime="50" requiresrecipe="True">
+			<RequiredSkill identifier="medical" level="45" />
+			<RequiredItem identifier="fpgacircuit" amount="2" />
+			<RequiredItem identifier="fulgurium" amount="2" />
+			<RequiredItem identifier="toolbox" />
+			<RequiredItem tag="weldingequipment" defaultitem="weldingtool" />
+		</Fabricate>
+		<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+			<GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+			<Button text="Evaluate Schematic">
+				<!-- fumigator -->
+				<StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_fumigator" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="thal_recipefumigator" type="Contained" />
+					<RequiredItem items="weldingtool" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipefumigator" type="Contained" />
+					<RequiredItem items="weldingtool" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="weldingtool" IsOn="true">
+					<Remove />
+					<RequiredItem items="thal_recipefumigator" type="Contained" />
+					<RequiredItem items="weldingtool" type="Contained" />
+				</StatusEffect>
+				<!-- respirator -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_botanistmask" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="thal_recipebotanistmask" type="Contained" />
+					<RequiredItem items="divingmask" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipebotanistmask" type="Contained" />
+					<RequiredItem items="divingmask" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="divingmask" IsOn="true">
+					<Remove />
+					<RequiredItem items="thal_recipebotanistmask" type="Contained" />
+					<RequiredItem items="divingmask" type="Contained" />
+				</StatusEffect>
+				<!-- shroomcure -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_cylindershroomcure" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="oxygensource" type="Contained" />
+					<RequiredItem items="thal_shroomseed" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipefungicide" type="Contained" />
+					<RequiredItem items="thal_shroomseed" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_shroomseed" IsOn="true">
+					<Remove />
+					<RequiredItem items="oxygensource" type="Contained" />
+					<RequiredItem items="thal_shroomseed" type="Contained" />
+				</StatusEffect>
+				<!-- teargas -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_cylinderteargas" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="weldingtoolfuel" type="Contained" />
+					<RequiredItem items="badcreepingorange" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="weldingtoolfuel" type="Contained" />
+					<RequiredItem items="badcreepingorange" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="badcreepingorange" IsOn="true">
+					<Remove />
+					<RequiredItem items="weldingtoolfuel" type="Contained" />
+					<RequiredItem items="badcreepingorange" type="Contained" />
+				</StatusEffect>
+				<!-- laughingas -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_cylinderlaughing" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="oxygensource" type="Contained" />
+					<RequiredItem items="bikehorn" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="oxygensource" type="Contained" />
+					<RequiredItem items="bikehorn" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="bikehorn" IsOn="true">
+					<Remove />
+					<RequiredItem items="oxygensource" type="Contained" />
+					<RequiredItem items="bikehorn" type="Contained" />
+				</StatusEffect>
+				<!-- UC -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_constructor" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="thal_recipeconstructor" type="Contained" />
+					<RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipeconstructor" type="Contained" />
+					<RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="titaniumaluminiumalloy" IsOn="true">
+					<Remove />
+					<RequiredItem items="thal_recipeconstructor" type="Contained" />
+					<RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+				</StatusEffect>
+				<!-- CRISPR -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_geneticinit" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="thal_recipegeneticinit" type="Contained" />
+					<RequiredItem items="antirad" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipegeneticinit" type="Contained" />
+					<RequiredItem items="antirad" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="antirad" IsOn="true">
+					<Remove />
+					<RequiredItem items="thal_recipegeneticinit" type="Contained" />
+					<RequiredItem items="antirad" type="Contained" />
+				</StatusEffect>
+				<!-- DNAgraft -->
+				<StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_geneticgraft" />
+					<sound file="%ModDir%/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+					<RequiredItem items="thal_recipegeneticgraft" type="Contained" />
+					<RequiredItem items="syringegun" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_recipegeneticgraft" type="Contained" />
+					<RequiredItem items="syringegun" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="syringegun" IsOn="true">
+					<Remove />
+					<RequiredItem items="thal_recipegeneticgraft" type="Contained" />
+					<RequiredItem items="syringegun" type="Contained" />
+				</StatusEffect>
+			</Button>
+		</CustomInterface>
+		<ItemContainer capacity="2" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
+			<!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
+			<StatusEffect type="Always" target="This" condition="1" setvalue="true" />
+		</ItemContainer>
+		<Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+		<LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+			<sound file="%ModDir%/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+			</StatusEffect>
+		</LightComponent>
+	</Item>
+
+	<Item nameidentifier="food" identifier="thal_petfood" variantof="food" tags="smallitem,petfood1,petfood2,petfood3,monsterfood" maxstacksize="8" hideinmenus="true" damagedbyexplosions="true" category="Misc" scale="0.5" impactsoundtag="impact_metal_light" cargocontaineridentifier="metalcrate">
+		<Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="True" outcondition="0.5">
+			<RequiredItem tag="seed" usecondition="false" description="fabricationdescription.seed" header="fabricationheader.seed" defaultitem="creepingorangevineseed" />
+			<Item identifier="antibloodloss1" />
+		</Fabricate>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="True">
+			<RequiredItem tag="plantitem" usecondition="false" description="fabricationdescription.fruit" header="fabricationheader.fruit" defaultitem="creepingorange" />
+			<Item identifier="antibloodloss1" />
+		</Fabricate>
+	</Item>
+
+	<Item name="" identifier="thal_seedmodder" category="Machine" cargocontaineridentifier="metalcrate" tags="smallitem,mobilecontainer,donttakeitems,dontsellitems" impactsoundtag="impact_soft" scale="0.2" hideconditionbar="true">
+		<InventoryIcon name="basicmap sprite" texture="%ModDir%/Items/Electricity/poweritems.png" sourcerect="699,15,215,125" depth="0.55" origin="0.5,0.5"/>
+		<Sprite name="basicmap sprite" texture="%ModDir%/Items/Electricity/poweritems.png" sourcerect="699,15,215,125" depth="0.55" origin="0.5,0.5"/>
+		<Body width="24" height="12" density="40" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+			<RequiredSkill identifier="electrical" level="10" />
+			<RequiredItem identifier="fpgacircuit" />
+			<RequiredItem identifier="plastic" />
+		</Fabricate>
+		<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+			<GuiFrame relativesize="0.2,0.1" anchor="TopRight" absoluteoffset="0,-30" style="ItemUI" />
+			<Button text="seedmodder.random">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" drawhudwhenequipped="true" comparison="AND">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_randomseed" />
+					<RequiredItem tag="plantitem" type="Contained" />
+					<RequiredItem tag="seed" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" IsOn="true" delay="14.5" comparison="AND">
+					<RequiredItem tag="plantitem" type="Contained" />
+					<RequiredItem tag="seed" type="Contained" />
+					<Remove/>
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" IsOn="true" noninteractable="true" comparison="AND">
+					<RequiredItem tag="plantitem" type="Contained" />
+					<RequiredItem tag="seed" type="Contained" />
+				</StatusEffect>
+			</Button>
+		</CustomInterface>
+		<ItemContainer capacity="3" canbeselected="false" hideitems="true" slotsperrow="1" drawinventory="true"/>
+		<Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+		<LightComponent range="250" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" flicker="0.1" allowingameediting="false">
+			<Sprite name="penta light Sprite" texture="%ModDir%/Items/Electricity/poweritems.png" sourcerect="699,15,215,125" depth="0.6" origin="0.5,0.5" />
+		</LightComponent>
+	</Item>
+
+	<Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,provocative,thal_dnapreserve,mobilecontainer" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false" GrabWhenSelected="true">
+		<Sprite name="dna scanner" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="5,263,261,113" depth="0.8" origin="0.5,0.5" />
+		<BrokenSprite name="dna scanner" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="5,382,261,113" depth="0.8" origin="0.5,0.5" maxcondition="40" fadein="true" />
+		<Body width="261" height="113" density="5"/>
+		<ItemLabel scrollable="true" padding="4,30,40,40" textcolor="1,1,1,1" text="DNA Detected"/>
+		<Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+			<RequiredSkill identifier="medical" level="60" />
+			<RequiredItem identifier="fpgacircuit" amount="2" />
+			<RequiredItem identifier="rubber" amount="2" />
+			<RequiredItem identifier="silicon" amount="2" />
+		</Fabricate>
+		<Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+			<requireditem identifier="wrench" type="Equipped" />
+		</Holdable>
+		<LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="0" allowingameediting="false" IsOn="false">
+			<StatusEffect type="OnContained" target="This" setvalue="true" delay="0.1" IsOn="false"/>
+			<CustomInterface canbeselected="true" drawhudwhenequipped="false">
+				<GuiFrame relativesize="0.3,0.1" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+				<Button text="Toggle Power">
+					<StatusEffect type="OnUse" target="This" setvalue="true" delay="0.1" IsOn="true">
+						<Conditional IsOn="false" />
+					</StatusEffect>
+					<StatusEffect type="OnUse" target="This" setvalue="true" delay="0.1" IsOn="false">
+						<Conditional IsOn="true" />
+					</StatusEffect>
+				</Button>
+			</CustomInterface>
+			<Sprite name="dna scanner text" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="278,338,165,57" depth="0.8" origin="0.7332378,0.46395308" />
+			<LightSprite name="dna scan backlight" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="273,266,171,69" depth="0.8" origin="0.74371487,0.49465847" />
+			<StatusEffect type="OnActive" target="This" delay="1.0" stackable="false">
+				<UseItem />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" duration="1.0" stackable="false" offset="50,-10">
+				<ParticleEmitter particle="thal_grid" velocitymin="60.0" velocitymax="60.0" anglemin="-90" anglemax="-90" particlespersecond="3" colormultiplier="50,200,200,200" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/scanner.ogg" type="OnActive" range="500.0" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
+				<Conditional IsOn="eq false" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="scannerinfo.ready" delay="1.0" stackable="false" checkconditionalalways="true">
+				<Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="scannerinfo.hammerhead" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnahammer" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="scannerinfo.thresher" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnathresher" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="scannerinfo.mushroom" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnaramblin" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="180,140,80,100" text="scannerinfo.maggot" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnamaggot" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="255,230,140,100" text="scannerinfo.crawler" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnacrawler" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100" text="scannerinfo.mudraptor" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnamudraptor" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="scannerinfo.humanoid" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnahuman" type="Contained" />
+			</StatusEffect>
+			<!--StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="scannerinfo.husk" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnahusk" type="Contained" />
+			</StatusEffect-->
+			<StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="scannerinfo.xeno" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnaxeno" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="scannerinfo.unknown" delay="1.0" stackable="false" checkconditionalalways="true">
+				<RequiredItem items="thal_dnaunknown" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" target="This" condition="-0.7" />
+		</LightComponent>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="power" displayname="connection.power" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+		</ConnectionPanel>
+		<ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="3" drawinventory="false" maxstacksize="1">
+			<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,60,1,1" />
+			<GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+		</ItemContainer>
+		<PowerContainer capacity="100.0" maxrechargespeed="0.0" maxoutput="0" canbeselected="false" indicatorposition="15,90" indicatorsize="150,15" indicatordepth="0.4" ishorizontal="true" msg="ItemMsgInteractSelect" charge="0">
+			<StatusEffect type="OnContained" target="This" indicatorsize="1,1" />
+			<StatusEffect type="OnNotContained" target="This" indicatorsize="150,15" />
+			<GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
+				<!-- human scan logic -->
+			<!-- charge/buzz if humdna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="human">
+				<Conditional HasStatusTag="thal_humanscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnahuman" type="Contained" />
+			</StatusEffect>
+			<!-- spawn humdna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="human">
+				<Conditional HasStatusTag="thal_humanscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnahuman" />
+			</StatusEffect>
+				<!-- mudraptor scan logic -->
+			<!-- charge/buzz if muddna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="mudraptor">
+				<Conditional HasStatusTag="thal_mudraptorscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnamudraptor" type="Contained" />
+			</StatusEffect>
+			<!-- spawn muddna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="mudraptor">
+				<Conditional HasStatusTag="thal_mudraptorscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnamudraptor" />
+			</StatusEffect>
+				<!-- husk scan logic -->
+			<!-- charge/buzz if huskdna inside -->
+			<!--StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="husk">
+				<Conditional HasStatusTag="thal_huskscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnahusk" type="Contained" />
+			</StatusEffect-->
+			<!-- spawn huskdna inside if detected -->
+			<!--StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="husk">
+				<Conditional HasStatusTag="thal_huskscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnahusk" />
+			</StatusEffect-->
+				<!-- crawler scan logic -->
+			<!-- charge/buzz if crawdna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="crawler">
+				<Conditional HasStatusTag="thal_crawlerscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnacrawler" type="Contained" />
+			</StatusEffect>
+			<!-- spawn crawdna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="crawler">
+				<Conditional HasStatusTag="thal_crawlerscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnacrawler" />
+			</StatusEffect>
+				<!-- maggot scan logic -->
+			<!-- charge/buzz if maggotdna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="maggot">
+				<Conditional HasStatusTag="thal_maggotscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnamaggot" type="Contained" />
+			</StatusEffect>
+			<!-- spawn maggotdna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="maggot">
+				<Conditional HasStatusTag="thal_maggotscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnamaggot" />
+			</StatusEffect>
+				<!-- unknown scan logic -->
+			<!-- charge/buzz if maggotdna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="unknown">
+				<Conditional HasStatusTag="thal_unknownscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnathalamus" type="Contained" />
+			</StatusEffect>
+			<!-- spawn thalamusdna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="unknown">
+				<Conditional HasStatusTag="thal_unknownscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnathalamus" />
+			</StatusEffect>
+				<!-- xeno scan logic -->
+			<!-- charge/buzz if xenodna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="xeno">
+				<Conditional HasStatusTag="thal_xenoscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnathalamus" type="Contained" />
+			</StatusEffect>
+			<!-- spawn thalamusdna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="xeno">
+				<Conditional HasStatusTag="thal_xenoscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnathalamus" />
+			</StatusEffect>
+				<!-- ramblin scan logic -->
+			<!-- charge/buzz if ramblindna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="ramblin">
+				<Conditional HasStatusTag="thal_ramblinscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnaramblin" type="Contained" />
+			</StatusEffect>
+			<!-- spawn xenodna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="ramblin">
+				<Conditional HasStatusTag="thal_xenoscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnathalamus" />
+			</StatusEffect>
+			<!-- spawn unknowndna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="ramblin">
+				<Conditional HasStatusTag="thal_unknownscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnathalamus" />
+			</StatusEffect>
+				<!-- hammer scan logic -->
+			<!-- charge/buzz if hammerdna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="hammer">
+				<Conditional HasStatusTag="thal_hammerscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnahammer" type="Contained" />
+			</StatusEffect>
+			<!-- spawn ramblindna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="hammer">
+				<Conditional HasStatusTag="thal_hammerscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnahammer" />
+			</StatusEffect>
+			<!-- spawn ramblindna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="hammer">
+				<Conditional HasStatusTag="thal_hammerscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnahammer" />
+			</StatusEffect>
+			<!-- spawn ramblindna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="hammer">
+				<Conditional HasStatusTag="thal_hammerscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnahammer" />
+			</StatusEffect>
+				<!-- thresher scan logic -->
+			<!-- charge/buzz if ramblindna inside -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" charge="7" originalOutpost="thresher">
+				<Conditional HasStatusTag="thal_thresherscanned" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+				<RequiredItem items="thal_dnathresher" type="Contained" />
+			</StatusEffect>
+			<!-- spawn ramblindna inside if detected -->
+			<StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" range="200" originalOutpost="thresher">
+				<Conditional HasStatusTag="thal_thresherscanned" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_dnathresher" />
+			</StatusEffect>
+			<!--end logic-->
+			<StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" charge="-3"/>
+			<StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
+				<Conditional ChargePercentage="lt 1" targetcontainer="true" targetitemcomponent="PowerContainer" />
+				<RemoveItem />
+			</StatusEffect>
+			<!-- completions -->
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnahuman" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnahuman" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnamudraptor" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnamudraptor" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnacrawler" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnacrawler" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnamaggot" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnamaggot" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnaramblin" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnaramblin" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnahammer" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnahammer" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnathresher" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnathresher" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect>
+			<!--StatusEffect type="Always" target="This" charge="0" setvalue="true">
+				<RequiredItem items="thal_dnahusk" type="Contained" />
+				<Conditional ChargePercentage="gt 99" />
+				<SpawnItem identifier="thal_dnahusk" />
+				<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+				<ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+			</StatusEffect-->
+		</PowerContainer>
+		<RepairTool canbeselected="false" range="60" spread="20" barrelpos="40,-50" repairthroughholes="false" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
+			<StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true">
+				<Conditional IsDead="false" />
+				<Affliction identifier="thal_scan" amount="50" />
+			</StatusEffect>
+			<RequiredItem items="youJustLostTheGame" type="Equipped" />
+			<ParticleEmitter particle="thal_grid" velocitymin="60.0" velocitymax="60.0" particlespersecond="3" colormultiplier="50,200,200,200" />
+			<sound file="%ModDir%/Items/Jobgear/Scientist/scanner.ogg" type="OnUse" range="500.0" loop="true" />
+			<StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false"/>
+			<StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true"/>
+		</RepairTool>
+		<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="270" MinDeteriorationCondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+			<ParticleEmitter particle="spark" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+			<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+				<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+				<Affliction identifier="lacerations" strength="5" />
+				<Affliction identifier="stun" strength="5" />
+			</StatusEffect>
+		</Repairable>
+		<Upgrade Tags="mobilecontainer" />
+		</Item>
+
+	<Item name="" identifier="thal_dnabox" category="Machine" tags="smallitem,mobilecontainer,thal_dnapreserve" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy">
+		<PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+		<PreferredContainer secondary="wreckstoragecab" spawnprobability="0.06" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<Item identifier="thal_frostcrystal" />
+			<Item identifier="steel" />
+		</Fabricate>
+		<Price baseprice="25">
+			<Price locationtype="outpost" multiplier="1" minavailable="4" />
+			<Price locationtype="city" multiplier="0.9" minavailable="6" />
+			<Price locationtype="research" multiplier="1.25" minavailable="1" />
+			<Price locationtype="military" multiplier="1.25" minavailable="1" />
+			<Price locationtype="mine" multiplier="1.25" minavailable="8" />
+		</Price>
+		<Sprite name="dnabox" texture="%ModDir%/Items/Jobgear/Scientist/science.png" sourcerect="281,398,152,92" depth="0.6" origin="0.5,0.5" />
+		<!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+		<Body width="148" height="88" density="20" />
+		<MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" holdpos="43,-10" handle1="-10,-10" handle2="-10,-10" aimangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+			<Attack structuredamage="10" itemdamage="5" stun="0.6" targetimpulse="2">
+				<Affliction identifier="blunttrauma" strength="2" />
+				<Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+			</Attack>
+		</MeleeWeapon>
+		<ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+			<Containable items="thal_dna" />
+		</ItemContainer>
+		<Upgrade Tags="mobilecontainer" />
+	</Item>
+
+	<Item name="" description="" identifier="thal_radsuit" category="Equipment" tags="mediumitem,clothing,deepdiving" scale="0.45" fireproof="true" impactsoundtag="impact_soft">
+		<InventoryIcon name="Rad Suit Icon" texture="%ModDir%/Items/Jobgear/RadiationGear/DivingSuitLocker.png" sourcerect="0,324,189,188" origin="0.5,0.5" />
+		<Sprite name="Rad Suit (Floor)" texture="%ModDir%/Items/Jobgear/RadiationGear/DivingSuitLocker.png" scale="0.4" sourcerect="329,200,134,108" depth="0.55" origin="0.5,0.5" />
+		<ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/DivingSuitLocker.png" sourcerect="181,0,75,193" depth="0.55" origin="0.5,0.5" />
+		<ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" sourcerect="421,29,77,209" depth="0.55" origin="-0.12,-0.14" />
+		<ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Diving/DivingSuitLocker.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />0	
+		<Price locationtype="Research" buyprice="4000" />
+		<Price locationtype="City" buyprice="6000" />
+		<Price locationtype="Military" buyprice="4000" />
+		<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+		<Deconstruct time="120">
+			<Item identifier="orangejumpsuit1" />
+			<Item identifier="lead" />
+			<Item identifier="rubber" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="True">
+			<Item identifier="orangejumpsuit1" />
+			<Item identifier="lead" />
+			<Item identifier="rubber" />
+			<Item identifier="rubber" />
+		</Fabricate>
+		<Wearable slots="OuterClothes" msg="ItemMsgEquipSelect">
+			<StatusEffect type="OnWearing" target="Character" HideFace="false" ObstructVision="true" duration="0.1" stackable="false" tags="thal_wearingradsuit" >
+				<TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+				<TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="1" ExpectedSpecies="Human" />
+			</StatusEffect>
+			<sprite name="Rad Suit Helmet Wearable" texture="%ModDir%/Items/Jobgear/RadiationGear/DivingSuitLocker.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="true" sourcerect="11,11,102,117" origin="0.48,0.42"/>
+			<sprite name="Rad Suit Torso" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Hand" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Hand" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Lower Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Lower Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Upper Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Upper Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Waist" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Thigh" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Thigh" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Leg" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Leg" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Left Shoe" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Rad Suit Right Shoe" texture="%ModDir%/Items/Jobgear/RadiationGear/Rad Suit.png" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_mushroomized" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_teargasaffliction" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		</Wearable>
+		<Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use"/>
+		<Upgrade Tags="deepdiving" />
+	</Item>
+	<Item name="" description="" identifier="thal_botanyradsuit" category="Equipment" tags="mediumitem,clothing,deepdiving" scale="0.5" fireproof="true" impactsoundtag="impact_soft">
+		<InventoryIcon name="Botany Rad Suit Icon" texture="%ModDir%/Items/Jobgear/RadiationGear/BotanyRadsuitLocker.png" sourcerect="0,324,189,188" origin="0.5,0.5" />
+		<Sprite name="Botany Rad Suit (Floor)" texture="%ModDir%/Items/Jobgear/RadiationGear/BotanyRadsuitLocker.png" scale="0.4" sourcerect="329,200,134,108" depth="0.55" origin="0.5,0.5" />
+		<ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/BotanyRadsuitLocker.png" sourcerect="181,0,75,193" depth="0.55" origin="0.5,0.5" />
+		<ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" sourcerect="421,29,77,209" depth="0.55" origin="-0.12,-0.14" />
+		<ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Diving/BotanyRadsuitLocker.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+		<Price locationtype="Research" buyprice="4000" />
+		<Price locationtype="City" buyprice="6000" />
+		<Price locationtype="Military" buyprice="4000" />
+		<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+		<Deconstruct time="120">
+			<Item identifier="thal_botanistsuit" />
+			<Item identifier="lead" />
+			<Item identifier="rubber" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="True">
+			<Item identifier="thal_botanistsuit" />
+			<Item identifier="lead" />
+			<Item identifier="rubber" />
+			<Item identifier="rubber" />
+		</Fabricate>
+		<Wearable slots="OuterClothes" msg="ItemMsgEquipSelect">
+			<StatusEffect type="OnWearing" target="Character" HideFace="false" ObstructVision="true" duration="0.1" stackable="false" tags="thal_wearingradsuit" >
+				<TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+				<TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="1" ExpectedSpecies="Human" />
+			</StatusEffect>
+			<sprite name="Botany Rad Suit Helmet Wearable" texture="%ModDir%/Items/Jobgear/RadiationGear/BotanyRadsuitLocker.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="true" sourcerect="11,11,102,117" origin="0.48,0.42"/>
+			<sprite name="Botany Rad Suit Torso" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Hand" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Hand" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Lower Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Lower Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Upper Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Upper Arm" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Waist" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Thigh" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Thigh" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Leg" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Leg" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Left Shoe" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Botany Rad Suit Right Shoe" texture="%ModDir%/Items/Jobgear/RadiationGear/Botany Rad Suit.png" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_maggotinfection" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_mushroomized" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+			<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_teargasaffliction" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		</Wearable>
+		<Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use"/>
+		<Upgrade Tags="deepdiving" />
+	</Item>
+</Items>

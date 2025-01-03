@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item name="" identifier="op_clownjukebox" width="149" height="258" scale="0.5" category="Decorative">
+		<sprite texture="Content/Map/Outposts/Art/ClownDistrict.png" sourcerect="82,763,149,258" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+		<Powered IsActive="true" PowerConsumption="50">
+			<LightComponent range="20" lightcolor="209,46,158,255" blinkfrequency="1" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+				<sprite texture="Content/Map/Outposts/Art/ClownDistrict.png" sourcerect="205,95,169,278" depth="0.98" origin="0.5,0.5" />
+			</LightComponent>			
+			<sound file="Content/Sounds/ClubMusic_accordion.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<sound file="Content/Sounds/ClubMusic_ztrr.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<sound file="Content/Sounds/ClubMusic_seafloor.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true"/>
+			<sound file="Content/Sounds/ClubMusic_alien.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<TriggerComponent triggeredby="Human" force="0" radius="50">
+				<StatusEffect type="OnActive" target="This,Character" interval="0.5" CheckConditionalAlways="true" disabledeltatime="true">
+					<Conditional PowerConsumption="gt 0" targetitemcomponent="Powered" />
+					<Conditional IsBot="true" />
+					<Affliction identifier="stun" amount="0.22" />
+				</StatusEffect>
+			</TriggerComponent>
+		</Powered>
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" attachedbydefault="true">
+			<RequiredItem items="crowbaritem" type="Equipped" />
+		</Holdable>
+		<CustomInterface canbeselected="true" ElementStates="true,1,50">
+			<GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+			<TickBox text="speaker.on" targetitemcomponent="Powered" propertyname="IsActive" ContinuousSignal="false" GetValueInterval="1" />
+			<IntegerInput text="speaker.trackselection" propertyname="ManuallySelectedSound" targetitemcomponent="Powered" min="0" max="3">
+				<StatusEffect type="OnUse" targettype="This">
+					<sound file="Content/Sounds/ClubMusic_transitionScratch.ogg" range="1000.0" />
+				</StatusEffect>
+			</IntegerInput>
+			<IntegerInput text="speaker.volume" propertyname="PowerConsumption" targetitemcomponent="Powered" min="0" max="100" step="10"/>
+		</CustomInterface>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+		</ConnectionPanel>
+	</Item>
+
+	<Item name="" identifier="bigspeaker" nameidentifier="barspeaker" width="190" height="175" scale="0.5" category="Decorative">
+		<sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="463,849,190,175" depth="0.899" premultiplyalpha="false" origin="0.5,0.5" />
+		<DecorativeSprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="958,250,66,68" depth="0.48" premultiplyalpha="false" origin="0.5,0.5" offset="0,37" scaleanim="Sine" scaleanimspeed="52" scaleanimamount="0.02,0.02">
+			<AnimationConditional IsActive="true" targetitemcomponent="Powered" />
+			<AnimationConditional PowerConsumption="gt 0" targetitemcomponent="Powered" />
+		</DecorativeSprite>
+		<DecorativeSprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="958,250,66,68" depth="0.48" premultiplyalpha="false" origin="0.5,0.5" offset="0,-37" scaleanim="Sine" scaleanimspeed="52" scaleanimamount="0.02,0.02">
+			<AnimationConditional IsActive="true" targetitemcomponent="Powered" />
+			<AnimationConditional PowerConsumption="gt 0" targetitemcomponent="Powered" />
+		</DecorativeSprite>
+		<Powered IsActive="true" PowerConsumption="100">
+			<sound file="Content/Sounds/ClubMusic_ztrr.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<sound file="Content/Sounds/ClubMusic_seafloor.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<sound file="Content/Sounds/ClubMusic_alien.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<sound file="Content/Sounds/ClubMusic_accordion.ogg" type="OnActive" range="1000.0" loop="true" volume="0.01" volumeproperty="PowerConsumption" selectionmode="Manual" mutebackgroundmusic="true" />
+			<TriggerComponent triggeredby="Human" force="0" radius="50">
+				<StatusEffect type="OnActive" target="This,Character" interval="0.5" CheckConditionalAlways="true" disabledeltatime="true">
+					<Conditional PowerConsumption="gt 0" targetitemcomponent="Powered" />
+					<Conditional IsBot="true" />
+					<Affliction identifier="stun" amount="0.22" />
+				</StatusEffect>
+			</TriggerComponent>
+		</Powered>
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" attachedbydefault="true">
+			<RequiredItem items="crowbaritem" type="Equipped" />
+		</Holdable>
+		<CustomInterface canbeselected="true" ElementStates="true,0,100">
+			<GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />			
+			<TickBox text="speaker.on" targetitemcomponent="Powered" propertyname="IsActive" ContinuousSignal="false" GetValueInterval="1" />
+			<IntegerInput text="speaker.trackselection" propertyname="ManuallySelectedSound" targetitemcomponent="Powered" min="0" max="3">
+				<StatusEffect type="OnUse" targettype="This">
+					<sound file="Content/Sounds/ClubMusic_transitionScratch.ogg" range="1000.0" />
+				</StatusEffect>
+			</IntegerInput>
+			<IntegerInput text="speaker.volume" targetitemcomponent="Powered" propertyname="PowerConsumption" min="0" max="100" step="10"/>
+		</CustomInterface>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+		</ConnectionPanel>
+	</Item>
+</Items>
