@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- PIANO, SHEET MUSIC -->
+<Items>
+	<Item name="" identifier="thal_watcheregg" variantof="balloonegg" nameidentifier="petegg" Tags="smallitem,monsterfood" hideinmenus="true" health="100" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft" spritecolor="64,32,64,255" inventoryiconcolor="64,32,64,255">
+		<Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="9,389,43,56" origin="0.5,0.5" />
+		<ItemContainer capacity="1" hideitems="true" showcontainedstateindicator="false" maxstacksize="1">
+			<Containable items="antibloodloss1">
+				<StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+				<StatusEffect type="OnContaining" target="This" Condition="0" setvalue="true">
+					<SpawnCharacter speciesname="Watcherpet"/>
+					<Remove />
+				</StatusEffect>
+			</Containable>
+		</ItemContainer>
+	</Item>
+	<Item nameidentifier="op_huskstatue1" descriptionidentifier="alientrinket1" identifier="jovefigurine" category="Misc" maxstacksize="2" Tags="smallitem" scale="0.5" health="10" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true">
+		<InventoryIcon texture="Content/Map/AlienShrine.png" sourcerect="1385,355,657,711" depth="0.55" premultiplyalpha="false" />
+		<Sprite texture="%ModDir%/Items/Misc/AlienShrine.png" sourcerect="0,0,256,243" depth="0.55" origin="0.5,0.5" />
+		<Body width="30" height="55" density="15" />
+		<LightComponent range="600" lightcolor="140,197,180,111" IsOn="true" castshadows="true" allowingameediting="false" flicker="0.2" flickerspeed="5.0" pulsefrequency="0.2" pulseamount="0.4">
+			<sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" origin="0.5,0.5"  size="0.5,0.5"/>
+		</LightComponent>
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="itemmsgdetachcrowbar" PickingTime="3.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="false" aimable="true">
+			<requireditem identifier="crowbaritem" type="Equipped" />
+			<StatusEffect type="OnNotContained" target="This">
+				<Conditional targetitemcomponent="Holdable" Attached="eq true" />
+				<sound file="Content/Characters/Jove/JOVE_sleepingLoop.ogg" range="300" loop="true" volume="0.05" />
+				<!--IsActiveConditional LevelDifficulty="gt 80"/-->
+			</StatusEffect>
+		</Holdable>
+	</Item>
+</Items>

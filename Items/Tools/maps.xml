@@ -17,7 +17,7 @@
       <RequiredItem identifier="plastic" />
       <RequiredItem identifier="rubber" />
     </Fabricate>
-    <Sprite name="basicmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="2,1,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="basicmap sprite" texture="%ModDir%/Items/Tools/maps.png" sourcerect="2,1,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>
@@ -61,7 +61,7 @@
       <RequiredItem identifier="waterdetector" />
       <RequiredItem identifier="wrench" />
     </Fabricate>
-    <Sprite name="watermap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="145,0,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="watermap sprite" texture="%ModDir%/Items/Tools/maps.png" sourcerect="145,0,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>
@@ -83,7 +83,7 @@
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
       <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
@@ -105,7 +105,7 @@
       <RequiredItem identifier="oxygendetector" />
       <RequiredItem identifier="screwdriver" />
     </Fabricate>
-    <Sprite name="airmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="288,0,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="airmap sprite" texture="%ModDir%/Items/Tools/maps.png" sourcerect="288,0,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>
@@ -127,7 +127,7 @@
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
       <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
@@ -149,7 +149,7 @@
       <RequiredItem identifier="thal_mapwater" />
       <RequiredItem identifier="alienpowercell" />
     </Fabricate>
-    <Sprite name="allmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="0,81,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="allmap sprite" texture="%ModDir%/Items/Tools/maps.png" sourcerect="0,81,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>
@@ -170,7 +170,7 @@
       <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
