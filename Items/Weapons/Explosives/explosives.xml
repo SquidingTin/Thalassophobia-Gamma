@@ -1,296 +1,503 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Items>
+﻿<Items>
 	<!-- NEW COLLAR (Part of Genetics III) -->
-	<Item name="" identifier="thal_slavecollar" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,explosive" description="" scale="0.5"
-	originaloutpost="unarmed" canflipy="false"
-	><!-- use originaloutpost to keep track of unarmed/armed, canflipy for whether detonation is fulfilled -->
-    <Sprite name="Slavecollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
-    <Body width="40" radius="30" density="15" />
-    <Fabricate suitablefabricators="fabricator" requiredtime="120">
-      <RequiredSkill identifier="weapons" level="50" />
-      <RequiredItem identifier="nitroglycerin" />
-      <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="handcuffs" />
-    </Fabricate>
-    <Deconstruct time="10">
-      <Item identifier="fpgacircuit" />
-      <Item identifier="handcuffs" />
-    </Deconstruct>
-    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
-      <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154" />
-      <!-- DETONATIONS -->
-      <StatusEffect type="OnBroken" target="This" >
+	<Item name="" description="" identifier="thal_slavecollar" category="Weapon" cargocontaineridentifier="explosivecrate" Tags="smallitem,explosive" scale="0.2" originaloutpost="unarmed" canflipy="false" ><!-- use originaloutpost to keep track of unarmed/armed,canflipy for whether detonation is fulfilled -->
+		<sprite name="Muzzle held" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" sourcerect="225,5,215,167" origin="0.4,0.3" scale="0.4"/>
+		<InventoryIcon name="Gag Sprite" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="232,1,214,172" origin="0.5123859,0.53692484" scale="0.5" />
+		<Body width="40" radius="30" density="15" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredSkill identifier="weapons" level="25" />
+			<RequiredItem identifier="fpgacircuit" />
+			<RequiredItem identifier="handcuffs" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="fpgacircuit" />
+			<Item identifier="handcuffs" />
+		</Deconstruct>
+		<CustomInterface canbeselected="true" drawhudwhenequipped="true" allowuioverlap="true">
+			<GuiFrame relativesize="0.2,0.12" anchor="BottomRight" absoluteoffset="40,80" style="ItemUI" />
+			<TextBox text="connection.set_text" propertyname="description" />
+			<RequiredItem identifier="thal_bombcollarkey" type="Equipped" />
+		</CustomInterface>
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="Slave Collar" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154" />
+			<!-- Drop on the ground when let go -->
+			<StatusEffect type="OnBroken" target="This">
+				<SpawnItem identifier="thal_slavecollar" spawnposition="This" />
+				<Sound file="%ModDir%/Items/Jobgear/Security/cuffbreak.ogg" range="1200" />
 				<Remove />
-      </StatusEffect>
-      <!-- ARMING -->
-      <!-- Arm when initially put on, Give character collar affliction -->
-      <StatusEffect type="OnWearing" target="This" originaloutpost="armed">
-				<Conditional originaloutpost="eq unarmed" />
-      </StatusEffect>
-      <!-- Beep while armed -->
-    </Wearable>
-  </Item>
+			</StatusEffect>
+			<StatusEffect type="Always" target="This" Condition="0">
+				<RequiredItem items="thal_bombcollarkey" type="Contained" />
+			</StatusEffect>
+			<!-- No more speaking for you -->
+			<StatusEffect Tags="gagged" type="OnWearing" target="Character" setvalue="true" stackable="false" speechImpediment="25.0" noninteractable="True"/>
+			<StatusEffect type="OnWearing" target="This" noninteractable="True"/>
+
+		</Wearable>
+		<ItemContainer maxstacksize="1" capacity="1" hideitems="true" drawinventory="False">
+			<Containable items="thal_bombcollarkey" />
+			<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+		</ItemContainer>
+	</Item>
+
+	<Item name="" description="" identifier="thal_breachcharge" category="Weapon" cargocontaineridentifier="explosivecrate" Tags="smallitem,weapon,explosive" scale="0.4" impactsoundtag="impact_metal_heavy">
+		<PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="1" />
+		<PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+		<Upgrade gameversion="0.9.3.0" scale="0.5" />
+		<Price locationtype="Military" buyprice="250" />
+		<Deconstruct time="10">
+			<Item identifier="iron" />
+			<Item identifier="uex" mincondition="0.9" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="20">
+			<RequiredSkill identifier="weapons" level="60" />
+			<RequiredItem identifier="iron" />
+			<RequiredItem identifier="uex" />
+		</Fabricate>
+		<Sprite name="breach charge" texture="%ModDir%/Items/Electricity/poweritems.png" sourcerect="571,17,113,151" origin="0.5712885,0.446652" depth="0.8" />
+		<Body width="40" height="60" density="30" />
+		<Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+			<requireditem identifier="wrench" type="Equipped" />
+		</Holdable>
+		<LightComponent lightcolor="0,255,255,255" castshadows="false" allowingameediting="false" IsOn="false" blinkfrequency="4" range="80">
+			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+			<sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="68,35,23,24" origin="0.5,0.5" />
+			<CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgInteractSelect">
+				<StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+				<GuiFrame relativesize="0.15,0.1" anchor="Center" absoluteoffset="0,0" style="ItemUI" />
+				<Button text="Activate">
+					<StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+					<StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true">
+						<sound file="%ModDir%/Items/Weapons/Explosives/Countdown240.ogg" range="800.0" loop="false" volume="1.0" />
+					</StatusEffect>
+				</Button>
+				<StatusEffect type="OnBroken" target="NearbyItems" range="100" setvalue="true" condition="0" targetidentifiers="door,hatch,windoweddoor,doorwbuttons,hatchwbuttons,windoweddoorwbuttons,alienhatch,aliendoor,doorwrecked,hatchwrecked,windoweddoorwrecked,doorwbuttonswrecked,hatchwbuttonswrecked,windoweddoorwbuttonswrecked" />
+				<StatusEffect type="OnBroken" target="This">
+					<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All" />
+					<sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000" />
+					<Explosion range="100.0" structuredamage="0" itemdamage="0" stun="5" force="20.0" severlimbsprobability="0.5">
+						<Affliction identifier="bleeding" strength="20" />
+						<Affliction identifier="lacerations" strength="100" />
+					</Explosion>
+					<Remove />
+				</StatusEffect>
+			</CustomInterface>
+		</LightComponent>
+	</Item>
 	
-	
-  <!-- COLLAR SHIT BEGIN -->
-  <Item name="" identifier="thal_bombcollar" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
-    <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
-    <Body width="40" radius="30" density="15" />
-    <Fabricate suitablefabricators="fabricator" requiredtime="120">
-      <RequiredSkill identifier="weapons" level="50" />
-      <RequiredItem identifier="nitroglycerin" />
-      <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="handcuffs" />
-    </Fabricate>
-    <Deconstruct time="10">
-      <Item identifier="fpgacircuit" />
-      <Item identifier="handcuffs" />
-    </Deconstruct>
-    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
-      <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
-        <LightComponent LightColor="1.0,0.0,0.0,1.0" range="200" powerconsumption="0" blinkfrequency="1" IsOn="true" canbeselected="false">
-          <StatusEffect type="OnWearing" target="Character" setvalue="true" tags="nocollar" duration="0.1" lifetime="0.1">
-            <Affliction identifier="thal_bombcollar" amount="80" />
-          </StatusEffect>
-          <StatusEffect type="OnWearing" target="This">
-            <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown60.ogg" range="500.0" loop="true" volume="1.0" />
-          </StatusEffect>
-          <StatusEffect type="OnWearing" target="This, Character" setvalue="true" IsOn="false">
-            <Conditional thal_bombcollar="lt 1" />
-            <RequiredItem items="bikehorn" type="Contained" />
-          </StatusEffect>
-        </LightComponent>
-      </sprite>
-      <StatusEffect type="Always" target="This">
-        <Conditional IsOn="false" />
-        <RequiredItem items="bikehorn" type="Contained" />
-        <Sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="100" loop="true" />
-        <Explosion range="500" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="0.1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
-          <Affliction identifier="thal_bombcollar" strength="46" />
-          <Affliction identifier="internaldamage" strength="60" />
-          <Affliction identifier="burn" strength="120" />
-          <Affliction identifier="bleeding" strength="30" />
-          <Affliction identifier="stun" strength="6" />
-        </Explosion>
-        <sound file="Content/Items/Weapons/ShotgunShot1.ogg" range="1000" selectionmode="random" />
-        <sound file="Content/Items/Weapons/ShotgunShot2.ogg" range="1000" />
-        <sound file="Content/Items/Weapons/ShotgunShot3.ogg" range="1000" />
-        <sound file="Content/Items/Weapons/ShotgunShot4.ogg" range="1000" />
-        <Remove />
-      </StatusEffect>
-      <ItemContainer maxstacksize="1" capacity="2" hideitems="true" drawinventory="false">
-        <StatusEffect type="OnWearing" target="Character" setvalue="true" tags="collar" lifetime="0.03" disabledeltatime="false">
-          <SpawnItem identifiers="bikehorn" spawnposition="ThisInventory" count="1" />
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Character" duration="1.0">
-          <RequiredItem items="thal_bombcollarkey" type="Contained" />
-          <ReduceAffliction identifier="thal_bombcollar" amount="400" strength="400" />
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="This, Character">
-          <RequiredItem items="thal_bombcollarkey" type="Contained" />
-          <Remove />
-        </StatusEffect>
-        <Containable items="bikehorn, thal_bombcollarkey" />
-        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
-      </ItemContainer>
-    </Wearable>
-  </Item>
-  <!-- Little "meta item" not intended for gameplay that makes the beeping noise for the timed bombcollar -->
-  <Item name="metaclock" identifier="thal_bombcollarclock" category="Electrical" Tags="smallitem,signal" cargocontaineridentifier="metalcrate" hideinmenus="true" description="" scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="122,68,36,36" origin="0.5,0.5" />
-    <Body width="36" height="36" density="30" />
-    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="Always" target="Parent, This" setvalue="true" Condition="55" lifetime="0.1">
-        <Conditional Condition="lt 55" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="Parent, This" setvalue="true" Condition="25" lifetime="0.1">
-        <Conditional Condition="lt 25" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="Parent, This" setvalue="true" Condition="3" lifetime="0.1">
-        <Conditional Condition="lt 3" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This">
-        <Conditional Condition="100" />
-        <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown60.ogg" range="500.0" loop="true" volume="1.0" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This">
-        <Conditional Condition="55" />
-        <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown120.ogg" range="500.0" loop="true" volume="1.0" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This">
-        <Conditional Condition="25" />
-        <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown240.ogg" range="500.0" loop="true" volume="1.0" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This">
-        <Conditional Condition="3" />
-        <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdowndone.ogg" range="500.0" loop="true" volume="1.0" />
-      </StatusEffect>
-    </Holdable>
-  </Item>
-  <Item identifier="thal_bombcollarkey" category="Electrical" Tags="smallitem,signal" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="122,68,36,36" origin="0.5,0.5" />
-    <Body width="36" height="36" density="30" />
-    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
-    <Fabricate suitablefabricators="fabricator" requiredtime="40">
-      <RequiredSkill identifier="mechanical" level="10" />
-      <RequiredItem identifier="plastic" />
-      <RequiredItem identifier="rubber" />
-    </Fabricate>
-  </Item>
-  <Item name="" identifier="thal_bombcollartimed" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
-		<!--
-    <PreferredContainer primary="armcab" minamount="1" maxamount="1" spawnprobability="0.5" />
-    <PreferredContainer primary="wreckarmcab" minamount="1" maxamount="2" spawnprobability="0.1" />
-    -->
-    <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.5" />
-    <Body width="40" radius="30" density="15" />
-    <Fabricate suitablefabricators="fabricator" requiredtime="100">
-      <RequiredSkill identifier="weapons" level="50" />
-      <RequiredItem identifier="nitroglycerin" />
-      <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="handcuffs" />
-    </Fabricate>
-    <Deconstruct time="10">
-      <Item identifier="fpgacircuit" />
-      <Item identifier="handcuffs" />
-    </Deconstruct>
-    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
-      <sprite name="Bombcollar Wearable Timed" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
-        <LightComponent LightColor="1.0,0.0,0.0,1.0" range="200" powerconsumption="0" blinkfrequency="1" IsOn="true" canbeselected="false">
+	<!-- COLLAR SHIT BEGIN -->
+	<Item name="" description="" identifier="thal_bombcollar" category="Weapon" cargocontaineridentifier="metalcrate" Tags="smallitem" scale="0.2">
+		<Sprite name="Bombcollar Normal" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5,0.5" scale="0.2" />
+		<Body width="40" radius="30" density="15" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredSkill identifier="weapons" level="50" />
+			<RequiredItem identifier="nitroglycerin" />
+			<RequiredItem identifier="fpgacircuit" />
+			<RequiredItem identifier="handcuffs" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="fpgacircuit" />
+			<Item identifier="handcuffs" />
+		</Deconstruct>
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="Bombcollar Wearable True" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
+				<LightComponent LightColor="1.0,0.0,0.0,1.0" range="200" powerconsumption="0" blinkfrequency="1" IsOn="true" canbeselected="false">
+					<StatusEffect type="OnWearing" target="Character" setvalue="true" Tags="nocollar" duration="0.1" lifetime="0.1">
+						<!--Affliction identifier="thal_bombcollar" amount="80" /-->
+					</StatusEffect>
+					<StatusEffect type="OnWearing" target="This">
+						<sound file="%ModDir%/Items/Weapons/Explosives/Countdown60.ogg" range="500.0" loop="true" volume="1.0" />
+					</StatusEffect>
+					<StatusEffect type="OnWearing" target="This,Character" setvalue="true" IsOn="false">
+						<Conditional thal_bombcollar="lt 1" />
+						<RequiredItem items="thal_bombtrigger" type="Contained" />
+					</StatusEffect>
+				</LightComponent>
+			</sprite>
+			<StatusEffect type="Always" target="This">
+				<Conditional IsOn="false" />
+				<RequiredItem items="thal_bombtrigger" type="Contained" />
+				<Sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="100" loop="true" />
+				<Explosion range="500" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="0.1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
+					<Affliction identifier="internaldamage" strength="60" />
+					<Affliction identifier="burn" strength="120" />
+					<Affliction identifier="bleeding" strength="30" />
+					<Affliction identifier="stun" strength="6" />
+				</Explosion>
+				<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" selectionmode="random" />
+				<sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
+				<sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
+				
+				<Remove />
+			</StatusEffect>
+			<ItemContainer maxstacksize="1" capacity="1" hideitems="true" drawinventory="false">
+				<StatusEffect type="OnWearing" target="Character" setvalue="true" Tags="collar" lifetime="0.03" disabledeltatime="false">
+					<SpawnItem identifiers="thal_bombtrigger" spawnposition="ThisInventory" count="1" />
+				</StatusEffect>
+				<StatusEffect type="OnWearing" target="Character" duration="1.0">
+					<RequiredItem items="thal_bombcollarkey" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnWearing" target="This">
+					<RequiredItem items="thal_bombcollarkey" type="Contained" />
+					<Remove />
+				</StatusEffect>
+				<Containable items="signal" />
+				<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+			</ItemContainer>
+		</Wearable>
+	</Item>
+	<Item name="" description="" identifier="thal_bombcollartimed" category="Weapon" cargocontaineridentifier="metalcrate" Tags="smallitem" scale="0.2">
+		<Sprite name="Bombcollar Normal" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5,0.5" scale="0.2" />
+		<Body width="40" radius="30" density="15" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredSkill identifier="weapons" level="50" />
+			<RequiredItem identifier="nitroglycerin" />
+			<RequiredItem identifier="fpgacircuit" />
+			<RequiredItem identifier="handcuffs" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="fpgacircuit" />
+			<Item identifier="handcuffs" />
+		</Deconstruct>
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="Bombcollar Wearable Timed" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
+				<LightComponent LightColor="1.0,0.0,0.0,1.0" range="200" powerconsumption="0" blinkfrequency="1" IsOn="true" canbeselected="false">
 					<!-- section for flashing -->
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="2" >
+					<StatusEffect type="Always" target="This,Contained" setvalue="true" blinkfrequency="2" >
 						<Conditional Condition="55" />
 					</StatusEffect>
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="4" >
+					<StatusEffect type="Always" target="This,Contained" setvalue="true" blinkfrequency="4" >
 						<Conditional Condition="25" />
 					</StatusEffect>
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="0" >
+					<StatusEffect type="Always" target="This,Contained" setvalue="true" blinkfrequency="0" >
 						<Conditional Condition="3" />
 					</StatusEffect>
 					<!-- end section for flashing -->
-          <StatusEffect type="OnWearing" target="Character" setvalue="true" tags="nocollar" duration="0.1" lifetime="0.1">
-            <Affliction identifier="thal_bombcollar" amount="80" />
-          </StatusEffect>
-          <StatusEffect type="OnWearing" target="This" Condition="-1.0" />
-          <StatusEffect type="OnWearing" target="This, Character" setvalue="true" IsOn="false">
-            <Conditional thal_bombcollar="lt 1" />
-            <RequiredItem items="thal_bombcollarclock" type="Contained" />
-          </StatusEffect>
-          <StatusEffect type="OnWearing" target="This, Character" setvalue="true" IsOn="false">
-            <Conditional condition="lt 2" />
-            <Affliction identifier="thal_bombcollartimed" amount="200" />
-          </StatusEffect>
-        </LightComponent>
-      </sprite>
-      <StatusEffect type="Always" target="This">
-        <Conditional IsOn="false" />
-        <RequiredItem items="thal_bombcollarclock" type="Contained" />
-        <Sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="100" loop="true" />
-        <Explosion range="500" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="0.1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
-          <Affliction identifier="thal_bombcollar" strength="46" />
-          <Affliction identifier="internaldamage" strength="60" />
-          <Affliction identifier="burn" strength="120" />
-          <Affliction identifier="bleeding" strength="30" />
-          <Affliction identifier="stun" strength="6" />
-        </Explosion>
-        <sound file="Content/Items/Weapons/ShotgunShot1.ogg" range="1000" selectionmode="random" />
-        <sound file="Content/Items/Weapons/ShotgunShot2.ogg" range="1000" />
-        <sound file="Content/Items/Weapons/ShotgunShot3.ogg" range="1000" />
-        <sound file="Content/Items/Weapons/ShotgunShot4.ogg" range="1000" />
-        <Remove />
-      </StatusEffect>
-      <ItemContainer maxstacksize="1" capacity="2" hideitems="true" drawinventory="false">
-        <StatusEffect type="OnWearing" target="Character" setvalue="true" tags="collar" lifetime="0.03" disabledeltatime="false">
-          <SpawnItem identifiers="thal_bombcollarclock" spawnposition="ThisInventory" count="1" />
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Character" duration="1.0">
-          <RequiredItem items="thal_bombcollarkey" type="Contained" />
-          <ReduceAffliction identifier="thal_bombcollar" amount="400" strength="400" />
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="This, Character">
-          <RequiredItem items="thal_bombcollarkey" type="Contained" />
-          <Remove />
-        </StatusEffect>
-        <Containable items="thal_bombcollarclock, thal_bombcollarkey" />
-        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
-      </ItemContainer>
-    </Wearable>
-  </Item>
-  <!-- COLLAR SHIT END -->
-  <Item name="" identifier="thal_bombvest" spritecolor="255,0,0,255" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+					<StatusEffect type="OnWearing" target="Character" setvalue="true" Tags="nocollar" duration="0.1" lifetime="0.1">
+						<!--Affliction identifier="thal_bombcollar" amount="80" /-->
+					</StatusEffect>
+					<StatusEffect type="OnWearing" target="This" Condition="-1.0" />
+					<StatusEffect type="OnWearing" target="This,Character" setvalue="true" IsOn="false">
+						<Conditional thal_bombcollar="lt 1" />
+						<RequiredItem items="thal_bombcollarclock" type="Contained" />
+					</StatusEffect>
+					<StatusEffect type="OnWearing" target="This,Character" setvalue="true" IsOn="false">
+						<Conditional condition="lt 2" />
+						<!--Affliction identifier="thal_bombcollartimed" amount="200" /-->
+					</StatusEffect>
+				</LightComponent>
+			</sprite>
+			<StatusEffect type="Always" target="This">
+				<Conditional IsOn="false" />
+				<RequiredItem items="thal_bombcollarclock" type="Contained" />
+				<Sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="100" loop="true" />
+				<Explosion range="500" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="0.1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
+					<!--Affliction identifier="thal_bombcollar" strength="46" /-->
+					<Affliction identifier="internaldamage" strength="60" />
+					<Affliction identifier="burn" strength="120" />
+					<Affliction identifier="bleeding" strength="30" />
+					<Affliction identifier="stun" strength="6" />
+				</Explosion>
+				<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" selectionmode="random" />
+				<sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
+				<sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
+				<Remove />
+			</StatusEffect>
+			<ItemContainer maxstacksize="1" capacity="2" hideitems="true" drawinventory="false">
+				<StatusEffect type="OnWearing" target="Character" setvalue="true" Tags="collar" lifetime="0.03" disabledeltatime="false">
+					<SpawnItem identifiers="thal_bombtrigger" spawnposition="ThisInventory" count="1" />
+				</StatusEffect>
+				<StatusEffect type="OnWearing" target="Character" duration="1.0">
+					<RequiredItem items="thal_bombcollarkey" type="Contained" />
+				</StatusEffect>
+				<StatusEffect type="OnWearing" target="This">
+					<RequiredItem items="thal_bombcollarkey" type="Contained" />
+					<Remove />
+				</StatusEffect>
+				<Containable items="signal" />
+				<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+			</ItemContainer>
+		</Wearable>
+	</Item>
+	<!-- Little "meta item" not intended for gameplay that makes the beeping noise for the timed bombcollar -->
+	<Item name="metaclock" identifier="thal_bombcollarclock" category="Electrical" Tags="smallitem,signal" cargocontaineridentifier="metalcrate" hideinmenus="true" scale="0.2" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="122,68,36,36" origin="0.5,0.5" />
+		<Body width="36" height="36" density="30" />
+		<Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="Always" target="Parent,This" setvalue="true" Condition="55" lifetime="0.1">
+				<Conditional Condition="lt 55" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="Parent,This" setvalue="true" Condition="25" lifetime="0.1">
+				<Conditional Condition="lt 25" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="Parent,This" setvalue="true" Condition="3" lifetime="0.1">
+				<Conditional Condition="lt 3" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This">
+				<Conditional Condition="100" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/Countdown60.ogg" range="500.0" loop="true" volume="1.0" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This">
+				<Conditional Condition="55" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/Countdown120.ogg" range="500.0" loop="true" volume="1.0" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This">
+				<Conditional Condition="25" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/Countdown240.ogg" range="500.0" loop="true" volume="1.0" />
+			</StatusEffect>
+			<StatusEffect type="Always" target="This">
+				<Conditional Condition="3" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/Countdowndone.ogg" range="500.0" loop="true" volume="1.0" />
+			</StatusEffect>
+		</Holdable>
+	</Item>
+	<Item identifier="thal_bombcollarkey" category="Electrical" Tags="smallitem,signal" cargocontaineridentifier="metalcrate" hideinmenus="false" scale="0.2" impactsoundtag="impact_metal_light">
+		<Sprite texture="%ModDir%/Items/Electricity/poweritems.png" depth="0.8" sourcerect="731,276,149,66" origin="0.5,0.5" />
+		<Body width="36" height="36" density="30" />
+		<Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+		<Fabricate suitablefabricators="fabricator" requiredtime="40">
+			<RequiredSkill identifier="mechanical" level="10" />
+			<RequiredItem identifier="plastic" />
+			<RequiredItem identifier="rubber" />
+		</Fabricate>
+	</Item>
+	<Item name="Bomb Trigger" identifier="thal_bombtrigger" category="Electrical" Tags="smallitem,signal" cargocontaineridentifier="metalcrate" hideinmenus="true" scale="0.2" impactsoundtag="impact_metal_light">
+		<Sprite texture="%ModDir%/Items/Electricity/poweritems.png" depth="0.8" sourcerect="731,276,149,66" origin="0.5,0.5" />
+		<Body width="36" height="36" density="30" />
+		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
+	</Item>
+	<!-- COLLAR SHIT END -->
+	<Item name="" description="" identifier="thal_bombvest" spritecolor="255,0,0,255" category="Weapon" Tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
 		<PreferredContainer primary="wreckarmcab" minamount="1" maxamount="1" spawnprobability="0.1" />
-    <Deconstruct time="40">
-      <Item identifier="healthscanner" />
-      <Item identifier="ballisticfiber" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="120">
-      <RequiredItem identifier="healthscanner" />
-      <RequiredItem identifier="bodyarmor" />
-      <RequiredItem identifier="c4block" />
-      <RequiredItem identifier="detonator" />
-    </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="14,45,103,158" depth="0.6" />
-    <Body radius="45" height="50" density="40" />
-    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnWearing" target="Character,This">
-        <Conditional IsDead="true" />
-        <Explosion range="800" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
-          <Affliction identifier="internaldamage" strength="130" />
-          <Affliction identifier="burn" strength="330" />
-          <Affliction identifier="bleeding" strength="50" />
-          <Affliction identifier="stun" strength="10" />
-        </Explosion>
-        <Fire size="150.0" />
-        <Remove />
-      </StatusEffect>
-      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="1.3" />
-      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="1.3" bleedingmultiplier="0.3" damagesound="LimbArmor" />
-      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="1.3" damagesound="LimbArmor" />
-      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="1.3" damagesound="LimbArmor" />
-      <sprite name="Security Vest" texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-    </Wearable>
-  </Item>
-  <Item name="" identifier="thal_nukevest" spritecolor="0,0,0,255" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
-    <Deconstruct time="40">
-      <Item identifier="healthscanner" />
-      <Item identifier="ballisticfiber" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="120">
-      <RequiredItem identifier="healthscanner" />
-      <RequiredItem identifier="bodyarmor" />
-      <RequiredItem identifier="fuelrod" />
-      <RequiredItem identifier="detonator" />
-    </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="14,45,103,158" depth="0.6" />
-    <Body radius="45" height="50" density="40" />
-    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<Deconstruct time="40">
+			<Item identifier="healthscanner" />
+			<Item identifier="ballisticfiber" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredItem identifier="bodyarmor" />
+			<RequiredItem identifier="c4block" />
+			<RequiredItem identifier="detonator" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="14,45,103,158" depth="0.6" />
+		<Body radius="45" height="50" density="40" />
+		<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnWearing" target="Character,This">
+				<Conditional IsDead="true" />
+				<Explosion range="800" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
+					<Affliction identifier="internaldamage" strength="130" />
+					<Affliction identifier="burn" strength="330" />
+					<Affliction identifier="bleeding" strength="50" />
+					<Affliction identifier="stun" strength="10" />
+				</Explosion>
+				<Fire size="150.0" />
+				<Remove />
+			</StatusEffect>
+			<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="1.3" />
+			<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="1.3" bleedingmultiplier="0.3" damagesound="LimbArmor" />
+			<damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<sprite name="Security Vest" texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+		</Wearable>
+	</Item>
+	<Item name="" description="" identifier="thal_nukevest" spritecolor="123,123,123,255" category="Weapon" Tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+		<Deconstruct time="40">
+			<Item identifier="detonator" />
+			<Item identifier="ballisticfiber" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredItem identifier="bodyarmor" />
+			<RequiredItem identifier="dirtybomb" />
+			<RequiredItem identifier="detonator" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="14,45,103,158" depth="0.6" />
+		<Body radius="45" height="50" density="40" />
+		<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnWearing" target="Character" stackable="false" >
+				<GiveTalentInfo talentidentifiers="thal_Achievement_IAmDeath" />
+			</StatusEffect>
 			<StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="0" >
-        <Conditional IsDead="true" />
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/SingularityCollapse.ogg" range="3000" />
-      </StatusEffect>
-      <StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="2.6" >
-        <Conditional IsDead="true" />
-        <!--
-        <Explosion range="1000" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">
-          <Affliction identifier="radiationsickness" strength="70" />
-          <Affliction identifier="burn" strength="330" />
-          <Affliction identifier="bleeding" strength="50" />
-          <Affliction identifier="stun" strength="10" />
-        </Explosion>
-        <Fire size="150.0" />
-        -->
-        <SpawnItem identifier="thal_singularity" />
-        <Remove />
-      </StatusEffect>
-      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="1.3" />
-      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="1.3" bleedingmultiplier="0.3" damagesound="LimbArmor" />
-      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="1.3" damagesound="LimbArmor" />
-      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="1.3" damagesound="LimbArmor" />
-      <sprite name="Security Vest" texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-    </Wearable>
-  </Item>
+				<Conditional IsDead="true" />
+				<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" />
+				<sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
+				<sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
+				<ParticleEmitter particle="fixfoam" anglemax="360" velocitymin="4000" velocitymax="4000" particlespersecond="64" colormultiplier="50,150,50" />
+				<Explosion range="250.0" ballastfloradamage="50" structuredamage="90" itemdamage="250" force="5" severlimbsprobability="0.25" debris="true" decal="explosion" decalsize="0.25">
+					<Affliction identifier="explosiondamage" strength="50" />
+					<Affliction identifier="burn" strength="5" probability="0.2" dividebylimbcount="false"/>
+					<Affliction identifier="bleeding" strength="20" probability="0.05" dividebylimbcount="false"/>
+					<Affliction identifier="stun" strength="3" />
+				</Explosion>
+				<Explosion range="1500" force="0.0" smoke="false" sparks="false" empstrength="2.5" applyfireeffects="false" ignorecover="true">
+					<Affliction identifier="emp" strength="25" multiplybymaxvitality="true" />
+				</Explosion>
+				<SpawnItem identifier="dirtybombafteremitter" spawnposition="This" />
+				<Remove />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="2.6" >
+				<Conditional IsDead="true" />
+				<sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="3500" />
+			</StatusEffect>
+			<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="1.3" />
+			<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="1.3" bleedingmultiplier="0.3" damagesound="LimbArmor" />
+			<damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<sprite name="Security Vest" texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+		</Wearable>
+	</Item>
+	<!-- Unstable Matter -->
+	<Item name="" identifier="thal_unstablematter" category="Weapon,Material" Tags="mediumitem,dontsellitems,explosive,demolitionsexpert" impacttolerance="2" maxstacksize="32" maxstacksizecharacterinventory="8" Scale="1" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+		<Fabricate suitablefabricators="fabricator" requiredtime="20"> <!-- requiresrecipe="true"-->
+			<RequiredSkill identifier="weapons" level="40" />
+			<RequiredItem tag="thal_sabercrystal" amount="4" defaultitem="thal_glowcrystal" description="fabricationdescription.thal_catalyst" />
+			<RequiredItem identifier="depletedfuel"/>
+			<RequiredItem identifier="compoundn" amount="4" />
+			<RequiredItem identifier="titaniumaluminiumalloy" amount="8" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/Alien/Legacy/AlienRuin_Legacy2.png" sourcerect="959,218,64,64" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Items/Weapons/Explosives/storagevessel.png" sourcerect="0,0,58,80" origin="0.5,0.5" />
+		<Body width="45" height="30" density="20" />
+		<Throwable characterusable="false" slots="RightHand+LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+			<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnBroken" range="5000" />
+			<sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnBroken" range="5000" />
+			<sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="5000" />
+			<StatusEffect type="Always" target="This" Condition="-1.11" />
+			<StatusEffect type="Always" target="This" disabledeltatime="true">
+				<Conditional Condition="lt 25" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/storagevessel_warming.ogg" range="3500" loop="true"/>
+			</StatusEffect>
+			<StatusEffect type="OnSpawn" target="This" >
+				<sound file="%ModDir%/Items/Weapons/Explosives/storagevessel_activation.ogg" range="3500" />
+			</StatusEffect>
+			<StatusEffect type="OnSpawn" target="This" >
+				<Conditional Condition="lt 80" />
+				<sound file="%ModDir%/Items/Weapons/Explosives/storagevessel_countdown.ogg" range="3500" loop="true"/>
+			</StatusEffect>
+			<StatusEffect type="OnImpact" target="This" Condition="-20" disabledeltatime="true" />
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional InWater="False" />
+				<Explosion range="300.0" ballastfloradamage="50" structuredamage="100" itemdamage="250" force="18" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.25">
+					<Affliction identifier="explosiondamage" strength="75" dividebylimbcount="true"/>
+				</Explosion>
+				<sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="3500" />
+				<Remove />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional InWater="True" />
+				<Explosion range="150.0" ballastfloradamage="50" structuredamage="50" itemdamage="25" force="18" severlimbsprobability="0" decal="explosion" decalsize="0.25">
+					<Affliction identifier="explosiondamage" strength="25" dividebylimbcount="true"/>
+				</Explosion>
+				<sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="1500" />
+				<Remove />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This" stackable="false">
+				<SpawnItem identifier="thal_stabilizedmatter" />  
+				<sound file="%ModDir%/Items/Weapons/Explosives/storagevessel_inject.ogg" range="3500" />
+			</StatusEffect>
+		</Throwable>
+		<Quality>
+			<QualityStat stattype="ExplosionRadius" value="-0.25"/>
+			<QualityStat stattype="ExplosionDamage" value="-0.25"/>
+		</Quality>
+	</Item>
+	
+	<Item name="Stablized Matter" identifier="thal_stabilizedmatter" category="Weapon,Material" Tags="smallitem,explosive,demolitionsexpert" impacttolerance="2" maxstacksize="32" maxstacksizecharacterinventory="8" Scale="0.150" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+		<Price baseprice="3075" sold="false">
+			<Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="0" maxavailable="1" sold="true">
+				<Reputation faction="separatists" min="90"/>
+			</Price>
+			<Price storeidentifier="merchantresearch" multiplier="1.25" />
+		</Price>
+		<Sprite texture="%ModDir%/Items/Weapons/Explosives/capsule.png" depth="0.55" sourcerect="0,0,88,256" origin="0.5,0.5" />
+		<Body width="45" height="30" density="20" />
+		<Throwable characterusable="false" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+			<StatusEffect type="OnBroken" target="This" stackable="false">
+				<SpawnItem identifier="thal_singularity" />
+				<Remove />
+			</StatusEffect>
+		</Throwable>
+	</Item>
+
+	<Item name="" identifier="thal_stabilizedmattergrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" scale="0.5" impactsoundtag="impact_metal_heavy">
+		<Deconstruct time="10">
+			<Item identifier="thal_stabilizedmatter" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="20">
+			<RequiredSkill identifier="weapons" level="60" />
+			<RequiredItem identifier="iron" />
+			<RequiredItem identifier="thal_stabilizedmatter" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="580,770,54,63" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="217,305,40,61" depth="0.55" origin="0.5,0.5" />
+		<!-- Broken sprite is the same but without the pin and lever-->
+		<BrokenSprite texture="Content/Items/Weapons/weapons_new.png" name="fraggrenade" sourcerect="423,120,40,61" depth="0.55" origin="0.5,0.5" maxcondition="99.9" />
+		<Body radius="20" height="10" density="30" />
+		<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnBroken" target="This">
+				<SpawnItem identifier="thal_singularity" />
+				<Remove />
+			</StatusEffect>
+			<!-- Skip the removal of safeties and explode immediatly if inside of a detonator, railgun shell or a depth charge-->
+			<StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+				<Conditional HasTag="detonator" targetcontainer="true" />
+				<Conditional HasTag="railgunammo" targetcontainer="true" />
+				<Conditional HasTag="depthchargeammo" targetcontainer="true" />
+			</StatusEffect>
+			<!-- forcefully pull the pin if player hasnt done so -->
+			<StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+				<Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+				<Use />
+			</StatusEffect>
+		</Throwable>
+		<!-- Activating the ItemComponent starts the timer -->
+		<ItemComponent IsActive="false" CharacterUsable="true">
+			<!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+			<StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+				<Conditional HasTag="neq detonator" targetcontainer="true" />
+				<Conditional HasTag="neq railgunammo" targetcontainer="true" />
+				<Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+				<Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+				<ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+				<ParticleEmitter particle="grenadelever" emitinterval="10" particleamount="1" anglemin="120" anglemax="210" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+				<Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+			</StatusEffect>
+			<StatusEffect type="OnActive" targettype="This" Condition="-24">
+				<ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
+			</StatusEffect>
+		</ItemComponent>
+	</Item>
+	<Item name="" description="" identifier="thal_stabilizedmattervest" spritecolor="123,123,123,255" category="Weapon" Tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+		<Deconstruct time="40">
+			<Item identifier="detonator" />
+			<Item identifier="ballisticfiber" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="120">
+			<RequiredItem identifier="bodyarmor" />
+			<RequiredItem identifier="thal_stabilizedmatter" />
+			<RequiredItem identifier="detonator" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="320,640,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Map/Pirates/PirateEquip.png" sourcerect="14,45,103,158" depth="0.6" origin="0.5,0.4" />
+		<Body radius="45" height="50" density="40" />
+		<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="0" >
+				<Conditional IsDead="true" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/SingularityCollapse.ogg" range="3000" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="2.6" >
+				<Conditional IsDead="true" />
+				<SpawnItem identifier="thal_singularity" />
+				<RemoveCharacter />
+				<Remove />
+			</StatusEffect>
+			<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="1.3" />
+			<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="1.3" bleedingmultiplier="0.3" damagesound="LimbArmor" />
+			<damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="1.3" damagesound="LimbArmor" />
+			<sprite name="Pirate Armor Wearable" texture="Content/Map/Pirates/PirateEquip.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" ignorelimbscale="true" scale="0.7" inheritsourcerect="false" sourcerect="14,45,103,158" />
+		</Wearable>
+	</Item>
 </Items>

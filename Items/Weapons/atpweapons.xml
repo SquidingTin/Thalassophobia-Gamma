@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+	<Item name="" description="" identifier="thal_improbabilitydrive" category="Machine" tags="mediumitem,fabricator,donttakeitems,dontsellitems" damagedbyexplosions="true" impactsoundtag="impact_soft" scale="0.6" hideconditionbar="false" canflipx="false" linkable="true" allowedlinks="deconstructor,locker" explosiondamagemultiplier="0.2" hideinmenus="true">
+		<UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+		<Sprite name="Improb Drive Sprite" texture="%ModDir%/Items/Weapons/improbabilitydrive.png" sourcerect="0,0,255,222" depth="0.6" origin="0.5,0.5" />
+		<BrokenSprite name="Improb Broken" texture="%ModDir%/Items/Weapons/improbabilitydrive.png" sourcerect="256,0,255,222" depth="0.6" origin="0.5,0.5" maxcondition="1" fadein="true" />
+		
+		<LightComponent range="10.0" lightcolor="180,255,255,200" IsOn="true" powerconsumption="5" castshadows="false" alphablend="false" blinkfrequency="1" allowingameediting="false">
+			<sound file="%ModDir%/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+			</StatusEffect>
+			<sprite texture="%ModDir%/Items/Weapons/improbabilitydrive.png" depth="0.025" sourcerect="0,223,255,222" alpha="1.0" />
+		</LightComponent>
+		
+		<Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+			<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+			<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true"/>
+			<poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+			<StatusEffect type="InWater" target="This" condition="-0.5" />
+		</Fabricator>
+
+		<ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+			<RequiredSkill identifier="electrical" level="55" />
+			<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+				<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+				<Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+				<Affliction identifier="stun" strength="4" probability="0.5" />
+				<Affliction identifier="electricshock" strength="60"/>
+				<Affliction identifier="burn" strength="5" />
+				<ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
+			</StatusEffect>
+			<RequiredItem items="screwdriver" type="Equipped"/>
+			<input name="power_in" displayname="connection.powerin"/>
+			<output name="condition_out" displayname="connection.conditionout" />
+		</ConnectionPanel>
+
+		<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
+			<RequiredSkill identifier="mechanical" level="55" />
+			<RequiredItem items="wrench" type="Equipped" />
+			<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+			<ParticleEmitter particle="smoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+			<ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="60" mincondition="0.0" maxcondition="15.0" />
+			<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+				<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+				<Affliction identifier="lacerations" strength="5" />
+				<Affliction identifier="stun" strength="4" />
+			</StatusEffect>
+		</Repairable>
+
+		<ItemContainer capacity="6" canbeselected="true" hideitems="true" slotsperrow="8" uilabel="" allowuioverlap="true"/>
+		<ItemContainer capacity="4" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
+	</Item>
+	<!-- Actual Drive
+	<Item name="" description="" identifier="thal_improbabilitydrive" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem" health="80" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" impactsoundtag="impact_soft" scale="0.6" hideconditionbar="false" canflipx="false" >
+		<Sprite name="Improb Drive Sprite" texture="%ModDir%/Items/Weapons/improbabilitydrive.png" sourcerect="0,0,255,222" depth="0.6" origin="0.5,0.5" />
+		<BrokenSprite name="Improb Broken" texture="%ModDir%/Items/Weapons/improbabilitydrive.png" sourcerect="256,0,255,222" depth="0.6" origin="0.5,0.5" maxcondition="1" fadein="true" />
+		<Body width="290" height="253" density="400" friction="1.0" restitution="0.01" angulardamping="0.8" bodytype="Kinematic" />
+		<ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text=""/>
+		<CustomInterface canbeselected="true" drawhudwhenequipped="false">
+			<GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+			<Button text="Activate Drive (Requires Wired Power)">
+				<StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true" text="">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_radsuit" />
+					<sound file="%ModDir%/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+					<RequiredItem items="divingsuit" type="Contained" />
+					<RequiredItem items="lead" type="Contained" />
+					<RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+				</StatusEffect>
+			</Button>
+		</CustomInterface>
+		<LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+			<sound file="%ModDir%/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+			</StatusEffect>
+		</LightComponent>
+		<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="270" MinDeteriorationCondition="0" RepairThreshold="90" fixDurationHighSkill="30" fixDurationLowSkill="30" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+			<RequiredSkill identifier="mechanical" level="0" />
+			<RequiredItem items="thal_atpengimask" type="Picked" />
+			<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+			<ParticleEmitter particle="spark" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+			<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+				<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+				<Affliction identifier="lacerations" strength="5" />
+				<Affliction identifier="stun" strength="5" />
+			</StatusEffect>
+		</Repairable>
+	</Item>
+	<Item name="" identifier="thal_atpengimask" scale="0.35" category="Equipment" Tags="smallitem,atp" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+		<Deconstruct time="10">
+			<Item identifier="plastic" />
+			<Item identifier="rubber" />
+		</Deconstruct>
+		<Turret HudTint="255,191,43,24" drawhudwhenequipped="true" />
+		<InventoryIcon name="inv apt engi" texture="%ModDir%/Items/Jobgear/headgears.png" sourcerect="217,401,115,112" origin="0.5188282,0.53310513" />
+		<Sprite name="ATP Engineer Mask" texture="%ModDir%/Items/Jobgear/headgears.png" sourcerect="485,400,88,86" depth="0.6" origin="0.446,0.562" />
+		<Body width="40" height="35" density="15" />
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+			<sprite name="ATP Engineer Mask Wearable" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="moustache,beard" sourcerect="216,213,88,86" origin="0.50535464,0.6024698">
+				<LightComponent range="1.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+					<StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+						<Conditional IsDead="false" />
+					</StatusEffect>
+					<LightTexture texture="%ModDir%/Items/Jobgear/headgears.png" sourcerect="238,399,88,86" origin="0.05,0.5" size="1.0,1.0" depth="0.01" />
+				</LightComponent>
+			</sprite>
+			<StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
+			<StatusEffect type="OnWearing" target="Character" comparison="And">
+				<Conditional thal_atp="gt 20" />
+				<Conditional thal_atpsoldat="eq 0" />
+				<Affliction identifier="thal_atpengi" amount="50" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" target="Character" comparison="And">
+				<Conditional thal_atp="gt 20" />
+				<Conditional thal_atpsoldat="gt 0" />
+				<ReduceAffliction identifier="thal_atpsoldat" amount="1" />
+			</StatusEffect>
+		</Wearable>
+	</Item>
+	<Item name="" identifier="thal_atpsoldatmask" scale="0.5" category="Equipment" Tags="smallitem,atp" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+		<Deconstruct time="10">
+			<Item identifier="plastic" />
+			<Item identifier="rubber" />
+		</Deconstruct>
+		<Turret HudTint="255,191,43,24" drawhudwhenequipped="true" />
+		<InventoryIcon name="soldat inv" texture="%ModDir%/Items/Jobgear/headgears.png" sourcerect="364,448,111,55" origin="0.5,0.5" />
+		<Sprite name="ATP Soldat Mask" texture="%ModDir%/Items/Jobgear/headgears.png" sourcerect="112,442,109,34" depth="0.6" origin="0.45,0.5" />
+		<Body width="70" height="24" density="30" />
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+			<sprite name="ATP Soldat Mask Wearable" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="101,338,109,34" origin="0.43629134,0.5129453" />
+			<StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
+			<StatusEffect type="OnWearing" target="Character" comparison="And">
+				<Conditional thal_atp="gt 20" />
+				<Conditional thal_atpengi="eq 0" />
+				<Affliction identifier="thal_atpsoldat" amount="50" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" target="Character" comparison="And">
+				<Conditional thal_atp="gt 20" />
+				<Conditional thal_atpengi="gt 0" />
+				<ReduceAffliction identifier="thal_atpengi" amount="1" />
+			</StatusEffect>
+		</Wearable>
+	</Item>
+	<Item name="ATP M60" identifier="thal_atpm60" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.3" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,830,64,64" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Items/Weapons/improbabilitydrive.png" sourcerect="265,250,496,118" depth="0.55" origin="0.5,0.5" />
+		<Body width="140" height="60" density="50" />
+		<Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="75,-10" aimpos="65,-4" handle1="-90,-13" handle2="10,-20" holdangle="-48" msg="ItemMsgPickUpSelect"/>
+		<RangedWeapon reload="0.13" barrelpos="75,14" spread="0" unskilledspread="60" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2" characterusable="false" offsetonselected="40">
+			<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+			<CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+			<ParticleEmitter particle="thal_madnessmuzzle" particleamount="1" velocitymin="0" velocitymax="0" />
+			<Sound file="%ModDir%/Items/Weapons/m60.ogg" type="OnUse" range="3500" selectionmode="All" volume="1.0" />
+			<Sound file="%ModDir%/Items/Weapons/gun_m60low.ogg" type="OnUse" range="500" selectionmode="All" volume="1.0" />
+			<StatusEffect type="OnUse" target="This">
+				<ParticleEmitter highqualitycollisiondetection="False" particle="thal_cartm60" particleamount="1" velocitymin="300" velocitymax="400" anglemin="80" anglemax="130" />
+				<Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="5.0" />
+				<SpawnItem identifier="thal_m60ammo" spawnposition="ThisInventory" />
+			</StatusEffect>
+			<StatusEffect type="OnSecondaryUse" target="This" unskilledspread="-30" setvalue="false" stackable="false">
+				<Conditional unskilledspread="gt 3" />
+			</StatusEffect>
+			<StatusEffect type="OnSecondaryUse" target="Character" SpeedMultiplier="0.0" setvalue="true"/>
+			<StatusEffect type="OnContained" target="This" unskilledspread="15" setvalue="false" stackable="false">
+				<Conditional unskilledspread="lt 80" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="Contained">
+				<Use />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This" delay="0.8" stackable="false" checkconditionalalways="true">
+				<Conditional InWater="false" />
+				<Sound file="%ModDir%/Items/Weapons/casings1.ogg" range="300" selectionmode="Random" />
+				<Sound file="%ModDir%/Items/Weapons/casings2.ogg" range="300" />
+				<Sound file="%ModDir%/Items/Weapons/casings3.ogg" range="300" />
+			</StatusEffect>
+			<RequiredItems items="thal_M60magazine" type="Contained" msg="ItemMsgAmmoRequired" />
+			<RequiredSkill identifier="thal_atp" level="50" />
+		</RangedWeapon>
+		<ItemContainer spawnwithid="thal_M60magazine" capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="bullet">
+			<Containable items="thal_M60magazine" />
+		</ItemContainer>
+		<aitarget sightrange="3000" soundrange="4000" fadeouttime="5" />
+	</Item>
+	<Item name="M60 Magazine" identifier="thal_M60magazine" maxstacksize="4" maxstacksizecharacterinventory="1" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,hmgammo,handheldammo" impactsoundtag="impact_metal_light">
+		<PreferredContainer primary="hmg" minamount="1" maxamount="1" spawnprobability="1" />
+		<PreferredContainer primary="armcab" secondary="secarmcab" />
+		<Price baseprice="330" sold="true" minleveldifficulty="65" displaynonempty="true">
+			<Price storeidentifier="merchantoutpost" multiplier="1.4" />
+			<Price storeidentifier="merchantcity" multiplier="1.25" />
+			<Price storeidentifier="merchantresearch" multiplier="1.25" />
+			<Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+			<Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+			<Price storeidentifier="merchantmine" multiplier="1.25" />
+		</Price>
+		<Fabricate suitablefabricators="fabricator" requiredtime="35">
+			<RequiredSkill identifier="weapons" level="40" />
+			<RequiredItem identifier="magnesium" />
+			<RequiredItem identifier="titaniumaluminiumalloy" />
+			<RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
+			<RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
+			<RequiredItem identifier="steel" />
+		</Fabricate>
+		<Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+			<RequiredSkill identifier="weapons" level="40" />
+			<RequiredItem identifier="magnesium" />
+			<RequiredItem identifier="titaniumaluminiumalloy" />
+			<RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
+			<RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
+			<RequiredItem identifier="thal_M60magazine" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+		</Fabricate>
+		<Deconstruct time="15">
+			<Item identifier="steel" />
+		</Deconstruct>
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="208,88,29,37" depth="0.55" origin="0.5,0.5" />
+		<Body width="29" height="37" density="25" />
+		<ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="m60ammo" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
+			<Containable items="m60ammo" />
+			<StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+				<SpawnItem identifiers="m60ammo" spawnposition="ThisInventory" />
+			</StatusEffect>
+		</ItemContainer>
+		<Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+	</Item>
+	<Item name="m60ammo" identifier="thal_m60ammo" category="Equipment" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="" hideinmenus="true" impactsoundtag="impact_metal_light">
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
+		<Body width="29" height="10" density="40" />
+		<Pickable slots="None" msg="ItemMsgPickUpSelect" />
+		<Projectile characterusable="false" hitscan="true" removeonhit="true">
+			<ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,255,255" scalemultiplier="0.9,1" />
+			<Attack structuredamage="1" targetforce="10" itemdamage="10" severlimbsprobability="0.1">
+				<Affliction identifier="bleeding" strength="0.5" />
+				<Affliction identifier="gunshotwound" strength="8" />
+			</Attack>
+			<StatusEffect type="OnImpact" target="Character" setvalue="true" SpeedMultiplier="0.5" stackable="false" duration="1.0"/>
+			<StatusEffect type="OnImpact" target="UseTarget">
+				<ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+			</StatusEffect>
+			<StatusEffect type="OnImpact" target="UseTarget" Condition="-10">
+				<Conditional entitytype="eq Structure" />
+				<Conditional hastag="eq door" />
+				<ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+				<Sound file="%ModDir%/Items/Weapons/ricochet.ogg" volume="0.8" range="700" selectionmode="Random" />
+				<Sound file="%ModDir%/Items/Weapons/ricochet2.ogg" volume="0.9" range="700" />
+				<Sound file="%ModDir%/Items/Weapons/ricochet3.ogg" range="700" />
+				
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/Ricochet1.ogg" range="700" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/Ricochet2.ogg" range="700" />
+				<Sound file="%ModDir%/Items/Jobgear/Scientist/Ricochet3.ogg" range="700" />
+			</StatusEffect>
+		</Projectile>
+		<Upgrade gameversion="0.10.0.0" scale="0.5" />
+	</Item-->
+	<Item name="ATP Fist" identifier="thal_atpfist" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.5" hideconditionbar="false" impactsoundtag="impact_metal_light" requireaimtouse="false">
+		<PreferredContainer primary="armcab" minamount="0" maxamount="3" spawnprobability="1" />
+		<PreferredContainer secondary="wreckarmcab" minamount="0" maxamount="2" spawnprobability="0.25" />
+		<PreferredContainer secondary="abandonedarmcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.5" />
+		<Price baseprice="30">
+			<Price locationtype="outpost" multiplier="1.5" minavailable="6" />
+			<Price locationtype="city" multiplier="1.25" minavailable="8" />
+			<Price locationtype="research" multiplier="1.25" minavailable="2" />
+			<Price locationtype="military" multiplier="0.9" minavailable="15" />
+			<Price locationtype="mine" multiplier="1.25" minavailable="2" />
+		</Price>
+		<Deconstruct time="10">
+			<Item identifier="iron" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+			<RequiredSkill identifier="weapons" level="30" />
+			<RequiredItem identifier="iron" />
+		</Fabricate>
+		<sprite texture="Content/Items/Jobgear/Mechanic/Exosuit.png" SourceRect="447,160,64,48" depth="0.05" origin="0.5,0.4" />
+		<Body width="65" height="45" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" holdpos="-20,-23" aimpos="-25,-18" handle1="-5,-5" holdangle="30" reload="0.7" range="180" combatPriority="25" msg="ItemMsgPickUpSelect">
+			<!-- Chargeless attack (base) -->
+			<Attack force="20" targetimpulse="9" severlimbsprobability="0.1" itemdamage="10">
+				<Affliction identifier="blunttrauma" strength="4" />
+				<Affliction identifier="stun" strength="0.2" />
+			</Attack>
+			<!-- Windup Sound -->
+			<StatusEffect type="OnSecondaryUse" target="This" setvalue="false">
+				<Sound file="%ModDir%/Items/Weapons/windup.ogg" loop="true" range="500" />
+				<Conditional Condition="gt 10" />
+			</StatusEffect>
+			<!-- Wind up -->
+			<StatusEffect type="OnSecondaryUse" target="This" setvalue="false" condition="35"/>
+			<StatusEffect type="OnSecondaryUse" target="Character" setvalue="true" SpeedMultiplier="0.4"/>
+			<!-- Wind Down -->
+			<StatusEffect type="OnActive" target="This" setvalue="false" condition="-25">
+				<Conditional condition="gt 1" />
+			</StatusEffect>
+			<!-- 25 Charge ATK: Light Knockback -->
+			<StatusEffect type="OnUse" target="This,UseTarget" comparison="Or" offset="0,-20">
+				<Conditional Condition="gte 25" />
+				<Explosion range="150.0" force="5" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+				<Affliction identifier="stun" strength="0.8" />
+				<Affliction identifier="blunttrauma" strength="2" />
+				<Affliction identifier="burn" strength="3" />
+				<Sound file="%ModDir%/Items/Weapons/Electocute.ogg" type="OnUse" range="800" volume="1.0" />
+			</StatusEffect>
+			<!-- 40 Charge ATK: Medium Knockback, High Damage -->
+			<StatusEffect type="OnUse" target="UseTarget, This" comparison="Or" offset="0,-20">
+				<Conditional Condition="gte 40" />
+				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+				<Affliction identifier="stun" strength="2" />
+				<Affliction identifier="blunttrauma" strength="2.5" />
+				<Affliction identifier="burn" strength="2" />
+				<Sound file="%ModDir%/Items/Weapons/Electocute.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+			</StatusEffect>
+			<!-- 75 Charge ATK: Heavy Knockback, Less than Two Hit KO, Minor Item Damage -->
+			<StatusEffect type="OnUse" target="UseTarget, This" comparison="Or" offset="0,-20">
+				<Conditional Condition="gte 75" />
+				<Explosion range="200.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="10.0" />
+				<Affliction identifier="stun" strength="2" />
+				<Affliction identifier="blunttrauma" strength="2.5" />
+				<Affliction identifier="burn" strength="2" />
+				<Sound file="%ModDir%/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+			</StatusEffect>
+			<!-- 93 Charge ATK: Heavy Knockback, Shred Target, Structural damage, Item Damage -->
+			<StatusEffect type="OnUse" target="UseTarget, This" comparison="Or" offset="0,-20">
+				<Conditional Condition="gte 93" />
+				<Explosion range="250.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="15.0" severlimbsprobability="1.0" />
+				<Affliction identifier="stun" strength="2" />
+				<Affliction identifier="blunttrauma" strength="2.5" />
+				<Affliction identifier="burn" strength="2" />
+				<Sound file="%ModDir%/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+			</StatusEffect>
+			<!-- 100 Charge: Backfire -->
+			<StatusEffect type="OnSecondaryUse" target="Character,This" comparison="Or" offset="0,-20">
+				<Conditional Condition="eq 100" />
+				<Explosion range="150.0" force="30" stun="5" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" severlimbsprobability="1.0" />
+					<Affliction identifier="stun" strength="3" />
+					<Affliction identifier="blunttrauma" strength="45" />
+					<Affliction identifier="burn" strength="15" />
+				</Explosion>
+				<Sound file="%ModDir%/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+			</StatusEffect>
+			<!-- 20 Charge: Particles -->
+			<StatusEffect type="OnSecondaryUse" target="This">
+				<Conditional Condition="gte 20" />
+				<ParticleEmitter particle="thal_madnesszap" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" particlespersecond="3" particleburstamount="2" />
+			</StatusEffect>
+			<!-- Reset on Use -->
+			<StatusEffect type="OnUse" target="This" setvalue="true" condition="1" />
+		</MeleeWeapon>
+		<LightComponent range="150" lightcolor="255,255,150,200" IsOn="False" castshadows="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+			<StatusEffect type="Always" target="This" setvalue="false" lightcolor="255,255,150,100" IsOn="false">
+				<Conditional Condition="lt 25" />
+			</StatusEffect>
+			<StatusEffect type="OnSecondaryUse" target="This" setvalue="false" lightcolor="255,255,150,100" IsOn="true" Comparison="And">
+				<Conditional Condition="gt 25" />
+				<Conditional Condition="lte 35" />
+			</StatusEffect>
+		</LightComponent>
+		<aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+		<Upgrade gameversion="0.10.0.0" scale="0.5" />
+	</Item>
+</Items>
