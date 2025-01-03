@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<!-- CULTIST STUFF BEGIN -->
+	<Item name="" identifier="thal_cultistmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.4">
+		<Sprite name="Cultist Mask" texture="%ModDir%/Items/Jobgear/headgears.png" depth="0.6" sourcerect="432,321,117,84" origin="0.5123859,0.53692484" scale="0.4" />
+		<Body width="40" radius="30" density="15" />
+		<Deconstruct time="10">
+			<Item identifier="bikehorn" />
+		</Deconstruct>
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+			<sprite name="Cultist Mask Wearable" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="false" depth="0.6" scale="0.4" sourcerect="437,323,110,80" origin="0.21839365,0.45777225" />
+			<StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" stackable="false" />
+		</Wearable>
+	</Item>
+	<Item name="" identifier="thal_cultistcostume" variantof="cultistrobes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+		<InventoryIcon name="Cultist Costume Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="129,413,128,101" origin="0.5,0.5" />
+		<Sprite name="Cultist Costume (floor)" texture="%ModDir%/Items/Jobgear/MiscJobGear.png" sourcerect="6,163,195,68" depth="0.6" origin="0.5,0.5" />
+		<Deconstruct time="40">
+			<Item identifier="bikehorn" />
+			<Item identifier="bikehorn" />
+			<Item identifier="bikehorn" />
+		</Deconstruct>
+		<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+			<sprite name="Cultist Torso" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Right Hand" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Hand" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Right Lower Arm" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Lower Arm" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Right Upper Arm" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Upper Arm" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Waist" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Right Thigh" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Thigh" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Right Leg" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Leg" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+			<sprite name="Cultist Left Shoe" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" sourcerect="269,218,104,38" origin="0.37,0.50" sound="footstep_armor" />
+			<sprite name="Cultist Right Shoe" texture="%ModDir%/Items/Jobgear/Cultist/cultist_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" sourcerect="374,218,104,38" origin="0.37,0.50" sound="footstep_armor" />
+			<sprite name="Cultist Head" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inherittexturescale="false" hideotherwearables="false" hidewearablesoftype="moustache,beard,headset" scale="0.3" sourcerect="401,193,118,130" origin="0.5,0.5" />
+			<!-- HENK -->
+			<StatusEffect tags="husk" type="OnWearing" target="Character" duration="0.1" stackable="false" />
+			<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbClown" />
+			<StatusEffect type="OnWearing" target="Character" HideFace="true" />
+		</Wearable>
+	</Item>
+	<Item name="" identifier="thal_zombieknife" category="Weapon" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="20">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.98" usecondition="true" />
+		</Fabricate>
+		<Body width="110" height="25" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="2" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect">
+			<Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+				<Affliction identifier="lacerations" strength="2" />
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+			</Attack>
+			<StatusEffect type="OnSuccess" target="UseTarget" IsDead="false" comparison="AND">
+				<Conditional IsDead="true" />
+				<Conditional speciesname="Human" />
+				<ResetJoints />
+			</StatusEffect>
+			<StatusEffect type="OnSuccess" target="UseTarget" delay="0.2">
+				<Affliction identifier="thal_apostleinfection" strength="2" />
+			</StatusEffect>
+			<StatusEffect type="OnSuccess" target="This,UseTarget" condition="-10.0" delay="0.1">
+				<Conditional IsDead="true" />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime0.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime1.ogg" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime2.ogg" range="500" />
+			</StatusEffect>
+			<!-- Item becomes unusable at 0 condition so keep it above-->
+			<StatusEffect type="OnBroken" target="This">
+				<Remove />
+			</StatusEffect>
+		</MeleeWeapon>
+	</Item>
+	
+	<Item name="" identifier="thal_restoreknife" category="Weapon" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+		<Body width="110" height="25" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="2" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect">
+			<Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+				<Affliction identifier="lacerations" strength="2" />
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+			</Attack>
+			<StatusEffect type="OnSuccess" target="UseTarget" IsDead="false">
+				<Conditional IsDead="true" />
+				<ResetJoints />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This, Character" condition="-25.0">
+				<Conditional IsDead="true" />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime0.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime1.ogg" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime2.ogg" range="500" />
+			</StatusEffect>
+			<!-- Item becomes unusable at 0 condition so keep it above-->
+			<StatusEffect type="OnBroken" target="This">
+				<Remove />
+			</StatusEffect>
+		</MeleeWeapon>
+	</Item>
+	
+	<Item name="" identifier="thal_cultistknife" category="Weapon" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+		<Body width="110" height="25" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="0.75" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect" condition="0">
+			<Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+				<Affliction identifier="lacerations" strength="7" />
+				<Affliction identifier="bleeding" strength="3" />
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+			</Attack>
+			<StatusEffect type="OnUse" target="This, Character" condition="10.0">
+				<Conditional IsDead="false" />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime0.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime1.ogg" range="500" />
+				<Sound file="%ModDir%/Items/Jobgear/Clown/clownchime2.ogg" range="500" />
+			</StatusEffect>
+			<!-- Item becomes unusable at 0 condition so keep it above-->
+			<StatusEffect type="OnContained" target="This" setvalue="true" condition="1.0">
+				<Conditional Condition="0" />
+			</StatusEffect>
+			<!-- Try to always keep bar showing, it disappears at 100 so keep it at 99 -->
+			<StatusEffect type="OnContained" target="This" setvalue="true" condition="99">
+				<Conditional Condition="100" />
+			</StatusEffect>
+		</MeleeWeapon>
+		<!-- Knife spawns in with a one-time switch that sets gutter to empty and never activates again-->
+		<LightComponent range="0" lightcolor="0,0,0,0" castshadows="true" allowingameediting="false">
+			<StatusEffect type="Always" target="This" setvalue="true" condition="1" castshadows="false">
+				<Conditional castshadows="true" />
+			</StatusEffect>
+		</LightComponent>
+		<ItemContainer hideitems="true" capacity="0" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+			<Containable items="youJustLostTheGame" />
+			<!--looks like ass
+			<ContainedStateIndicator texture="Mods/Thalassophobia Remastered/UI/ContainerIndicators.png" sourcerect="2,32,101,37" origin="0.5,0.5" />
+			-->
+		</ItemContainer>
+	</Item>
+	<Item nameidentifier="thal_cultistkit" descriptionidentifier="thal_cultistkit" identifier="thal_cultistkit_placeable" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,mobilecontainer,donttakeitems,dontsellitems" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true" GrabWhenSelected="true">
+		<InventoryIcon name="blodbank Inv" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
+		<Sprite name="bloodbank Sprite" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
+		<Body width="30" height="15" density="400" />
+		<Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
+			<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+			<sound file="%ModDir%/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true"/>
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="blooddrop" particlespersecond="2" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="2" velocitymin="90" velocitymax="150" anglemin="0" anglemax="360" scalemin="0.3" scalemax="0.5" />
+			</StatusEffect>
+		</Fabricator>
+		<ItemContainer capacity="1" slotsperrow="1" canbeselected="true" hideitems="true" drawinventory="true" allowuioverlap="true" keepopenwhenequipped="true" movableframe="true" />
+		<ItemContainer capacity="1" slotsperrow="1" canbeselected="true" hideitems="true" drawinventory="true" allowuioverlap="true" keepopenwhenequipped="true" movableframe="true" />
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="True" attachedbydefault="true" aimable="True"/>
+		<LightComponent range="250" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" flicker="0.1" allowingameediting="false"/>
+		<Upgrade gameversion="1.2.7.0" Tags="mobilecontainer" />
+	</Item>
+	<Item name="" description="" identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,mobilecontainer,donttakeitems,dontsellitems" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true">
+		<InventoryIcon name="blodbank Inv" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
+		<Sprite name="bloodbank Sprite" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
+		<Body width="30" height="15" density="400" />
+		<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+			<GuiFrame relativesize="0.4,0.6" anchor="TopRight" absoluteoffset="0,-30" style="ItemUI" />
+			<Button text="cultistkit.wireband">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="30" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_wirebind" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 50" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 50" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-50">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 50" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.muzzle">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="25" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_muzzle" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 70" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 70" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-70">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 70" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.blindfold">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="25" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_blindfold" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 60" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 60" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-60">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 60" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.candle">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="10" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_candle" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 10" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 10" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-10">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 10" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.ouija">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_ouijaboard" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-20">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.huskcostume">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_huskcostume" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 30" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 30" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-30">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 30" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.resurrection">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="30" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_zombieknife" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 90" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 90" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-90">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 90" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.paintbrush">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="60" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_paintbrush" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-90">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+			</Button>
+			<Button text="cultistkit.cultistkit_placeable">
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="60" IsOn="false" drawhudwhenequipped="true">
+					<SpawnItem spawnposition="ThisInventory" identifier="thal_cultistkit_placeable" />
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife,bloodsamplevial" IsOn="true" condition="-90">
+					<RequiredItem items="thal_cultistknife,bloodsamplevial" type="Contained" />
+					<Conditional condition="gt 98" />
+				</StatusEffect>
+			</Button>
+		
+		
+		</CustomInterface>
+		<ItemContainer capacity="2" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true" spawnwithid="">
+			<!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
+			<StatusEffect type="Always" target="This" condition="1" setvalue="true" />
+		</ItemContainer>
+		<Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+		<LightComponent range="250" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" flicker="0.1" allowingameediting="false">
+			<sound file="%ModDir%/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true" />
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="blooddrop" particlespersecond="2" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="2" velocitymin="90" velocitymax="150" anglemin="0" anglemax="360" scalemin="0.3" scalemax="0.5" />
+			</StatusEffect>
+		</LightComponent>
+		<Upgrade gameversion="1.2.7.0" Tags="mobilecontainer" />
+	</Item>
+	<Item name="" identifier="thal_muzzle" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.2">
+		<PreferredContainer primary="crewcab" spawnprobability="0.05" />
+		<sprite name="Muzzle held" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" sourcerect="225,5,215,167" origin="0.4,0.3" scale="0.4"/>
+		<InventoryIcon name="Gag Sprite" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="232,1,214,172" origin="0.5123859,0.53692484" scale="0.5" />
+		<Body width="40" radius="30" density="15" />
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="40">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.70" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="rubber" />
+			<Item identifier="plastic" />
+		</Deconstruct>
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="Muzzle Wearable" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="false" hidelimb="false" hideotherwearables="false" sourcerect="230,326,69,68" origin="0.4,0.3" scale="0.4" hidewearablesoftype="moustache,beard" />
+			<!-- No more speaking for you -->
+			<StatusEffect tags="gagged" type="OnWearing" target="Character" setvalue="true" stackable="false" speechImpediment="100.0" />
+			<StatusEffect type="OnBroken" target="This">
+				<Sound file="Content/Sounds/Impact/SoftImpact1.ogg" type="OnActive" range="1000" />
+				<Remove />
+			</StatusEffect>
+		</Wearable>
+	</Item>
+	<Item name="" identifier="thal_blindfold" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.4">
+		<PreferredContainer primary="crewcab" spawnprobability="0.1" />
+		<Sprite name="blindfold sprite" texture="%ModDir%/Items/Jobgear/headgears.png" depth="0.4" sourcerect="325,153,69,32" origin="0.5123859,0.53692484" scale="0.4" />
+		<Body width="40" radius="30" density="15" />
+		<InventoryIcon name="Blindfold Inv" texture="%ModDir%/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="461,13,150,133" origin="0.5,0.5" scale="0.5" />
+		<Body width="40" radius="30" density="15" />
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="40">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.60" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="rubber" />
+			<Item identifier="plastic" />
+		</Deconstruct>
+		<Turret HudTint="0,0,0,255" drawhudwhenequipped="true" />
+		<!--
+		<CustomInterface canbeselected="false" drawhudwhenequipped="true" hudpriority="20" depth="9">
+			<GuiFrame relativesize="1.1,1.1" anchor="Center" absoluteoffset="0,0" style="GUIListBoxNoBorder" color="0,0,0,255" />
+		</CustomInterface>
+		-->
+		<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="blindfold Wearable" texture="%ModDir%/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="false" depth="0.6" scale="0.4" sourcerect="316,156,80,51" origin="0.5661016,0.28514442" />
+		</Wearable>
+	</Item>
+	<Item name="" identifier="thal_wirebind" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.3">
+		<Deconstruct time="1">
+			<Item identifier="rubber" outcondition="0.5" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="20">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.50" usecondition="true" />
+		</Fabricate>
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
+		<Sprite name="visible wirebind" texture="Content/Items/InventoryIconAtlas.png" depth="0.55" sourcerect="448,64,64,64" origin="0.5,0.5" />
+		<BrokenSprite name="invisible wirebind" texture="%ModDir%/Items/Jobgear/Clown/clown.png" depth="0.55" sourcerect="388,699,86,35" origin="0.5,0.5" maxcondition="90" />
+		<Body width="30" height="15" density="40" />
+		<Wearable slots="Any,RightHand+LeftHand" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+			<sprite name="Wirebind thing" texture="%ModDir%/Items/Jobgear/Clown/clown.png" limb="RightHand" sourcerect="1,1,1,1" origin="0.5,0.5" depth="0.01" scale="0.3" />
+			<StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" tags="bound" />
+			<StatusEffect type="OnBroken" target="This">
+				<Sound file="Content/Sounds/Impact/SoftImpact1.ogg" type="OnActive" range="1000" />
+				<Remove />
+			</StatusEffect>
+		</Wearable>
+		<CustomInterface canbeselected="true" drawhudwhenequipped="true">
+			<GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" absoluteoffset="0,0" style="ItemUI" />
+			<Button text="Struggle">
+				<StatusEffect type="OnUse" target="This" condition="-2" />
+			</Button>
+		</CustomInterface>
+	</Item>
+	<Item name="" identifier="thal_candle" category="Equipment" cargocontaineridentifier="metalcrate" Scale="0.3" tags="smallitem,light,provocative" requireaimtouse="true" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true">
+		<Price baseprice="50">
+			<Price locationtype="outpost" multiplier="1" minavailable="3" />
+			<Price locationtype="city" multiplier="0.9" minavailable="3" />
+		</Price>
+		<Deconstruct time="10">
+			<Item identifier="flashpowder" mincondition="0.9" outcondition="0.25" />
+			<Item identifier="rubber" mincondition="0.9" outcondition="0.25" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="20">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.10" usecondition="true" />
+		</Fabricate>
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="491,747,76,145" depth="0.8" origin="0.5979346,0.48941234" />
+		<BrokenSprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="567,747,74,146" depth="0.8" maxcondition="65" origin="0.5,0.5" />
+		<BrokenSprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="642,748,65,146" depth="0.8" maxcondition="30" origin="0.5,0.5" />
+		<BrokenSprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="710,748,65,146" depth="0.8" maxcondition="5" origin="0.5,0.5" />
+		<Body width="76" height="145" density="12" />
+		<Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+		<LightComponent castshadows="false" LightColor="255,40,40,60" Flicker="0.5" range="300" IsOn="false">
+			<StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.05">
+				<Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+				<sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.05">
+				<Conditional IsOn="eq True" targetitemcomponent="LightComponent" />
+				<sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+			</StatusEffect>
+			<StatusEffect type="InWater" targettype="This" IsOn="false" />
+			<StatusEffect type="OnActive" targettype="This" Condition="-0.5" />
+			<StatusEffect type="OnActive" targettype="This">
+				<Conditional PhysicsBodyActive="eq true" />
+				<ParticleEmitter particle="flare" particlespersecond="4" />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+		</LightComponent>
+		<AiTarget sightrange="4000" />
+	</Item>
+	<Item name="" identifier="thal_ouijaboard" category="Equipment" requireaimtosecondaryuse="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,ritualitem,thal_ouijaboardo" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" canflipx="false" canflipy="false">
+		<Price baseprice="70">
+			<Price locationtype="outpost" multiplier="1" minavailable="2" />
+			<Price locationtype="city" multiplier="0.9" minavailable="1" />
+		</Price>
+		<Deconstruct time="10">
+			<Item identifier="thal_memo" mincondition="0.9" />
+			<Item identifier="thal_memo" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="20">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.20" usecondition="true" />
+		</Fabricate>
+		<Sprite name="Ouija Board Base" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="690,227,174,110" depth="0.8" origin="0.5,0.5" />
+		<BrokenSprite name="Ouija broken" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="715,122,174,110" depth="0.8" maxcondition="1" origin="0.5,0.5" />
+		<DecorativeSprite name="Ouija Pointer" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="865,229,34,46" depth="0.6" origin="0.5,0.5" offset="120,70" offsetanim="Noise" offsetanimspeed="0.1">
+			<AnimationConditional IsOn="true" targetitemcomponent="LightComponent" />
+		</DecorativeSprite>
+		<Body width="174" height="120" density="12" />
+		<Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" aimpos="35,-10" msg="ItemMsgPickUpSelect" aimable="false" characterusable="false" />
+		<LightComponent castshadows="false" LightColor="0,0,0,0" Flicker="0.5" range="10" IsOn="true">
+			<!--
+			<StatusEffect type="Always" targettype="This" IsOn="true" lifetime="0.1" >
+				<Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+				<sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+			</StatusEffect>
+			-->
+			<StatusEffect type="OnNotContained" targettype="This" IsOn="true">
+				<Conditional requireaimtosecondaryuse="eq true" />
+			</StatusEffect>
+			<StatusEffect type="OnFire" targettype="This" Condition="-2" />
+			<StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+			<!-- Automatically turn off every once in a while -->
+			<StatusEffect type="OnActive" targettype="This" IsOn="false" requireaimtosecondaryuse="false" delay="2" stackable="false"></StatusEffect>
+		</LightComponent>
+		<AiTarget sightrange="4000" />
+	</Item>
+	<Item name="" identifier="thal_paintbrush" category="Misc" Tags="smallitem" scale="0.3" impactsoundtag="impact_metal_light" isshootable="true">
+		<PreferredContainer primary="crewcab" spawnprobability="0.01" />
+		<Sprite name="brush" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="714,1013,126,131" depth="0.6" origin="0.5,0.5" />
+		<Fabricate suitablefabricators="thal_cultistkit_placeable" requiredtime="20">
+			<RequiredItem identifier="thal_cultistknife" mincondition="0.98" usecondition="true" />
+		</Fabricate>
+		<Body width="80" height="27" />
+		<Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="0,0" swingspeed="0.5" swingwhenusing="false" msg="ItemMsgPickUpSelect"></Holdable>
+		<RangedWeapon reload="2">
+			<StatusEffect type="OnUse" target="This" IsOn="true">
+				<SpawnItem identifier="thal_pentagram" />
+				<Remove />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This" delay="0.8" IsOn="false" />
+		</RangedWeapon>
+	</Item>
+	<Item name="" identifier="thal_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.45" interactdistance="50" hideconditionbar="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbyrepairtools="true" damagedbymeleeweapons="true" isshootable="true">
+		<InventoryIcon name="penta Inv" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="732,-2,132,126" depth="0.6" origin="0.5,0.5" />
+		<Sprite name="penta Sprite" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="4,404,374,368" depth="0.6" origin="0.5,0.5" />
+		<Body width="50" height="50" density="400" bodytype="Kinematic" />
+		<LightComponent range="900.0" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" blinkFrequency="10" allowingameediting="false" castshadows="true">
+			<StatusEffect delay="0.1" type="OnBroken" target="This" Condition="-100.0">
+				<Explosion range="10.0" structuredamage="0" itemdamage="0" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5" camerashake="5.0"></Explosion>
+				<Remove />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This" Condition="-100.0" castshadows="false">
+				<RequiredItem items="divingknife,divingknifeunique,divingknifehardened" type="contained" />
+				<Conditional castshadows="true" />
+				<SpawnItem identifier="thal_cultistknife" />
+			</StatusEffect>
+			<StatusEffect type="OnNotContained" target="This" Voltage="1.0" setvalue="true">
+				<Conditional IsActive="true" targetitemcomponent="Fabricator" />
+			</StatusEffect>
+			<Sprite name="penta light Sprite" texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="4,780,374,368" depth="0.6" origin="0.5,0.5" />
+			<sound file="%ModDir%/Items/Jobgear/Clown/uboa.ogg" type="OnActive" range="10000.0" loop="true" volume="2" />
+			<StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
+				<ParticleEmitter particle="thal_pentacircle" burstamount="3" particlespersecond="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
+			</StatusEffect>
+			<!-- Cold cav bad end -->
+		</LightComponent>
+		<ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgOpenSelect" drawinventory="false">
+			<GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+			<Containable items="smallitem,mediumitem" />
+			<StatusEffect type="Always" target="This" condition="1" setvalue="true" drawinventory="true">
+				<Conditional drawinventory="false" />
+			</StatusEffect>
+			<StatusEffect type="OnContained" target="This">
+				<Remove />
+				<SpawnItem identifier="thal_paintbrush" />
+			</StatusEffect>
+		</ItemContainer>
+		<CustomInterface canbeselected="true" IsOn="true">
+			<GuiFrame relativesize="0.2,0.1" anchor="Center" absoluteoffset="0,90" style="ItemUI" />
+			<Button text="Initiate Ritual">
+				<!-- 
+				START XX Cold Cavern Sampler:
+				Core: 50pct Dagger
+				1 candle XX -->
+				<!-- set subject depending on contained -->
+				<StatusEffect type="OnUse" targettype="This" description="ccsampler">
+					<RequiredItem items="thal_cultistknife" type="Contained" />
+				</StatusEffect>
+				<!-- successful completion, reward -->
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+					<SpawnCharacter speciesname="ramblin" count="2" />
+					<RequiredItem items="thal_cultistknife" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- successful initiation, set to on -->
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+					<RequiredItem items="thal_cultistknife" type="Contained" />
+					<Conditional condition="gt 20" />
+					<Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" flames="false" sparks="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0"></Explosion>
+				</StatusEffect>
+				<!-- item target effects (drain, remove, etc) -->
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-20">
+					<RequiredItem items="thal_cultistknife" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- END CC SAMPLER -->
+				
+				<!--XX GLOWPOCALYPSE XX-->
+				<StatusEffect type="OnUse" targettype="This" description="ccsampler">
+					<RequiredItem items="thal_sabercrystal" type="Contained" />
+				</StatusEffect>
+				<!-- successful completion, reward -->
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+					<SpawnCharacter speciesname="glowraptor" count="1" />
+					<SpawnItem identifier="uranium" />
+					<SpawnItem identifier="uranium" />
+					<SpawnItem identifier="thorium" />
+					<RequiredItem items="thal_sabercrystal" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- successful initiation, set to on -->
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+					<RequiredItem items="thal_sabercrystal" type="Contained" />
+					<Conditional condition="gt 20" />
+					<Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+				</StatusEffect>
+				<!-- item target effects (drain, remove, etc) -->
+				<StatusEffect type="OnUse" targettype="Contained" targets="thal_sabercrystal" IsOn="true" condition="-20">
+					<RequiredItem items="thal_sabercrystal" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- XX Mudraptor XX -->
+				<StatusEffect type="OnUse" targettype="This" description="ccsampler">
+					<RequiredItem items="mudraptorshell" type="Contained" />
+				</StatusEffect>
+				<!-- successful completion, reward -->
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+					<SpawnCharacter speciesname="crawler" count="2" />
+					<SpawnItem identifier="steel" />
+					<SpawnItem identifier="steel" />
+					<SpawnItem identifier="steel" />
+					<SpawnItem identifier="steel" />
+					<RequiredItem items="mudraptorshell" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- successful initiation, set to on -->
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+					<RequiredItem items="mudraptorshell" type="Contained" />
+					<Conditional condition="gt 20" />
+					<Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+				</StatusEffect>
+				<!-- item target effects (drain, remove, etc) -->
+				<StatusEffect type="OnUse" targettype="Contained" targets="mudraptorshell" IsOn="true" condition="-20">
+					<RequiredItem items="mudraptorshell" type="Contained" />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- XX huskstinger XX -->
+				<StatusEffect type="OnUse" targettype="This" description="ccsampler">
+					<RequiredItem items="huskstinger" type="Contained" />
+				</StatusEffect>
+				<!-- successful completion, reward -->
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+					<SpawnCharacter speciesname="husk" count="2" />
+					<SpawnItem identifier="huskeggs" />
+					<SpawnItem identifier="calyxanide" />
+					<Conditional condition="gt 20" />
+					<RequiredItem items="huskstinger" type="Contained" />
+				</StatusEffect>
+				<!-- successful initiation, set to on -->
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+					<RequiredItem items="huskstinger" type="Contained" />
+					<Conditional condition="gt 20" />
+					<Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+				</StatusEffect>
+				<!-- item target effects (drain, remove, etc) -->
+				<StatusEffect type="OnUse" targettype="Contained" targets="huskstinger" IsOn="true" condition="-20">
+					<RequiredItem items="huskstinger" type="Contained" />
+					<Remove />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+				<!-- XX Singularity XX -->
+				<StatusEffect type="OnUse" targettype="This" description="ccsampler">
+					<RequiredItem items="dirtybomb" type="Contained" />
+				</StatusEffect>
+				<!-- successful completion, reward -->
+				<StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+					<SpawnItem identifier="thal_singularity" />
+					<Conditional condition="gt 20" />
+					<RequiredItem items="dirtybomb" type="Contained" />
+				</StatusEffect>
+				<!-- successful initiation, set to on -->
+				<StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+					<RequiredItem items="dirtybomb" type="Contained" />
+					<Conditional condition="gt 20" />
+					<Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+				</StatusEffect>
+				<!-- item target effects (drain, remove, etc) -->
+				<StatusEffect type="OnUse" targettype="Contained" targets="dirtybomb" IsOn="true" condition="-20">
+					<RequiredItem items="dirtybomb" type="Contained" />
+					<Remove />
+					<Conditional condition="gt 20" />
+				</StatusEffect>
+			</Button>
+			<Button text="Destroy Pentagram">
+				<StatusEffect type="OnUse" targettype="This" setvalue="true" condition="0"></StatusEffect>
+			</Button>
+		</CustomInterface>
+	</Item>
+	<!-- guide -->
+	<Item name="" descriptionidentifier="thal_guidegen" identifier="thal_cultistbook" category="Electrical" Tags="smallitem,logic" cargocontaineridentifier="metalcrate" scale="0.25" isshootable="true" canflipx="false" impactsoundtag="impact_soft" showcontentsintooltip="true">
+		<Price baseprice="100" soldeverywhere="false" />
+		<InventoryIcon texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="565,904,123,141" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="409,906,143,175" depth="0.55" origin="0.5,0.5" />
+		<Body width="130" height="160" density="8" />
+		<Holdable slots="Any,RightHand+LeftHand" holdpos="57,15" holdangle="-20" aimable="false" handle1="-25,-5" handle2="-27,-5" msg="ItemMsgPickUpSelect"/>
+		<ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_necro_description" drawinventory="false">
+			<Containable items="guidepage" />
+			<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
+			<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+				<GuiFrame relativesize="0.20,0.7" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+				<Button text="necro.intro">
+					<StatusEffect type="OnUse" targettype="Contained">
+						<RemoveItem />
+						<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+					</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_intro" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.index">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_index" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.glassaltar">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_glassaltar" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.pentagram">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_pentagram" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.coldcavern">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_coldcavern" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.husk">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_husk" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+					<Button text="necro.glow">
+						<StatusEffect type="OnUse" targettype="Contained">
+							<RemoveItem />
+							<Sound file="%ModDir%/Items/Misc/Pageturn.ogg" range="300" />
+						</StatusEffect>
+					<StatusEffect type="OnUse" delay="0.1" target="This">
+						<SpawnItem identifier="thal_necro_glow" spawnposition="ThisInventory" />
+					</StatusEffect>
+				</Button>
+			</CustomInterface>
+		</ItemContainer>
+	</Item>
+
+	<Item name="" identifier="thal_necro_intro" Tags="guidepage" hideinmenus="true">
+		<Sprite texture="%ModDir%/Items/Jobgear/Clown/clown.png" sourcerect="565,904,123,141" origin="0.5,0.5" depth="0.6" />
+		<Body width="25" height="40" density="8" />
+	</Item>
+	<Item name="" identifier="thal_necro_description" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_index" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_glassaltar" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_pentagram" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_coldcavern" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_husk" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+	<Item name="" identifier="thal_necro_glow" Tags="guidepage" hideinmenus="true" variantof="thal_necro_intro"/>
+</Items>
