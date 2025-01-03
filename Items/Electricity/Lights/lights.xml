@@ -1,45 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="directional lamp" identifier="directionalLamp" category="Electrical" Tags="smallitem,light">
-    <Sprite texture="lamp.png" sourcerect="0,0,16,32" depth="0.8" />
-    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
-      <LightTexture texture="Mods/Thalassophobia/Items/Electricity/Lights/lightTextures/directional.png" origin="0.5,0.0" />
-      <!-- additive "top light" -->
-      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="33,0,31,37" alpha="1.0" />
-    </LightComponent>
-    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-      <RequiredItem items="screwdriver" type="Equipped" />
-      <input name="power" displayname="connection.power" />
-      <input name="toggle" displayname="connection.togglestate" />
-      <input name="set_state" displayname="connection.setstate" />
-    </ConnectionPanel>
-  </Item>
-  <Item name="Directional Fluorescent Lamp" identifier="thal_direcfluor" category="Electrical" Tags="largeitem,light" scale="0.5">
-    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
-    <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="0,896,288,48" depth="0.8" origin="0.5,0.5" />
-    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
-      <LightTexture texture="Mods/Thalassophobia/Items/Electricity/Lights/lightTextures/fluordirec.png" origin="0.5,0.5" />
-      <!-- additive "top light" -->
-      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="480,896,288,48" alpha="1.0" />
-    </LightComponent>
-    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-      <RequiredItem items="screwdriver" type="Equipped" />
-      <input name="power" displayname="connection.power" />
-      <input name="toggle" displayname="connection.togglestate" />
-      <input name="set_state" displayname="connection.setstate" />
-    </ConnectionPanel>
-  </Item>
-  <Item name="" identifier="thal_discoball" category="Electrical" Tags="largeitem,light" scale="0.3">
-    <Body radius="15" density="12" />
-    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="7.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
-    <Sprite name="discoball main" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="22,450,253,249" depth="0.8" origin="0.5,0.5" />
-    <LightComponent pulsefrequency="0.3" pulseamount="0.5" lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="0" IsOn="true">
-      <LightTexture texture="Mods/Thalassophobia/Items/Electricity/Lights/lightTextures/disco.png" origin="0.5,0.5" />
-      <!-- additive "top light" -->
-      <sprite texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="22,450,253,249" alpha="1.0" origin="0.5,0.5" />
-      <StatusEffect type="Always" target="This" rotation="20"></StatusEffect>
-    </LightComponent>
-  </Item>
+	<Item name="directional lamp" identifier="directionalLamp" category="Electrical" Tags="smallitem,light">
+		<Sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,16,32" depth="0.8" />
+		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
+			<LightTexture texture="%ModDir%/Items/Electricity/Lights/lightTextures/directional.png" origin="0.5,0.0" />
+			<!-- additive "top light" -->
+			<sprite texture="Content/Items/Electricity/lamp.png" sourcerect="33,0,31,37" alpha="1.0" />
+		</LightComponent>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="power" displayname="connection.power" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+		</ConnectionPanel>
+	</Item>
+	<Item name="Directional Fluorescent Lamp" identifier="thal_direcfluor" variantof="lightfluorescentl02" category="Electrical" Tags="largeitem,light" scale="0.5">
+		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
+			<LightTexture texture="%ModDir%/Items/Electricity/Lights/lightTextures/fluordirec.png" origin="0.5,0.5" />
+			<!-- additive "top light" -->
+			<sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="480,896,288,48" alpha="1.0" />
+		</LightComponent>
+	</Item>
+	
+	<Item name="" identifier="thal_discoball" category="Electrical" scale="0.3" Tags="largeitem,light" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" GrabWhenSelected="true">
+		<Body radius="15" density="12" />
+		<Deconstruct time="10">
+			<Item identifier="fpgacircuit" />
+			<Item identifier="phosphorus" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+			<RequiredSkill identifier="electrical" level="35" />
+			<RequiredItem identifier="tin" />
+			<RequiredItem identifier="aluminium" amount="2" />
+			<RequiredItem tag="lightcomponent" mount="2" defaultitem="lightcomponentround" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="tin" />
+			<Item identifier="aluminium" />
+			<Item identifier="fpgacircuit" />
+		</Deconstruct>
+		<Price baseprice="105" canbespecial="false">
+			<Price storeidentifier="merchantoutpost" minavailable="1"/>
+			<Price storeidentifier="merchantcity" minavailable="1"/>
+			<Price storeidentifier="merchantresearch" sold="false" />
+			<Price storeidentifier="merchantmilitary" sold="false" />
+			<Price storeidentifier="merchantmine" sold="false" />
+			<Price storeidentifier="merchantclown" minavailable="3" maxavailable="5">
+				<Reputation faction="clowns" min="5"/>
+			</Price>
+		</Price>
+		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+			<RequiredItem items="wrench" type="Equipped" />
+		</Holdable>
+		<InventoryIcon Name="Discoball Icon" texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="428,1778,49,49" origin="0.5,0.5" />
+		<sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="1,768,101,99" depth="0.899" premultiplyalpha="false" origin="0.5,0.5" />
+		<LightComponent canbeselected="true" pulsefrequency="0.3" pulseamount="0.5" color="1.0,0.0,0.0,0.5" lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
+			<LightTexture texture="%ModDir%/Items/Electricity/Lights/lightTextures/disco.png" origin="0.5,0.5" />
+			<IsActive/>
+			<StatusEffect type="OnActive" target="This" rotation="5"/>
+			<!-- additive "top light" -->
+			<sprite texture="%ModDir%/Items/Electricity/poweritems.png" sourcerect="22,450,253,249" alpha="0.75" origin="0.5,0.5" />
+		</LightComponent>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="power" displayname="connection.power" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+			<input name="set_color" displayname="connection.setcolor" />
+		</ConnectionPanel>
+	</Item>
 </Items>

@@ -1,108 +1,136 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="" identifier="thal_carver" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="Mods/Thalassophobia/Items/Food/Cooking/cookware.png" name="carver icon" sourcerect="445,4,59,60" origin="0.5,0.5" />
-    <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/cookware.png" sourcerect="290,5,148,44" depth="0.55" origin="0.5,0.5" />
-    <Body width="65" height="15" density="50" />
-    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-15,0" holdangle="80" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
-      <Attack targetimpulse="2" severlimbsprobability="0.9" itemdamage="10">
-        <Affliction identifier="lacerations" strength="5" />
-        <Affliction identifier="bleeding" strength="2" />
-        <Affliction identifier="stun" strength="0.2" />
-        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
-      </Attack>
-      <StatusEffect type="OnUse" target="Character" Comparison="And">
-        <Conditional IsDead="true" />
-        <Affliction identifier="thal_gutted" strength="10" />
-      </StatusEffect>
-      <!-- Creature Output Start -->
-      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
-				<Affliction identifier="thal_unguttable" strength="100" />
-				<Conditional thal_unguttable="lt 1" />
-        <Conditional thal_gutted="gt 80" />
-        <Conditional SpeciesName="crawler" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="20" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
-        <SpawnItem identifier="crawlermask" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
-        <SpawnItem identifier="thal_smallbreast" spawnposition="This" />
-        <SpawnItem identifier="thal_smallthigh" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
-				<Affliction identifier="thal_unguttable" strength="100" />
-				<Conditional thal_unguttable="lt 1" />
-        <Conditional thal_gutted="gt 80" />
-        <Conditional SpeciesName="human" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
-        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
-				<Affliction identifier="thal_unguttable" strength="100" />
-				<Conditional thal_unguttable="lt 1" />
-        <Conditional thal_gutted="gt 80" />
-        <Conditional SpeciesName="humanhusk" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
-        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
-				<Affliction identifier="thal_unguttable" strength="100" />
-				<Conditional thal_unguttable="lt 1" />
-        <Conditional thal_gutted="gt 80" />
-        <Conditional SpeciesName="gummy" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
-        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
-        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
-				<Affliction identifier="thal_unguttable" strength="100" />
-				<Conditional thal_unguttable="lt 1" />
-        <Conditional thal_gutted="gt 80" />
-        <Conditional SpeciesName="mudraptor" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
-        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
-        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
-        <SpawnItem identifier="thal_smallbreast" spawnposition="This" />
-        <SpawnItem identifier="thal_largethigh" spawnposition="This" />
-      </StatusEffect>
-    </MeleeWeapon>
-    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
-  </Item>
+	<Item name="" identifier="thal_carver" category="Weapon" Tags="smallitem,weapon,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_metal_light">
+		<InventoryIcon texture="%ModDir%/Items/Food/Cooking/cookware.png" name="carver icon" sourcerect="155,0,59,60" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Items/Food/Cooking/cookware.png" sourcerect="0,0,148,44" depth="0.55" origin="0.5,0.5" />
+		<Body width="65" height="15" density="50" />
+		<Deconstruct time="10">
+			<Item identifier="plastic" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+			<RequiredSkill identifier="weapons" level="30" />
+			<RequiredItem identifier="plastic" amount="1" />
+			<RequiredItem identifier="steel" amount="1" />
+		</Fabricate>
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-15,0" holdangle="80" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+			<Attack targetimpulse="2" severlimbsprobability="0.9" itemdamage="10">
+				<Affliction identifier="lacerations" strength="5" />
+				<Affliction identifier="bleeding" strength="2" />
+				<Affliction identifier="stun" strength="0.2" />
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+			</Attack>
+				<!-- BLOOD SPLATTER DECAL -->
+			<StatusEffect type="OnFailure" target="UseTarget" comparison="And">
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Affliction identifier="thal_gutted" strength="25" />
+				<ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+				<ParticleEmitter particle="heavygib" drawontop="true" particleamount="10" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+				<Sound file="%ModDir%/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+				<Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"/>
+			</StatusEffect>
+			<StatusEffect type="OnSuccess" target="UseTarget">
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Affliction identifier="thal_gutted" strength="25" />
+				<ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+				<ParticleEmitter particle="heavygib" drawontop="true" particleamount="10" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+				<Sound file="%ModDir%/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+				<Sound file="%ModDir%/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+				<Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"/>
+			</StatusEffect>
+				<!--Crawlers-->
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" spawnItemRandomly="True" >
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Conditional Speciesgroup ="crawler" />
+				<SpawnItem identifier="thal_mediumbrain" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_smallbreast" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_smallthigh" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+			</StatusEffect>
+				<!--humanoids-->
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" spawnItemRandomly="True" >
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Conditional Speciesgroup="Human" />
+				<SpawnItem identifier="thal_mediumbrain" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumbreast" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumthigh" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+			</StatusEffect>
+				<!--husk-->
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" spawnItemRandomly="True" >
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Conditional Speciesgroup="Husk" />
+				<SpawnItem identifier="thal_mediumbrain" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumbreast" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumthigh" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+			</StatusEffect>
+				<!--Gummy-->
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" spawnItemRandomly="True" >
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Conditional Speciesgroup="gummy" />
+				<SpawnItem identifier="thal_mediumbrain" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumbreast" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_mediumthigh" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+			</StatusEffect>
+				<!--mudraptor-->
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" spawnItemRandomly="True" >
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="lt 100" />
+				<Conditional Speciesgroup ="mudraptor" />
+				<SpawnItem identifier="thal_mediumbrain" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_smallbreast" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<SpawnItem identifier="thal_largethigh" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+			</StatusEffect>
+				<!-- CORPSE REMOVAL -->
+			<StatusEffect type="OnFailure" target="UseTarget" comparison="And">
+				<Conditional Speciesgroup ="!eq crawler" />
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="eq 100" />
+				<DropContainedItems />
+				<RemoveCharacter />
+			</StatusEffect>
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And">
+				<Conditional Speciesgroup ="!eq crawler" />
+				<Conditional isdead="true" />
+				<Conditional thal_gutted="eq 100" />
+				<DropContainedItems />
+				<RemoveCharacter />
+			</StatusEffect>
+				<!-- CORPSE REMOVAL crawler-->
+			<StatusEffect type="OnFailure" target="UseTarget" comparison="And">
+				<Conditional Speciesgroup ="crawler" />
+				<Conditional isdead="true" />
+				<SpawnItem identifier="crawlermask" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<Conditional thal_gutted="eq 100" />
+				<DropContainedItems />
+				<RemoveCharacter />
+			</StatusEffect>
+			<StatusEffect type="OnSuccess" target="UseTarget" comparison="And">
+				<Conditional Speciesgroup ="crawler" />
+				<Conditional isdead="true" />
+				<SpawnItem identifier="crawlermask" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+				<Conditional thal_gutted="eq 100" />
+				<DropContainedItems />
+				<RemoveCharacter />
+			</StatusEffect>
+		</MeleeWeapon>
+		<aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+		<Quality>
+			<QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+		</Quality>
+		<Upgrade gameversion="0.10.0.0" scale="0.5" />
+	</Item>
 </Items>
